@@ -1,0 +1,63 @@
+/* CareerVerse design tokens: canonical source. Copied into design/prototype/tokens.css. */
+:root {
+  /* Ground and surfaces */
+  --ground: #FFFFFF;
+  --chrome: #F4F6FA;
+  --raised: #FFFFFF;
+  --track: #E3E7EF;
+  --border: #E6E9F0;
+  --rule: #EEF1F6;
+  --off: #D5DAE3;
+
+  /* Ink */
+  --ink: #14161C;
+  --ink-2: #3D4250;
+  --muted: #5B6170;
+  --disabled-ink: #8A90A0;
+
+  /* Accent: progress only */
+  --accent: #2459E0;
+
+  /* Meaning */
+  --positive: #1E7A4C;  --pill-pos-bg: #DCFAE5;  --pill-pos-ink: #04250E;
+  --warning: #92400E;   --pill-warn-bg: #FFF4D6; --pill-warn-ink: #7A3E00;
+  --negative: #B42318;  --pill-neg-bg: #FDECEA;  --pill-neg-ink: #7A1D14;
+  --pill-neutral-bg: #E3E7EF; --pill-neutral-ink: #3D4250;
+  --anger: #C2410C;
+
+  /* Client identity tints */
+  --tint-blue: #DCE8FF;   --tint-blue-ink: #1F3F8F;
+  --tint-coral: #FFE3DA;  --tint-coral-ink: #8A2E12;
+  --tint-mint: #D6F3E6;   --tint-mint-ink: #0D5A3A;
+  --tint-butter: #FFF0C2; --tint-butter-ink: #7A3E00;
+
+  /* Shape */
+  --radius-panel: 22px;
+  --radius-card: 14px;
+  --radius-sheet: 26px;
+  --radius-frame: 16px;
+  --radius-pill: 999px;
+
+  /* Space */
+  --gap: 16px;
+  --pad-panel: 20px;
+  --pad-page-mobile: 16px;
+  --pad-page-desktop: 24px;
+  --sidebar: 228px;
+  --column: 1100px;
+
+  /* Elevation: floating things only */
+  --shadow-float: 0 2px 8px rgba(20, 22, 28, .06);
+  --shadow-sheet: 0 -8px 24px rgba(20, 22, 28, .12);
+  --shadow-dialog: 0 16px 40px rgba(20, 22, 28, .18);
+  --scrim: rgba(20, 22, 28, .40);
+
+  /* Type */
+  --font-sans: "Instrument Sans", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  /* Motion */
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --dur-ui: 200ms;
+  --dur-meter: 450ms;
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CareerVerse — Client call</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#14161C}a:hover{color:#2459E0}
+button{font-family:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid #2459E0;outline-offset:2px}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; color: #14161C; font-family: 'Instrument Sans', Inter, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="height: 56px; flex: none; display: flex; align-items: center; gap: 10px; padding: 0 12px 0 8px; background: #F4F6FA">
+    <a href="Main.dc.html" aria-label="Pause call and return to desk" style="width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #14161C">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+    </a>
+    <div style="flex: 1 1 auto; min-width: 0">
+      <div style="font-weight: 600; font-size: 15px">Marcus Bell</div>
+      <div style="font-size: 12px; color: #5B6170">Status update · Bellrock Commercial</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #5B6170">
+      <span style="width: 6px; height: 6px; border-radius: 50%; background: #1E7A4C"></span>Saved
+    </div>
+  </header>
+
+  <section style="margin: 12px 16px 0; height: 236px; flex: none; border-radius: 22px; background: {{stageBg}}; position: relative; overflow: hidden; transition: background .35s ease">
+    <svg width="208" height="208" viewBox="0 0 64 64" role="img" aria-label="{{face.label}}" style="position: absolute; left: 0; bottom: 0">
+      <path d="M7 64c2-12 12.5-18.5 25-18.5S55 52 57 64z" fill="#2B3A5C"/>
+      <path d="M25.5 45.5L32 53l6.5-7.5" fill="#FFFFFF"/>
+      <path d="M30.6 49.5h2.8l.8 9.5-2.2 2-2.2-2z" fill="#2459E0"/>
+      <rect x="27.5" y="37" width="9" height="10" rx="3" fill="#7E4F33"/>
+      <ellipse cx="21.6" cy="29.5" rx="1.6" ry="2.4" fill="#8D5A3B"/><ellipse cx="42.4" cy="29.5" rx="1.6" ry="2.4" fill="#8D5A3B"/>
+      <ellipse cx="32" cy="28" rx="10.5" ry="12" fill="#8D5A3B"/>
+      <path d="M21 27c0-9 4.8-14 11-14s11 4.6 11 12.5c-3-3.6-7.4-5-11-5s-8 1.6-11 6.5z" fill="#1B1F2A"/>
+      <path d="{{face.brows}}" stroke="#1B1F2A" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+      <circle cx="28" cy="29" r="1.3" fill="#1B1F2A"/><circle cx="36" cy="29" r="1.3" fill="#1B1F2A"/>
+      <path d="{{face.mouth}}" stroke="#1B1F2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <div style="position: absolute; right: 12px; top: 12px; bottom: 12px; width: 148px; background: #FFFFFF; border-radius: 16px; padding: 14px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+      <sc-for list="{{meters}}" as="m" hint-placeholder-count="3">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; color: #5B6170">
+            <span>{{m.label}}</span>
+            <span style="font-variant-numeric: tabular-nums"><span style="color: {{m.deltaColor}}; font-weight: 600">{{m.delta}}</span> <span style="color: #14161C; font-size: 15px">{{m.value}}</span>/10</span>
+          </div>
+          <div style="height: 6px; border-radius: 999px; background: #EEF1F6; margin-top: 6px; overflow: hidden">
+            <div style="height: 100%; width: {{m.pct}}; border-radius: 999px; background: {{m.color}}; transition: width .5s ease"></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <div style="margin: -18px 28px 0; position: relative; background: #FFFFFF; border: 1px solid #E6E9F0; border-radius: 18px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(20,22,28,.06)">
+    <div style="font-size: 12px; font-weight: 600; color: #1F3F8F">Marcus</div>
+    <div style="font-size: 16px; line-height: 1.45; margin-top: 2px">{{clientLine}}</div>
+  </div>
+
+  <div style="flex: 1 1 auto; padding: 14px 16px 16px; display: flex; flex-direction: column; justify-content: flex-end">
+
+    <sc-if value="{{choosing}}" hint-placeholder-val="{{ true }}">
+      <div style="background: #F4F6FA; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+          <div style="font-size: 13px; color: #5B6170">Your reply · option <span style="color: #14161C; font-variant-numeric: tabular-nums">{{optNum}}</span> of 3</div>
+          <div style="display: flex; gap: 5px" aria-hidden="true">
+            <sc-for list="{{pips}}" as="p" hint-placeholder-count="3">
+              <span style="width: {{p.w}}; height: 6px; border-radius: 999px; background: {{p.bg}}; transition: width .25s ease"></span>
+            </sc-for>
+          </div>
+        </div>
+        <div style="font-size: 18px; line-height: 1.45; letter-spacing: -0.005em; min-height: 104px">“{{opt.text}}”</div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <button type="button" onClick="{{reject}}" disabled="{{isLast}}" style="min-height: 48px; border-radius: 999px; border: none; background: {{rejectBg}}; color: {{rejectColor}}; font-weight: 600; font-size: 15px; cursor: pointer">{{rejectLabel}}</button>
+          <button type="button" onClick="{{say}}" style="min-height: 48px; border-radius: 999px; border: none; background: #14161C; color: #FFFFFF; font-weight: 600; font-size: 15px; cursor: pointer">Say this</button>
+        </div>
+        <div style="font-size: 12px; color: #5B6170; text-align: center">{{hint}}</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{done}}" hint-placeholder-val="{{ false }}">
+      <div style="background: #F4F6FA; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+        <div>
+          <div style="font-size: 12px; color: #5B6170">You said</div>
+          <div style="font-size: 15px; line-height: 1.45; margin-top: 4px">“{{opt.text}}”</div>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap">
+          <sc-for list="{{deltaChips}}" as="d" hint-placeholder-count="2">
+            <span style="flex: none; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: {{d.bg}}; color: {{d.fg}}; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums">{{d.text}}</span>
+          </sc-for>
+        </div>
+        <a href="Scorecard.dc.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 999px; background: #14161C; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">See how you did
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button type="button" onClick="{{restart}}" style="min-height: 36px; border: none; background: transparent; color: #5B6170; font-size: 13px; cursor: pointer; text-decoration: underline">Restart prototype</button>
+      </div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{confirming}}" hint-placeholder-val="{{ false }}">
+    <div style="position: absolute; inset: 0; background: rgba(20,22,28,.4); display: flex; flex-direction: column; justify-content: flex-end">
+      <div role="dialog" aria-modal="true" aria-labelledby="lock-title" style="background: #FFFFFF; border-radius: 26px 26px 0 0; padding: 12px 20px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 -8px 24px rgba(20,22,28,.12)">
+        <div style="width: 36px; height: 4px; border-radius: 999px; background: #D5DAE3; align-self: center"></div>
+        <h2 id="lock-title" style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.1">Say this to Marcus?</h2>
+        <div style="background: #F4F6FA; border-radius: 16px; padding: 14px 16px; font-size: 15px; line-height: 1.45">“{{opt.text}}”</div>
+        <div style="font-size: 13px; color: #5B6170; line-height: 1.5">This reply will shape his trust, the deadline, and your career record. <span style="color: #14161C; font-weight: 600">Once it's said, it can't be taken back.</span></div>
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 10px">
+          <button type="button" onClick="{{back}}" style="min-height: 48px; border-radius: 999px; border: none; background: #E8EBF1; color: #14161C; font-weight: 600; font-size: 15px; cursor: pointer">Not yet</button>
+          <button type="button" onClick="{{lock}}" style="min-height: 48px; border-radius: 999px; border: none; background: #14161C; color: #FFFFFF; font-weight: 600; font-size: 15px; cursor: pointer">Lock it in</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2459E0","options":["#2459E0","#1B6E66","#E0662F","#14161C"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { idx: 0, phase: 'choose' };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2459E0';
+    const { idx, phase } = this.state;
+    const faces = {
+      worried: { brows: 'M24.5 25l5-1.6M39.5 25l-5-1.6', mouth: 'M29 35.6q3-1.3 6 0', label: 'Marcus looks worried', stage: '#DCE8FF' },
+      happy: { brows: 'M24.5 23.8h5M34.5 23.8h5', mouth: 'M28.2 33.8q3.8 3.4 7.6 0', label: 'Marcus looks pleased', stage: '#DCE8FF' },
+      relieved: { brows: 'M24.5 24.2l5-.5M39.5 24.2l-5-.5', mouth: 'M29 34.4q3 2 6 0', label: 'Marcus looks relieved', stage: '#D6F3E6' },
+      angry: { brows: 'M24.5 23l5 2M39.5 23l-5 2', mouth: 'M29 36.4q3-2.4 6 0', label: 'Marcus looks frustrated', stage: '#FFE3DA' }
+    };
+    const options = [
+      { text: "Don't worry, it's basically done. You'll have it well before 3.", reaction: "Great. I'll tell the GC it's handled.", face: 'happy', d: { trust: 1, respect: 0, anger: -2 } },
+      { text: "I sent the request to the carrier at 9:40. The additional-insured endorsement is still pending. I'm calling the underwriter now and I'll update you by 1:30 with a firm time.", reaction: "Okay. That's a straight answer. Call me at 1:30 either way.", face: 'relieved', d: { trust: 1, respect: 2, anger: -1 } },
+      { text: "The carrier's slow today, so I really can't say when it'll come through.", reaction: "That's not an answer. I have a crew waiting on site.", face: 'angry', d: { trust: -1, respect: -1, anger: 2 } }
+    ];
+    const opt = options[idx];
+    const done = phase === 'done';
+    const face = done ? faces[opt.face] : faces.worried;
+    const base = { trust: 5, respect: 5, anger: 6 };
+    const fmt = (n) => (n > 0 ? '+' + n : n < 0 ? '−' + Math.abs(n) : '');
+    const defs = [
+      { key: 'trust', label: 'Trust', color: accent, goodUp: true },
+      { key: 'respect', label: 'Respect', color: '#14161C', goodUp: true },
+      { key: 'anger', label: 'Anger', color: '#C2410C', goodUp: false }
+    ];
+    const meters = defs.map((m) => {
+      const delta = done ? opt.d[m.key] : 0;
+      const value = Math.max(0, Math.min(10, base[m.key] + delta));
+      const good = m.goodUp ? delta > 0 : delta < 0;
+      return { label: m.label, color: m.color, value, pct: value * 10 + '%', delta: fmt(delta), deltaColor: good ? '#1E7A4C' : '#B42318' };
+    });
+    const deltaChips = defs.filter((m) => opt.d[m.key] !== 0).map((m) => {
+      const v = opt.d[m.key];
+      const good = m.goodUp ? v > 0 : v < 0;
+      return { text: m.label + ' ' + fmt(v), bg: good ? '#DCFAE5' : '#FDECEA', fg: good ? '#04250E' : '#7A1D14' };
+    });
+    const pips = [0, 1, 2].map((i) => ({ w: i === idx ? '20px' : '6px', bg: i === idx ? accent : i < idx ? '#B8C0CF' : '#D5DAE3' }));
+    const isLast = idx === 2;
+    return {
+      face, stageBg: face.stage, meters, deltaChips, pips, opt, isLast,
+      optNum: idx + 1,
+      rejectLabel: isLast ? 'Last option' : 'Next option',
+      rejectBg: isLast ? '#EEF1F6' : '#E3E7EF',
+      rejectColor: isLast ? '#8A90A0' : '#14161C',
+      hint: isLast ? "You've passed the other replies. This is the one you have left." : "Skipped replies don't come back.",
+      clientLine: done ? opt.reaction : "The GC needs that certificate of insurance before 3, or my client can't get on site. Where are we?",
+      choosing: phase === 'choose',
+      confirming: phase === 'confirm',
+      done,
+      reject: () => { if (idx < 2) this.setState({ idx: idx + 1 }); },
+      say: () => this.setState({ phase: 'confirm' }),
+      back: () => this.setState({ phase: 'choose' }),
+      lock: () => this.setState({ phase: 'done' }),
+      restart: () => this.setState({ idx: 0, phase: 'choose' })
+    };
+  }
+}
+</script>
+</body>
+</html>

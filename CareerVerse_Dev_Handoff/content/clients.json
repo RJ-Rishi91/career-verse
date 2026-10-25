@@ -1,0 +1,101 @@
+[
+  {
+    "id": "marcus",
+    "name": "Marcus Bell",
+    "initials": "MB",
+    "company": "Bellrock Commercial",
+    "role": "Account manager · Bellrock Commercial, Houston TX",
+    "importance": "High importance",
+    "tint": "blue",
+    "initial_status": "watch",
+    "initial_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 6
+    },
+    "preferences": [
+      "Bottom line first",
+      "Exact times, not “soon”",
+      "Short calls"
+    ],
+    "trigger": "Loses patience with vague answers",
+    "thought": {
+      "unlockTrust": 6,
+      "text": "“The last agency told me ‘it’s handled’ twice. Both times it wasn’t.”"
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#7E4F33",
+      "hair": "short",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    }
+  },
+  {
+    "id": "dana",
+    "name": "Dana Whitfield",
+    "initials": "DW",
+    "company": "Whitfield Insurance Group",
+    "role": "Agency owner · Whitfield Insurance Group, Columbus OH",
+    "importance": "Medium importance",
+    "tint": "coral",
+    "initial_status": "ok",
+    "initial_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "preferences": [
+      "Warm small talk first",
+      "Wants the why",
+      "Email recap after calls"
+    ],
+    "trigger": "Dislikes surprises on premium",
+    "thought": {
+      "unlockTrust": 6,
+      "text": "“If this renewal premium jumps again, I’ll lose the Hendricks account.”"
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#E2B38F",
+      "hair": "long",
+      "hairColor": "#B86F33",
+      "shirt": "#24325C",
+      "tie": null
+    }
+  },
+  {
+    "id": "priya",
+    "name": "Priya Raman",
+    "initials": "PR",
+    "company": "Lakeside Benefits",
+    "role": "Office manager · Lakeside Benefits, Naperville IL",
+    "importance": "Medium importance",
+    "tint": "mint",
+    "initial_status": "ok",
+    "initial_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 3
+    },
+    "preferences": [
+      "Detail and documents",
+      "Polite, formal tone",
+      "No surprises"
+    ],
+    "trigger": "Needs every number in writing",
+    "thought": {
+      "unlockTrust": 6,
+      "text": "“I need every number in writing before I take it to the partners.”"
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#B57C51",
+      "hair": "bun",
+      "hairColor": "#24140E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    }
+  }
+]

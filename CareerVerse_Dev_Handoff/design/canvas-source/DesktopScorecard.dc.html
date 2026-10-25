@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CareerVerse — Scorecard (desktop)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F6FA}
+a{color:#14161C}a:hover{color:#2459E0}
+a:focus-visible{outline:2px solid #2459E0;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 100vh; box-sizing: border-box; background: #F4F6FA; color: #14161C; font-family: 'Instrument Sans', Inter, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column">
+
+  <header style="height: 56px; flex: none; display: flex; align-items: center; gap: 12px; padding: 0 20px">
+    <svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 6.5A4.5 4.5 0 0 1 8.5 2h11A4.5 4.5 0 0 1 24 6.5v9a4.5 4.5 0 0 1-4.5 4.5H12l-5.5 5v-5A4.5 4.5 0 0 1 4 15.5z" fill="{{accent}}"/><path d="M9.5 14l4.5-4.5 4.5 4.5" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div style="font-weight: 600; font-size: 15px; flex: 1 1 auto">Call scorecard</div>
+    <a href="DesktopDesk.dc.html" style="font-size: 13px; color: #5B6170">Back to desk</a>
+  </header>
+
+  <main style="flex: 1 1 auto; margin: 0 8px 8px; background: #FFFFFF; border: 1px solid #E6E9F0; border-radius: 16px; padding: 48px 24px 40px">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px">
+      <div style="margin-bottom: 24px">
+        <div style="font-size: 14px; color: #5B6170">Marcus Bell · Status update · 4 min</div>
+        <h1 style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.05; letter-spacing: -0.015em">A straight answer and a real plan.</h1>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+        <div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+          <section style="display: flex; flex-wrap: wrap; background: #F4F6FA; border-radius: 22px">
+            <div style="flex: 1 1 220px; padding: 20px 24px; border-right: 1px solid #E3E7EF">
+              <div style="font-size: 13px; color: #5B6170">Communication</div>
+              <div style="font-size: 40px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em">84<span style="font-size: 16px; color: #5B6170"> /100</span></div>
+              <div style="font-size: 13px; color: #5B6170">The 7Cs, tone, grammar</div>
+            </div>
+            <div style="flex: 1 1 220px; padding: 20px 24px">
+              <div style="font-size: 13px; color: #5B6170">Business</div>
+              <div style="font-size: 40px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em">91<span style="font-size: 16px; color: #5B6170"> /100</span></div>
+              <div style="font-size: 13px; color: #5B6170">Accuracy, authority, outcome</div>
+            </div>
+          </section>
+
+          <section style="background: #F4F6FA; border-radius: 22px; padding: 20px 24px">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px">
+              <h2 style="margin: 0; font-size: 14px; font-weight: 600">The 7Cs</h2>
+              <span style="font-size: 12px; color: #5B6170">How your reply landed</span>
+            </div>
+            <sc-for list="{{cs}}" as="c" hint-placeholder-count="7">
+              <div style="display: grid; grid-template-columns: 110px minmax(0, 1fr) 100px; align-items: center; gap: 16px; min-height: 44px; border-top: {{c.rule}}">
+                <div style="font-size: 15px">{{c.name}}</div>
+                <div style="display: flex; flex-direction: column; gap: 6px; padding: 8px 0">
+                  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px" aria-hidden="true">
+                    <span style="height: 6px; border-radius: 999px; background: {{c.s1}}"></span>
+                    <span style="height: 6px; border-radius: 999px; background: {{c.s2}}"></span>
+                    <span style="height: 6px; border-radius: 999px; background: {{c.s3}}"></span>
+                  </div>
+                  <div style="font-size: 12px; color: #5B6170">{{c.why}}</div>
+                </div>
+                <div style="text-align: right"><span style="white-space: nowrap; padding: 2px 9px; border-radius: 999px; background: {{c.pillBg}}; color: {{c.pillInk}}; font-size: 12px; font-weight: 500">{{c.level}}</span></div>
+              </div>
+            </sc-for>
+          </section>
+
+          <section style="background: #F4F6FA; border-radius: 22px; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 20px">
+            <h2 style="margin: 0; flex: 1 1 100%; font-size: 14px; font-weight: 600">Coach's notes</h2>
+            <div style="flex: 1 1 220px">
+              <div style="font-size: 13px; font-weight: 600; color: #1E7A4C">What worked</div>
+              <p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5">A fact, the real status, and a next step with a time. Marcus can plan around that.</p>
+            </div>
+            <div style="flex: 1 1 220px">
+              <div style="font-size: 13px; font-weight: 600; color: #92400E">Try next time</div>
+              <p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5">Name his pressure first: “I know the crew is waiting.”</p>
+            </div>
+            <div style="flex: 1 1 220px">
+              <div style="font-size: 13px; font-weight: 600; color: #1F3F8F">Why it mattered</div>
+              <p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5">You can't confirm an endorsement the carrier hasn't issued. A promise would put the agency at risk.</p>
+            </div>
+            <div style="flex: 1 1 100%; background: #FFFFFF; border: 1px solid #E6E9F0; border-radius: 14px; padding: 14px 18px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap">
+              <span style="font-size: 12px; color: #5B6170">Rule of thumb</span>
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; line-height: 1.2">Fact, then status, then the next step with a time.</span>
+            </div>
+          </section>
+        </div>
+
+        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+          <section style="background: #FFF0C2; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+            <div style="font-size: 13px; color: #7A3E00">New badge</div>
+            <svg width="110" height="124" viewBox="0 0 150 170" role="img" aria-label="Straight Shooter badge">
+              <path d="M48 104l-14 58 22-11 14 19 12-62z" fill="#2459E0"/>
+              <path d="M102 104l14 58-22-11-14 19-12-62z" fill="#1F3F8F"/>
+              <circle cx="75" cy="72" r="62" fill="#FFFFFF" stroke="#14161C" stroke-width="3"/>
+              <circle cx="75" cy="72" r="48" fill="#FFD66B"/>
+              <circle cx="75" cy="72" r="30" fill="none" stroke="#14161C" stroke-width="4"/>
+              <circle cx="75" cy="72" r="14" fill="none" stroke="#14161C" stroke-width="4"/>
+              <circle cx="75" cy="72" r="4" fill="#14161C"/>
+              <path d="M108 39L79 68M108 39h-11M108 39v11" stroke="#14161C" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1">Straight Shooter</div>
+            <div style="font-size: 14px; line-height: 1.45; color: #5A3A10">A truthful, specific update under deadline pressure.</div>
+          </section>
+
+          <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; justify-content: space-between; align-items: baseline">
+              <span style="font-size: 24px; font-variant-numeric: tabular-nums">+85 <span style="font-size: 14px; color: #5B6170">XP</span></span>
+              <span style="font-size: 13px; color: #5B6170; font-variant-numeric: tabular-nums"><span style="color: #14161C">425</span> / 500</span>
+            </div>
+            <div style="height: 8px; border-radius: 999px; background: #E3E7EF; overflow: hidden"><div style="width: 85%; height: 100%; border-radius: 999px; background: {{accent}}"></div></div>
+            <div style="font-size: 13px; color: #5B6170">60 base + 25 performance · +15 coins</div>
+          </section>
+
+          <section style="background: #DCE8FF; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+            <h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #1F3F8F">Marcus's account</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #FFFFFF; border-radius: 14px">
+              <div style="padding: 10px 12px; border-right: 1px solid #EEF1F6"><div style="font-size: 12px; color: #5B6170">Trust</div><div style="font-size: 20px; font-variant-numeric: tabular-nums">6 <span style="font-size: 12px; color: #1E7A4C">+1</span></div></div>
+              <div style="padding: 10px 12px; border-right: 1px solid #EEF1F6"><div style="font-size: 12px; color: #5B6170">Respect</div><div style="font-size: 20px; font-variant-numeric: tabular-nums">7 <span style="font-size: 12px; color: #1E7A4C">+2</span></div></div>
+              <div style="padding: 10px 12px"><div style="font-size: 12px; color: #5B6170">Anger</div><div style="font-size: 20px; font-variant-numeric: tabular-nums">5 <span style="font-size: 12px; color: #1E7A4C">−1</span></div></div>
+            </div>
+            <div style="font-size: 13px; color: #1F3F8F; line-height: 1.5">New task: call Marcus by 1:30 PM. Status stays on Watch until the certificate is delivered.</div>
+          </section>
+
+          <a href="DesktopDesk.dc.html" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 999px; background: #14161C; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Collect and return to desk</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2459E0","options":["#2459E0","#1B6E66","#E0662F","#14161C"]},"$preview":{"width":1440,"height":1040}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#2459E0';
+    const off = '#DCE1EA';
+    const lv = {
+      strong: { level: 'Strong', n: 3, pillBg: '#DCFAE5', pillInk: '#04250E' },
+      good: { level: 'Good', n: 2, pillBg: '#E3E7EF', pillInk: '#3D4250' },
+      work: { level: 'Needs work', n: 1, pillBg: '#FFF4D6', pillInk: '#7A3E00' }
+    };
+    const rows = [
+      ['Clear', 'strong', 'One idea per sentence; no jargon he would trip on'],
+      ['Concise', 'good', 'Three sentences; the second could be shorter'],
+      ['Concrete', 'strong', 'Two real times: 9:40 and 1:30'],
+      ['Correct', 'strong', 'Called it pending, not issued'],
+      ['Coherent', 'strong', 'Past, present, next, in that order'],
+      ['Complete', 'good', 'Did not say what happens if the carrier misses 1:30'],
+      ['Courteous', 'work', 'No acknowledgement of his pressure']
+    ];
+    const cs = rows.map(([name, k, why], i) => {
+      const l = lv[k];
+      return { name, why, level: l.level, pillBg: l.pillBg, pillInk: l.pillInk, rule: i === 0 ? 'none' : '1px solid #E3E7EF', s1: accent, s2: l.n >= 2 ? accent : off, s3: l.n >= 3 ? accent : off };
+    });
+    return { accent, cs };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "_note": "PLACEHOLDER values until playtesting (open decisions 3-6). Server-side only; the client never computes authoritative scores.",
+  "version": 1,
+  "account_status_thresholds": {
+    "on_track_min": 70,
+    "watch_min": 40,
+    "severe_incident_override": "at_risk"
+  },
+  "promotion_gates": {
+    "level_1": {
+      "xp": 500,
+      "calls_complete": 9,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true
+    }
+  },
+  "thought_unlocks": {
+    "thought_1": {
+      "trust_min": 6
+    },
+    "thought_2": {
+      "trust_min": 8,
+      "ei_min": "good"
+    }
+  },
+  "streak": {
+    "qualifying_per_day": 1,
+    "freeze_covers_days": 1,
+    "freezes_max_held": 2
+  },
+  "feature_unlocks": {
+    "clients": "after_first_scorecard",
+    "inbox": "after_call_2",
+    "journal": "after_first_consequential_decision",
+    "shop": "after_level_1_review"
+  },
+  "c7Weights": {
+    "clear": 1,
+    "concise": 1,
+    "concrete": 1,
+    "correct": 1,
+    "coherent": 1,
+    "complete": 1,
+    "courteous": 1
+  },
+  "levelCuts": {
+    "strong": 2.5,
+    "good": 1.5
+  },
+  "criticalBusinessCap": 40,
+  "xpBase": 60,
+  "xpPerformanceMax": 25,
+  "coinsBase": 5,
+  "coinsPerformanceMax": 10,
+  "badges": {
+    "straightShooter": {
+      "requires": {
+        "correct": 2.5,
+        "concrete": 2.5
+      },
+      "noCritical": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "careerverse-client",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist --cname career-verse.onerishi.in --nojekyll --dotfiles"
+  },
+  "dependencies": {
+    "lottie-web": "^5.12.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}

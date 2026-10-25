@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 64 64" role="img" aria-label="Priya Raman looks calm">
+      
+      <path d="M28 10a4 4 0 1 0 8 0a4 4 0 1 0-8 0z" fill="#24140E"/>
+      <path d="M7 64c2-12 12.5-18.5 25-18.5S55 52 57 64z" fill="#2B3D6E"/>
+      <path d="M26 46l6 6.5 6-6.5" fill="#FFFFFF"/>
+      <rect x="27.5" y="37" width="9" height="10" rx="3" fill="#B57C51"/>
+      <ellipse cx="21.6" cy="29.5" rx="1.6" ry="2.4" fill="#C68B5E"/><ellipse cx="42.4" cy="29.5" rx="1.6" ry="2.4" fill="#C68B5E"/>
+      <ellipse cx="32" cy="28" rx="10.5" ry="12" fill="#C68B5E"/>
+      <path d="M20.8 28c0-9.8 5-15 11.2-15s11.2 5.2 11.2 15c-2-5-6-7.6-11.2-7.6S22.8 23 20.8 28z" fill="#24140E"/>
+      <path d="M24.5 24.2h5M34.5 24.2h5" stroke="#1B1F2A" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+      <circle cx="28" cy="29" r="1.3" fill="#1B1F2A"/><circle cx="36" cy="29" r="1.3" fill="#1B1F2A"/>
+      <path d="M29 34.6q3 1.2 6 0" stroke="#1B1F2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </svg>

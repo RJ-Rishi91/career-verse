@@ -1,0 +1,38 @@
+name: Deploy CareerVerse to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm --prefix client install
+
+      - name: Build client
+        run: npm --prefix client run build
+
+      - name: Deploy to GitHub Pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: client/dist
+          branch: gh-pages
+          cname: career-verse.onerishi.in

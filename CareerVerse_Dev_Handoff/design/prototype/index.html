@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CareerVerse — interactive prototype</title>
+  <meta name="description" content="Clickable, responsive prototype of the CareerVerse Level 1 core loop. No AI, no backend.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="frame" id="frame">
+    <div class="app" id="app" aria-live="off"></div>
+  </div>
+
+  <div class="proto-bar" role="group" aria-label="Prototype controls">
+    <span class="proto-bar__label">Layout</span>
+    <button type="button" class="proto-bar__btn" data-preview="auto" aria-pressed="true">Auto</button>
+    <button type="button" class="proto-bar__btn" data-preview="phone" aria-pressed="false">Phone</button>
+    <button type="button" class="proto-bar__btn" data-preview="desktop" aria-pressed="false">Desktop</button>
+    <span class="proto-bar__sep" aria-hidden="true"></span>
+    <button type="button" class="proto-bar__btn" data-action="reset-demo">Reset demo</button>
+  </div>
+
+  <div class="sr-only" id="live" aria-live="polite"></div>
+
+  <script src="vendor/lottie_light.min.js"></script>
+  <script src="animations.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

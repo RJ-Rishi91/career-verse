@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CareerVerse — Rewards</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#14161C}a:hover{color:#2459E0}
+a:focus-visible{outline:2px solid #2459E0;outline-offset:2px}
+@keyframes cvFill{from{width:68%}to{width:85%}}
+@keyframes cvRise{from{transform:translateY(14px) scale(.94);opacity:0}to{transform:none;opacity:1}}
+.cv-fill{animation:cvFill 1.1s .4s cubic-bezier(.2,.8,.2,1) both}
+.cv-rise{animation:cvRise .6s cubic-bezier(.2,.8,.2,1) both}
+@media (prefers-reduced-motion: reduce){.cv-fill,.cv-rise{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; color: #14161C; font-family: 'Instrument Sans', Inter, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column; overflow: hidden">
+
+  <section style="background: #FFF0C2; padding: 40px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+    <div style="font-size: 13px; color: #7A3E00">New badge</div>
+    <svg class="cv-rise" width="150" height="170" viewBox="0 0 150 170" role="img" aria-label="Straight Shooter badge">
+      <path d="M48 104l-14 58 22-11 14 19 12-62z" fill="#2459E0"/>
+      <path d="M102 104l14 58-22-11-14 19-12-62z" fill="#1F3F8F"/>
+      <circle cx="75" cy="72" r="62" fill="#FFFFFF"/>
+      <circle cx="75" cy="72" r="62" fill="none" stroke="#14161C" stroke-width="3"/>
+      <circle cx="75" cy="72" r="48" fill="#FFD66B"/>
+      <circle cx="75" cy="72" r="30" fill="none" stroke="#14161C" stroke-width="4"/>
+      <circle cx="75" cy="72" r="14" fill="none" stroke="#14161C" stroke-width="4"/>
+      <circle cx="75" cy="72" r="4" fill="#14161C"/>
+      <path d="M108 39L79 68" stroke="#14161C" stroke-width="4" stroke-linecap="round"/>
+      <path d="M108 39h-11M108 39v11" stroke="#14161C" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1; letter-spacing: -0.01em">Straight Shooter</h1>
+      <p style="margin: 10px auto 0; max-width: 300px; font-size: 15px; line-height: 1.5; color: #5A3A10">A truthful, specific update under deadline pressure, without promising what wasn't yours to promise.</p>
+    </div>
+  </section>
+
+  <div style="flex: 1 1 auto; padding: 20px 16px 16px; display: flex; flex-direction: column; gap: 16px">
+    <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <div style="font-size: 24px; font-variant-numeric: tabular-nums">+85 <span style="font-size: 14px; color: #5B6170">XP</span></div>
+        <div style="font-size: 13px; color: #5B6170; font-variant-numeric: tabular-nums"><span style="color: #14161C">425</span> / 500 to Level 2</div>
+      </div>
+      <div style="height: 8px; border-radius: 999px; background: #E3E7EF; overflow: hidden">
+        <div class="cv-fill" style="width: 85%; height: 100%; border-radius: 999px; background: {{accent}}"></div>
+      </div>
+      <div style="font-size: 13px; color: #5B6170; line-height: 1.45">Promotion also needs a healthy portfolio and a passed boss review. XP alone won't get you there.</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: #FFFFFF; border: 1px solid #E6E9F0; border-radius: 14px; margin-top: 2px">
+        <div style="padding: 12px 14px; border-right: 1px solid #EEF1F6">
+          <div style="font-size: 12px; color: #5B6170">Coins</div>
+          <div style="font-size: 22px; font-variant-numeric: tabular-nums">135 <span style="font-size: 13px; color: #1E7A4C">+15</span></div>
+        </div>
+        <div style="padding: 12px 14px">
+          <div style="font-size: 12px; color: #5B6170">Streak</div>
+          <div style="font-size: 22px; font-variant-numeric: tabular-nums">5 <span style="font-size: 13px; color: #5B6170">days</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div style="flex: 1 1 auto"></div>
+
+    <a href="Client.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 18px; background: #FFE3DA; text-decoration: none; color: #14161C">
+      <span style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; color: #8A2E12; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px">DW</span>
+      <span style="flex: 1 1 auto; min-width: 0">
+        <span style="display: block; font-size: 12px; color: #8A2E12">Up next · Instruction call</span>
+        <span style="display: block; font-size: 15px; font-weight: 600">Dana is nervous about a renewal</span>
+      </span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A2E12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </a>
+    <a href="Main.dc.html" style="display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; background: #14161C; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Back to my desk</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2459E0","options":["#2459E0","#1B6E66","#E0662F","#14161C"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2459E0' };
+  }
+}
+</script>
+</body>
+</html>

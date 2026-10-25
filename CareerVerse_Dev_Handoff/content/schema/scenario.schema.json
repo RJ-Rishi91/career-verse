@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "careerverse/scenario.schema.json",
+  "title": "CareerVerse scenario (draft schema v1)",
+  "description": "Authored, deterministic call scenario. Developer recommendation, not final. Validate before publish: references, reachability, option counts, scoring completeness.",
+  "type": "object",
+  "required": ["scenario_id", "version", "status", "level", "client_id", "scenario_type", "learning_objectives", "business_objective", "opening_node_id", "nodes"],
+  "properties": {
+    "scenario_id": { "type": "string", "pattern": "^L[0-9]{1,2}_[A-Z0-9_]+$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "in_review", "published", "retired"] },
+    "level": { "type": "integer", "minimum": 1, "maximum": 30 },
+    "client_id": { "type": "string" },
+    "scenario_type": { "enum": ["instruction_call", "status_update_call", "feedback_call", "escalation_call", "email_mission", "boss_mission"] },
+    "learning_objectives": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "business_objective": { "type": "string", "minLength": 10 },
+    "title": { "type": "string" },
+    "teaser": { "type": "string" },
+    "known_facts": { "type": "array", "items": { "type": "object", "required": ["time", "text"], "properties": { "time": { "type": "string" }, "text": { "type": "string" } } } },
+    "rule_of_thumb": { "type": "string" },
+    "base_meters": { "$ref": "#/$defs/meters" },
+    "opening_node_id": { "type": "string" },
+    "review": { "type": "object" },
+    "nodes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/node" } }
+  },
+  "$defs": {
+    "meters": {
+      "type": "object", "required": ["trust", "respect", "anger"],
+      "properties": { "trust": { "type": "integer", "minimum": 0, "maximum": 10 }, "respect": { "type": "integer", "minimum": 0, "maximum": 10 }, "anger": { "type": "integer", "minimum": 0, "maximum": 10 } }
+    },
+    "delta": {
+      "type": "object", "required": ["trust", "respect", "anger"],
+      "properties": { "trust": { "type": "integer", "minimum": -3, "maximum": 3 }, "respect": { "type": "integer", "minimum": -3, "maximum": 3 }, "anger": { "type": "integer", "minimum": -3, "maximum": 3 } }
+    },
+    "c7": {
+      "type": "object",
+      "required": ["clear", "concise", "concrete", "correct", "coherent", "complete", "courteous"],
+      "additionalProperties": false,
+      "properties": {
+        "clear": { "$ref": "#/$defs/level" }, "concise": { "$ref": "#/$defs/level" }, "concrete": { "$ref": "#/$defs/level" },
+        "correct": { "$ref": "#/$defs/level" }, "coherent": { "$ref": "#/$defs/level" }, "complete": { "$ref": "#/$defs/level" }, "courteous": { "$ref": "#/$defs/level" }
+      }
+    },
+    "level": { "type": "integer", "minimum": 0, "maximum": 3, "description": "0 = missing, 1 = needs work, 2 = good, 3 = strong. Use the anchored rubric." },
+    "node": {
+      "type": "object",
+      "required": ["node_id", "type", "line", "options"],
+      "properties": {
+        "node_id": { "type": "string" },
+        "type": { "enum": ["decision", "dialogue"] },
+        "speaker": { "type": "string" },
+        "line": { "type": "string" },
+        "presentation": { "const": "sequential_commit" },
+        "consequential": { "type": "boolean", "description": "Opens the lock-in sheet. Until tiered confirmation is approved, treat every decision as consequential." },
+        "options": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "$ref": "#/$defs/option" } }
+      }
+    },
+    "option": {
+      "type": "object",
+      "required": ["option_id", "text", "reaction", "effects", "critical_flags", "coaching"],
+      "properties": {
+        "option_id": { "type": "string" },
+        "text": { "type": "string", "minLength": 3 },
+        "reaction": { "type": "string" },
+        "expression": { "enum": ["neutral", "worried", "pleased", "relieved", "frustrated"] },
+        "next_node_id": { "type": ["string", "null"] },
+        "ends_call": { "type": "boolean" },
+        "effects": {
+          "type": "object", "required": ["relationship", "communication_7c", "business"],
+          "properties": { "relationship": { "$ref": "#/$defs/delta" }, "communication_7c": { "$ref": "#/$defs/c7" }, "business": { "$ref": "#/$defs/level" } }
+        },
+        "critical_flags": { "type": "array", "items": { "enum": ["commit_beyond_authority", "confirmed_unverified_coverage", "misstated_fact", "breached_privacy", "abusive_tone"] } },
+        "recovery": { "type": "boolean" },
+        "coaching": {
+          "type": "object", "required": ["worked", "next", "why"],
+          "properties": { "worked": { "type": "string" }, "next": { "type": "string" }, "why": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CareerVerse — Client profile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#14161C}a:hover{color:#2459E0}
+button{font-family:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid #2459E0;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1080px; box-sizing: border-box; background: #FFFFFF; color: #14161C; font-family: 'Instrument Sans', Inter, system-ui, sans-serif; font-size: 14px; display: flex; flex-direction: column">
+
+  <header style="height: 56px; flex: none; display: flex; align-items: center; gap: 6px; padding: 0 16px 0 6px; background: #F4F6FA">
+    <a href="Main.dc.html" aria-label="Back to desk" style="width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #14161C">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </a>
+    <div style="font-weight: 600; font-size: 15px">Clients</div>
+  </header>
+
+  <div style="padding: 16px; display: flex; flex-direction: column; gap: 16px">
+
+    <section style="background: #DCE8FF; border-radius: 22px; padding: 20px 20px 0; display: flex; align-items: flex-end; gap: 12px; overflow: hidden">
+      <div style="flex: 1 1 auto; min-width: 0; padding-bottom: 20px">
+        <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1">Marcus Bell</h1>
+        <div style="font-size: 13px; color: #1F3F8F; margin-top: 6px">Account manager · Bellrock Commercial, Houston TX</div>
+        <div style="display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap">
+          <span style="flex: none; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFF4D6; color: #7A3E00; font-size: 12px; font-weight: 500">Watch</span>
+          <span style="flex: none; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; color: #3D4250; font-size: 12px; font-weight: 500">High importance</span>
+        </div>
+      </div>
+      <svg width="120" height="132" viewBox="4 6 56 58" aria-hidden="true" style="flex: none">
+        <path d="M7 64c2-12 12.5-18.5 25-18.5S55 52 57 64z" fill="#2B3A5C"/>
+        <path d="M25.5 45.5L32 53l6.5-7.5" fill="#FFFFFF"/>
+        <path d="M30.6 49.5h2.8l.8 9.5-2.2 2-2.2-2z" fill="#2459E0"/>
+        <rect x="27.5" y="37" width="9" height="10" rx="3" fill="#7E4F33"/>
+        <ellipse cx="21.6" cy="29.5" rx="1.6" ry="2.4" fill="#8D5A3B"/><ellipse cx="42.4" cy="29.5" rx="1.6" ry="2.4" fill="#8D5A3B"/>
+        <ellipse cx="32" cy="28" rx="10.5" ry="12" fill="#8D5A3B"/>
+        <path d="M21 27c0-9 4.8-14 11-14s11 4.6 11 12.5c-3-3.6-7.4-5-11-5s-8 1.6-11 6.5z" fill="#1B1F2A"/>
+        <path d="M24.5 24.2l5-.5M39.5 24.2l-5-.5" stroke="#1B1F2A" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+        <circle cx="28" cy="29" r="1.3" fill="#1B1F2A"/><circle cx="36" cy="29" r="1.3" fill="#1B1F2A"/>
+        <path d="M29 34.4q3 2 6 0" stroke="#1B1F2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </section>
+
+    <div role="tablist" aria-label="Client sections" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 999px; background: #F4F6FA">
+      <button type="button" role="tab" aria-selected="{{ovSel}}" onClick="{{showOverview}}" style="min-height: 44px; border-radius: 999px; border: {{ovBorder}}; background: {{ovBg}}; color: {{ovFg}}; font-weight: 600; font-size: 14px; cursor: pointer">Overview</button>
+      <button type="button" role="tab" aria-selected="{{hiSel}}" onClick="{{showHistory}}" style="min-height: 44px; border-radius: 999px; border: {{hiBorder}}; background: {{hiBg}}; color: {{hiFg}}; font-weight: 600; font-size: 14px; cursor: pointer">History</button>
+    </div>
+
+    <sc-if value="{{overview}}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+          <h2 style="margin: 0; font-size: 14px; font-weight: 600">Relationship</h2>
+          <sc-for list="{{meters}}" as="m" hint-placeholder-count="3">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline">
+                <span style="font-size: 14px">{{m.label}}</span>
+                <span style="font-size: 13px; color: #5B6170; font-variant-numeric: tabular-nums"><span style="color: #14161C; font-size: 16px">{{m.value}}</span>/10 · {{m.word}}</span>
+              </div>
+              <div style="height: 6px; border-radius: 999px; background: #E3E7EF; margin-top: 7px; overflow: hidden">
+                <div style="height: 100%; width: {{m.pct}}; border-radius: 999px; background: {{m.color}}"></div>
+              </div>
+            </div>
+          </sc-for>
+        </section>
+
+        <section style="background: #FFFFFF; border: 1px solid #E6E9F0; border-radius: 22px; padding: 20px">
+          <div style="font-size: 12px; color: #5B6170">What Marcus is thinking · unlocked at trust 6</div>
+          <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.2">“The last agency told me ‘it's handled’ twice. Both times it wasn't.”</p>
+        </section>
+
+        <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+          <h2 style="margin: 0; font-size: 14px; font-weight: 600">How he likes to be told</h2>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap">
+            <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E6E9F0">Bottom line first</span>
+            <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E6E9F0">Exact times, not “soon”</span>
+            <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E6E9F0">Short calls</span>
+            <span style="font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #FDECEA; color: #7A1D14">Loses patience with vague answers</span>
+          </div>
+        </section>
+
+        <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px">
+            <h2 style="margin: 0; font-size: 14px; font-weight: 600">Client cycle</h2>
+            <span style="font-size: 12px; color: #5B6170; font-variant-numeric: tabular-nums">2 of 3 calls</span>
+          </div>
+          <sc-for list="{{cycle}}" as="s" hint-placeholder-count="3">
+            <div style="display: flex; align-items: center; gap: 12px; height: 52px; box-sizing: border-box; padding: 0 14px; border-radius: 14px; background: #FFFFFF; border: {{s.border}}">
+              <span style="flex: none; width: 22px; height: 22px; border-radius: 50%; background: {{s.dotBg}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+                <sc-if value="{{s.done}}" hint-placeholder-val="{{ true }}">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                </sc-if>
+              </span>
+              <span style="flex: 1 1 auto; font-size: 14px">{{s.name}}</span>
+              <span style="font-size: 12px; color: #5B6170">{{s.when}}</span>
+            </div>
+          </sc-for>
+        </section>
+
+        <section style="background: #F4F6FA; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+          <h2 style="margin: 0 0 4px; font-size: 14px; font-weight: 600">Open tasks <span style="font-weight: 400; color: #5B6170">2</span></h2>
+          <div style="display: flex; align-items: center; gap: 12px; height: 63px; box-sizing: border-box; padding: 0 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E6E9F0">
+            <div style="flex: 1 1 auto"><div style="font-size: 14px; font-weight: 600">Call Marcus with a firm time</div><div style="font-size: 12px; color: #5B6170">You promised this on the last call</div></div>
+            <span style="flex: none; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFF4D6; color: #7A3E00; font-size: 12px; font-weight: 500">1:30 PM</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: 63px; box-sizing: border-box; padding: 0 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E6E9F0">
+            <div style="flex: 1 1 auto"><div style="font-size: 14px; font-weight: 600">Deliver the COI to the GC</div><div style="font-size: 12px; color: #5B6170">Waiting on the carrier's endorsement</div></div>
+            <span style="flex: none; white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FDECEA; color: #7A1D14; font-size: 12px; font-weight: 500">3:00 PM</span>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{history}}" hint-placeholder-val="{{ false }}">
+      <section style="background: #F4F6FA; border-radius: 22px; padding: 20px">
+        <sc-for list="{{events}}" as="e" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px">
+            <div style="display: flex; flex-direction: column; align-items: center">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: {{e.dot}}; margin-top: 5px"></span>
+              <span style="flex: 1 1 auto; width: 1px; background: #D5DAE3; margin: 6px 0"></span>
+            </div>
+            <div style="padding-bottom: 20px">
+              <div style="font-size: 12px; color: #5B6170">{{e.when}} · {{e.kind}}</div>
+              <div style="font-size: 15px; font-weight: 600; margin-top: 2px">{{e.title}}</div>
+              <div style="font-size: 14px; color: #3D4250; line-height: 1.45; margin-top: 2px">{{e.detail}}</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="font-size: 13px; color: #5B6170; padding-left: 32px">This record is permanent. Recovering adds new entries; it never erases old ones.</div>
+      </section>
+    </sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2459E0","options":["#2459E0","#1B6E66","#E0662F","#14161C"]},"$preview":{"width":390,"height":1080}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'overview' };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#2459E0';
+    const ov = this.state.tab === 'overview';
+    const on = { bg: '#FFFFFF', fg: '#14161C', border: '1px solid #E6E9F0' };
+    const offT = { bg: 'transparent', fg: '#5B6170', border: 'none' };
+    const a = ov ? on : offT;
+    const b = ov ? offT : on;
+    return {
+      overview: ov, history: !ov,
+      ovSel: ov ? 'true' : 'false', hiSel: ov ? 'false' : 'true',
+      ovBg: a.bg, ovFg: a.fg, ovBorder: a.border,
+      hiBg: b.bg, hiFg: b.fg, hiBorder: b.border,
+      showOverview: () => this.setState({ tab: 'overview' }),
+      showHistory: () => this.setState({ tab: 'history' }),
+      meters: [
+        { label: 'Trust', value: 6, pct: '60%', word: 'Building', color: accent },
+        { label: 'Respect', value: 7, pct: '70%', word: 'Solid', color: '#14161C' },
+        { label: 'Anger', value: 5, pct: '50%', word: 'Tense', color: '#C2410C' }
+      ],
+      cycle: [
+        { name: 'Instruction call', when: 'Yesterday', done: true, dotBg: '#1E7A4C', border: '1px solid #E6E9F0' },
+        { name: 'Status update call', when: 'Today 11:05', done: true, dotBg: '#1E7A4C', border: '1px solid #E6E9F0' },
+        { name: 'Feedback call', when: 'Up next', done: false, dotBg: '#D5DAE3', border: '1px dashed #C4CBD8' }
+      ],
+      events: [
+        { when: 'Today 11:05', kind: 'Call', title: 'Status update: an honest timeline', detail: 'You said the endorsement was pending and committed to a 1:30 update.', dot: accent },
+        { when: 'Today 9:40', kind: 'Email', title: 'COI request sent to the carrier', detail: 'Additional insured: Riverside GC. Waiting on the endorsement.', dot: '#8A90A0' },
+        { when: 'Yesterday', kind: 'Call', title: 'Instruction: COI for the Riverside job', detail: 'You confirmed the GC name and the certificate holder address before hanging up.', dot: accent },
+        { when: 'Last Monday', kind: 'Account', title: 'Assigned to your desk', detail: 'Marcus moved to the agency after a bad experience with his previous one.', dot: '#8A90A0' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
