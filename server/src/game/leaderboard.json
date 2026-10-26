@@ -1,0 +1,78 @@
+{
+  "size": 30,
+  "periods": [
+    {
+      "id": "weekly",
+      "reset": "Monday 00:00 UTC",
+      "default": true
+    },
+    {
+      "id": "monthly",
+      "reset": "1st 00:00 UTC"
+    },
+    {
+      "id": "all_time",
+      "reset": null
+    }
+  ],
+  "points": {
+    "name": "Career Points (CP)",
+    "per_scorecard": "round(((communication + business) / 2) * type_weight)",
+    "type_weight": {
+      "instruction_call": 1,
+      "status_update_call": 1,
+      "feedback_call": 1,
+      "escalation_call": 1.2,
+      "email_mission": 0.6,
+      "boss_mission": 2,
+      "boss_variant": 1.5,
+      "team_delegation": 1.2,
+      "team_coaching": 1.2,
+      "team_one_on_one": 1.2,
+      "remediation_call": 0.5
+    },
+    "unrecovered_critical_multiplier": 0.5,
+    "daily_counted_scorecards_max": 4,
+    "review_mode": 0,
+    "onboarding": 0
+  },
+  "ties": [
+    "higher average communication in period",
+    "earlier time reaching the points"
+  ],
+  "visibility": {
+    "opt_in": true,
+    "prompt": "after first promotion and from the leaderboard page",
+    "default_handle": "First name + last initial (editable, unique, filtered)",
+    "shown": [
+      "rank",
+      "handle",
+      "avatar",
+      "title",
+      "CP",
+      "top badge",
+      "Top Voice marker"
+    ],
+    "never_shown": [
+      "email",
+      "real full name unless the player chose it",
+      "bottom ranks"
+    ],
+    "own_rank_always_visible": true
+  },
+  "snapshot": {
+    "live_refresh_minutes": 15,
+    "freeze_at_period_end": true,
+    "awards_at_freeze": [
+      "top_30",
+      "podium",
+      "number_one"
+    ]
+  },
+  "moderation": {
+    "admin_can_hide_player": true,
+    "admin_can_rename_handle": true,
+    "handle_filter": "blocked-words list + no emails/URLs",
+    "exclusions_logged_in_audit": true
+  }
+}

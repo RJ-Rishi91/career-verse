@@ -1,0 +1,342 @@
+{
+  "scenario_id": "L1_BOSS_FIRST_REVIEW",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "rosa-delgado",
+  "scenario_type": "boss_mission",
+  "learning_objectives": [
+    "staying_within_authority",
+    "prioritising",
+    "clear_updates"
+  ],
+  "business_objective": "Pass your first review by applying this level's skills to new situations.",
+  "title": "First review with Rosa",
+  "teaser": "Rosa replays three moments from your week. Show the judgment you've built.",
+  "known_facts": [
+    {
+      "time": "Level 1",
+      "text": "Your first week on the desk"
+    }
+  ],
+  "rule_of_thumb": "Fact, then status, then the next step with a time.",
+  "base_meters": {
+    "trust": 5,
+    "respect": 5,
+    "anger": 0
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "mentor",
+      "line": "Before your review, a quick one. Marcus emails at 4:55 asking if the Riverside certificate also covers a second job site. What do you do?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Reply that I've got it and will check with the carrier first thing tomorrow, then confirm by 10 a.m. I won't say it's covered until the carrier confirms.",
+          "reaction": "That's the answer.",
+          "expression": "pleased",
+          "next_node_id": "d2",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Acknowledge, plan, time, and no guessing.",
+            "next": "Keep it.",
+            "why": "A second location may need its own certificate or endorsement."
+          },
+          "tags": [
+            "stayed_in_authority",
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Tell him yes so he isn't worried overnight.",
+          "reaction": "And if it isn't?",
+          "expression": "worried",
+          "next_node_id": "d2",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "confirmed_unverified_coverage"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "Kind intent.",
+            "next": "Never confirm coverage to calm someone down.",
+            "why": "A wrong yes could send a crew to an uncovered site."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "Leave it until morning without replying.",
+          "reaction": "He'll think you ignored him.",
+          "expression": "neutral",
+          "next_node_id": "d2",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 0,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You didn't guess.",
+            "next": "A two-line acknowledgement costs nothing.",
+            "why": "Silence reads as no one's on it."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2",
+      "type": "decision",
+      "speaker": "mentor",
+      "line": "Next morning Dana and Priya both call at 9:00. Dana's renewal call is at 11. Priya's partners meet at 9:30. Who first?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Priya, briefly, because her deadline is 9:30. I'll text Dana that I'll call her at 9:40, well before her 11:00.",
+          "reaction": "Good prioritising.",
+          "expression": "pleased",
+          "next_node_id": "d3",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Earliest deadline first, and you told the other client.",
+            "next": "Always tell the one who waits.",
+            "why": "Prioritise by deadline and impact, not by title."
+          },
+          "tags": [
+            "early_warning"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Dana, because she's the agency owner.",
+          "reaction": "Even with Priya's 9:30?",
+          "expression": "worried",
+          "next_node_id": "d3",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You respected seniority.",
+            "next": "Weigh the deadline first.",
+            "why": "Priya would walk into her meeting empty-handed."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "Whoever calls back first.",
+          "reaction": "That's luck, not judgment.",
+          "expression": "neutral",
+          "next_node_id": "d3",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Fair-minded.",
+            "next": "Decide on purpose.",
+            "why": "Prioritising is a skill you'll need as you grow."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d3",
+      "type": "decision",
+      "speaker": "mentor",
+      "line": "Last one. What's the one thing you'd teach a new trainee from this level?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Facts, then status, then the next step with a time. And never confirm what only the carrier can confirm.",
+          "reaction": "You're ready.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You named both core lessons.",
+            "next": "Teach it to the next trainee.",
+            "why": "This is the base for every level ahead."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "B",
+          "text": "Keep the client happy whatever it takes.",
+          "reaction": "Whatever it takes?",
+          "expression": "worried",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You care about clients.",
+            "next": "Happy today can mean an incident tomorrow.",
+            "why": "Honesty within your authority keeps clients long term."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "deadline",
+    "coi"
+  ]
+}

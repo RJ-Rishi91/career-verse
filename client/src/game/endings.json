@@ -1,0 +1,45 @@
+[
+  {
+    "id": "trusted_manager",
+    "title": "Trusted Manager",
+    "priority": 1,
+    "rule": {
+      "portfolio_min": 80,
+      "team_health_min": 75,
+      "severe_incidents_max": 0,
+      "badges_min": 8
+    },
+    "body": "Clients ask for you by name and your team stays. You built that one honest answer at a time.",
+    "status": "draft"
+  },
+  {
+    "id": "steady_hand",
+    "title": "Steady Hand",
+    "priority": 2,
+    "rule": {
+      "portfolio_min": 65,
+      "team_health_min": 60,
+      "severe_incidents_max": 2
+    },
+    "body": "Not every call went well, but the unit runs, the numbers hold and people trust your word.",
+    "status": "draft"
+  },
+  {
+    "id": "hard_lessons",
+    "title": "Hard Lessons",
+    "priority": 3,
+    "rule": {
+      "severe_incidents_min": 3
+    },
+    "body": "You made it, but some promises cost more than they should have. The agency is wiser for it, and so are you.",
+    "status": "draft"
+  },
+  {
+    "id": "default",
+    "title": "Manager",
+    "priority": 99,
+    "rule": {},
+    "body": "You lead a unit now. The next chapter is yours to write.",
+    "status": "draft"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "q_calls_2",
+    "title": "Finish 2 calls",
+    "metric": "calls_completed",
+    "target": 2,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_calls_3",
+    "title": "Finish 3 calls",
+    "metric": "calls_completed",
+    "target": 3,
+    "reward": {
+      "coins": 15
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_concrete",
+    "title": "Earn Strong on Concrete",
+    "metric": "c7_strong:concrete",
+    "target": 1,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_correct",
+    "title": "Earn Strong on Correct",
+    "metric": "c7_strong:correct",
+    "target": 1,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_courteous",
+    "title": "Earn Strong on Courteous",
+    "metric": "c7_strong:courteous",
+    "target": 1,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_email",
+    "title": "Complete an email mission",
+    "metric": "email_missions",
+    "target": 1,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 2,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_glossary",
+    "title": "Finish a glossary round",
+    "metric": "glossary_rounds",
+    "target": 1,
+    "reward": {
+      "coins": 5
+    },
+    "min_level": 2,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_no_incident",
+    "title": "Finish 2 calls with no incident",
+    "metric": "calls_no_incident",
+    "target": 2,
+    "reward": {
+      "coins": 15
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_trust_up",
+    "title": "Raise any client's trust",
+    "metric": "trust_gain",
+    "target": 1,
+    "reward": {
+      "coins": 10
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_daily_goal",
+    "title": "Meet your daily goal",
+    "metric": "daily_goal_met",
+    "target": 1,
+    "reward": {
+      "freeze": 1
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_delegate",
+    "title": "Complete a delegation",
+    "metric": "delegations_done",
+    "target": 1,
+    "reward": {
+      "coins": 15
+    },
+    "min_level": 5,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_coach",
+    "title": "Finish a coaching call",
+    "metric": "coaching_calls",
+    "target": 1,
+    "reward": {
+      "coins": 20
+    },
+    "min_level": 5,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_review",
+    "title": "Replay a call in review mode",
+    "metric": "review_replays",
+    "target": 1,
+    "reward": {
+      "coins": 5
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "q_streak",
+    "title": "Keep your streak alive",
+    "metric": "streak_extended",
+    "target": 1,
+    "reward": {
+      "coins": 5
+    },
+    "min_level": 1,
+    "weight": 1,
+    "status": "in_review"
+  }
+]

@@ -3,8 +3,10 @@ import {
   CareerState,
   Client,
   CommittedChoice,
+  LeaderboardEntry,
   PlayerProfile,
   ScorecardResult,
+  ScenarioSummary,
   VisibleOption
 } from '../types/index.js';
 import { ContentService } from './contentService.js';
@@ -12,10 +14,8 @@ import { ScoringEngine } from './scoringEngine.js';
 import { isDbConnected } from '../config/db.js';
 import { PlayerModel } from '../models/Player.js';
 import { ClientModel } from '../models/ClientModel.js';
-import { CallSessionModel } from '../models/CallSession.js';
 import { DecisionEventModel } from '../models/DecisionEvent.js';
 
-// Deterministic seed order generator
 function hashString(s: string): number {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {
@@ -44,13 +44,16 @@ function seededOrder(n: number, seed: string): number[] {
 
 const clamp = (n: number) => Math.max(0, Math.min(10, n));
 
+const LB_FIRST = ['Maya', 'Leo', 'Ana', 'Sam', 'Ivy', 'Noah', 'Zoe', 'Eli', 'Ruby', 'Kai', 'Nia', 'Omar', 'Lena', 'Theo', 'Asha', 'Finn', 'Mila', 'Jude', 'Iris', 'Ravi', 'Cleo', 'Hugo', 'Esme', 'Arlo', 'Nora', 'Dev', 'Lucia', 'Ben', 'Tara', 'Yusuf', 'Gwen', 'Ezra', 'Priti', 'Max', 'Sana', 'Reed', 'Lia', 'Joel', 'Aya', 'Cole'];
+const LB_TITLES = ['Trainee Associate', 'Associate', 'Senior Associate', 'Executive Associate', 'Assistant Team Lead', 'Team Lead', 'Manager'];
+
 export class CareerService {
   private static playerMemory: PlayerProfile = {
     name: 'Alex Kumar',
     initials: 'AK',
     role: 'Virtual assistant',
     level: 1,
-    levelTitle: 'Rookie desk',
+    levelTitle: 'Trainee Associate',
     xp: 340,
     prevXp: 340,
     xpToNext: 500,
@@ -64,6 +67,10 @@ export class CareerService {
   };
 
   private static clientsMemory: Client[] = ContentService.getInitialClients();
+  private static completedScenariosMemory: Set<string> = new Set();
+  private static kudosSentMemory: Record<string, string> = {};
+  private static lbOptInMemory: boolean = false;
+
   private static activeCallMemory: {
     scenarioId: string;
     nodeId: string;
@@ -115,28 +122,119 @@ export class CareerService {
     return clients.find(c => c.id === id) || null;
   }
 
+  public static getAvailableScenarios(): ScenarioSummary[] {
+    const summaries = ContentService.getScenarioSummaries();
+    return summaries.map(s => ({
+      ...s,
+      completed: this.completedScenariosMemory.has(s.id)
+    }));
+  }
+
+  public static getGreeting(timeOverride: number | null = null): { line: string; band: string } {
+    const G = ContentService.getGreetings();
+    const now = new Date();
+    const hour = timeOverride ?? now.getHours();
+    const mins = hour * 60 + (timeOverride === null ? now.getMinutes() : 0);
+    const toMin = (t: string) => +t.slice(0, 2) * 60 + +t.slice(3);
+
+    const band = G.bands.find((b: any) => mins >= toMin(b.from) && mins <= toMin(b.to)) || G.bands[0];
+    const day = now.getDay();
+    let pool = G.lines[band.id];
+    let key = band.id;
+
+    if ((day === 0 || day === 6) && timeOverride === null) {
+      pool = G.context_lines.weekend;
+      key = 'weekend';
+    }
+
+    const seed = hashString(this.playerMemory.name + now.toDateString() + key);
+    const name = this.playerMemory.name.split(' ')[0];
+    const line = pool[seed % pool.length].replace('{name}', name);
+    return { line, band: band.id };
+  }
+
+  public static getLeaderboard(period: string = 'weekly'): LeaderboardEntry[] {
+    const s = hashString('lb:' + period);
+    const rows = LB_FIRST.map((f, i) => {
+      const h = hashString(f + period + s);
+      const pts = (period === 'all_time' ? 9000 : period === 'monthly' ? 2600 : 720) - i * (period === 'all_time' ? 170 : period === 'monthly' ? 52 : 15) + (h % 9);
+      return {
+        rank: i + 1,
+        handle: f + ' ' + String.fromCharCode(65 + (h % 26)) + '.',
+        title: LB_TITLES[(h >>> 3) % 7],
+        points: pts,
+        topVoice: i % 9 === 1,
+        badge: ['Master Communicator I', 'Problem Solver II', 'Trusted I', 'Straight Shooter I', 'Calm Voice I'][h % 5],
+        me: false
+      };
+    });
+
+    const myPts = this.lastResultMemory
+      ? (period === 'all_time' ? 1240 : period === 'monthly' ? 640 : Math.round((this.lastResultMemory.communication + this.lastResultMemory.business) / 2) + 410)
+      : (period === 'weekly' ? 380 : period === 'monthly' ? 520 : 1150);
+
+    const myEntry: LeaderboardEntry = {
+      rank: 0,
+      handle: this.playerMemory.name.split(' ')[0] + ' ' + this.playerMemory.name.split(' ')[1][0] + '.',
+      title: this.playerMemory.levelTitle,
+      points: myPts,
+      topVoice: false,
+      badge: this.lastResultMemory?.badge ? (this.lastResultMemory.badgeName || 'Straight Shooter I') : 'Crystal Clear I',
+      me: true
+    };
+
+    rows.push(myEntry);
+    rows.sort((a, b) => b.points - a.points);
+    rows.forEach((r, idx) => { r.rank = idx + 1; });
+
+    return rows.slice(0, 31);
+  }
+
+  public static setLeaderboardOptIn(optIn: boolean): boolean {
+    this.lbOptInMemory = optIn;
+    return this.lbOptInMemory;
+  }
+
+  public static sendKudos(handle: string, type: string): { success: boolean; kudosSent: Record<string, string> } {
+    if (Object.keys(this.kudosSentMemory).length >= 3) {
+      throw new Error('You have already sent your 3 daily kudos.');
+    }
+    this.kudosSentMemory[handle] = type;
+    return {
+      success: true,
+      kudosSent: { ...this.kudosSentMemory }
+    };
+  }
+
   public static async getCareerState(): Promise<CareerState> {
     const player = await this.getPlayer();
     const clients = await this.getClients();
-    const scenario = ContentService.getScenario();
-    const activeCall = await this.getActiveCallState();
+    const currentScenarioId = this.activeCallMemory?.scenarioId || 'L1_MARCUS_STATUS_UPDATE';
+    const scenario = ContentService.getScenario(currentScenarioId);
+    const activeCall = await this.getActiveCallState(currentScenarioId);
 
     return {
       player,
       clients,
       inbox: [
         { from: 'Dana Whitfield', title: 'Renewal documents attached', sub: 'Check the declarations page for changes' },
-        { from: 'Carrier underwriting', title: 'Endorsement in review', sub: 'Bellrock account, Riverside GC' }
+        { from: 'Carrier underwriting', title: 'Endorsement in review', sub: 'Bellrock account, Riverside GC' },
+        { from: 'Rosa Delgado', title: 'Feedback on your first week', sub: 'Review scheduled for Friday' }
       ],
       scenario,
       activeCall,
       lastResult: this.lastResultMemory,
+      completedScenarios: Array.from(this.completedScenariosMemory),
+      availableScenarios: this.getAvailableScenarios(),
       unlocks: {
         clients: true,
-        inbox: player.callsDone >= 2,
+        inbox: true,
         journal: true,
-        shop: false
-      }
+        shop: false,
+        leaderboard: true
+      },
+      kudosSent: { ...this.kudosSentMemory },
+      lbOptIn: this.lbOptInMemory
     };
   }
 
@@ -145,7 +243,7 @@ export class CareerService {
     const client = (await this.getClients()).find(c => c.id === scenario.clientId);
     if (!client) return null;
 
-    if (!this.activeCallMemory) {
+    if (!this.activeCallMemory || this.activeCallMemory.scenarioId !== scenarioId) {
       return null;
     }
 
@@ -181,13 +279,15 @@ export class CareerService {
 
   public static async startCall(scenarioId: string = 'L1_MARCUS_STATUS_UPDATE'): Promise<CallState> {
     const scenario = ContentService.getScenario(scenarioId);
-    const client = (await this.getClients()).find(c => c.id === scenario.clientId);
-    if (!client) throw new Error('Client not found');
+    let client = (await this.getClients()).find(c => c.id === scenario.clientId);
+    if (!client) {
+      client = (await this.getClients())[0];
+    }
 
     const startNode = scenario.nodes[scenario.start];
     const player = await this.getPlayer();
 
-    const order = seededOrder(startNode.options.length, `${player.careerSeed}:${scenario.start}`);
+    const order = seededOrder(startNode.options.length, `${player.careerSeed}:${scenario.id}:${scenario.start}`);
 
     this.activeCallMemory = {
       scenarioId,
@@ -205,7 +305,7 @@ export class CareerService {
   }
 
   public static async revealNextOption(scenarioId: string, nodeId: string, optionIndex: number): Promise<CallState> {
-    if (!this.activeCallMemory) {
+    if (!this.activeCallMemory || this.activeCallMemory.scenarioId !== scenarioId) {
       await this.startCall(scenarioId);
     }
     const st = this.activeCallMemory!;
@@ -230,7 +330,7 @@ export class CareerService {
       return this.idempotencyResponses.get(idempotencyKey);
     }
 
-    if (!this.activeCallMemory) {
+    if (!this.activeCallMemory || this.activeCallMemory.scenarioId !== scenarioId) {
       await this.startCall(scenarioId);
     }
 
@@ -243,7 +343,6 @@ export class CareerService {
       throw new Error(`Option ${optionId} not found in node ${nodeId}`);
     }
 
-    // Apply effects to relationship meters
     st.meters.trust = clamp(st.meters.trust + (opt.effects.trust || 0));
     st.meters.respect = clamp(st.meters.respect + (opt.effects.respect || 0));
     st.meters.anger = clamp(st.meters.anger + (opt.effects.anger || 0));
@@ -301,7 +400,7 @@ export class CareerService {
     }
 
     if (lastChoice.option.next === 'end') {
-      const scorecard = await this.getScorecard(scenarioId);
+      await this.getScorecard(scenarioId);
       return {
         callState: (await this.getActiveCallState(scenarioId))!,
         finished: true
@@ -318,7 +417,7 @@ export class CareerService {
     st.nodeId = nextNodeId;
     st.idx = 0;
     st.phase = 'choose';
-    st.order = seededOrder(nextNode.options.length, `${player.careerSeed}:${nextNodeId}`);
+    st.order = seededOrder(nextNode.options.length, `${player.careerSeed}:${scenarioId}:${nextNodeId}`);
 
     return {
       callState: (await this.getActiveCallState(scenarioId))!,
@@ -327,11 +426,12 @@ export class CareerService {
   }
 
   public static async getScorecard(scenarioId: string = 'L1_MARCUS_STATUS_UPDATE'): Promise<ScorecardResult> {
-    if (this.lastResultMemory) {
+    if (this.lastResultMemory && this.lastResultMemory.scenarioId === scenarioId) {
       return this.lastResultMemory;
     }
 
     if (!this.activeCallMemory || this.activeCallMemory.choices.length === 0) {
+      // If no active call, run on first scenario choices if any, or mock
       throw new Error('No committed choices found for scorecard');
     }
 
@@ -341,7 +441,7 @@ export class CareerService {
   }
 
   public static async collectRewards(scenarioId: string = 'L1_MARCUS_STATUS_UPDATE'): Promise<{
-    reward: { xp: number; coins: number; badge: boolean };
+    reward: { xp: number; coins: number; badge: boolean; badgeName?: string };
     career: CareerState;
   }> {
     const scorecard = await this.getScorecard(scenarioId);
@@ -357,19 +457,11 @@ export class CareerService {
         ? 'Promised the COI by 2:00 PM'
         : 'Call back by 1:30 PM';
 
-      if (client.cycle[1]) {
-        client.cycle[1].done = true;
-        client.cycle[1].current = false;
-      }
-      if (client.cycle[2]) {
-        client.cycle[2].current = true;
-      }
-
       const firstChoiceText = this.activeCallMemory.choices[0]?.option.text || '';
       client.history.unshift({
         when: 'Today',
         kind: 'Call',
-        title: `Status update: ${scorecard.critical ? (scorecard.recovered ? 'overpromised, then corrected' : 'promised the certificate') : 'an honest timeline'}`,
+        title: `${scenario.type}: ${scorecard.critical ? (scorecard.recovered ? 'overpromised, then corrected' : 'promised without authority') : 'a clear timeline'}`,
         detail: `“${firstChoiceText}”`
       });
     }
@@ -383,7 +475,8 @@ export class CareerService {
       player.portfolio = 'Fair';
     }
 
-    // Save changes to DB or memory
+    this.completedScenariosMemory.add(scenarioId);
+
     this.playerMemory = { ...player };
     this.clientsMemory = clients;
     this.activeCallMemory = null;
@@ -405,7 +498,8 @@ export class CareerService {
       reward: {
         xp: scorecard.xp,
         coins: scorecard.coins,
-        badge: scorecard.badge
+        badge: scorecard.badge,
+        badgeName: scorecard.badgeName
       },
       career
     };
@@ -417,7 +511,7 @@ export class CareerService {
       initials: 'AK',
       role: 'Virtual assistant',
       level: 1,
-      levelTitle: 'Rookie desk',
+      levelTitle: 'Trainee Associate',
       xp: 340,
       prevXp: 340,
       xpToNext: 500,
@@ -431,6 +525,9 @@ export class CareerService {
     };
 
     this.clientsMemory = ContentService.getInitialClients();
+    this.completedScenariosMemory.clear();
+    this.kudosSentMemory = {};
+    this.lbOptInMemory = false;
     this.activeCallMemory = null;
     this.lastResultMemory = null;
     this.idempotencyResponses.clear();
@@ -439,7 +536,6 @@ export class CareerService {
       try {
         await PlayerModel.deleteMany({});
         await ClientModel.deleteMany({});
-        await CallSessionModel.deleteMany({});
         await DecisionEventModel.deleteMany({});
         await PlayerModel.create(this.playerMemory);
         await ClientModel.insertMany(this.clientsMemory);

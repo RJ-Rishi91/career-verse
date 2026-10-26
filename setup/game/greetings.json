@@ -1,0 +1,130 @@
+{
+  "bands": [
+    {
+      "id": "up_late",
+      "from": "00:00",
+      "to": "04:59"
+    },
+    {
+      "id": "early_bird",
+      "from": "05:00",
+      "to": "07:59"
+    },
+    {
+      "id": "morning",
+      "from": "08:00",
+      "to": "11:59"
+    },
+    {
+      "id": "midday",
+      "from": "12:00",
+      "to": "13:59"
+    },
+    {
+      "id": "afternoon",
+      "from": "14:00",
+      "to": "17:59"
+    },
+    {
+      "id": "evening",
+      "from": "18:00",
+      "to": "21:59"
+    },
+    {
+      "id": "night_owl",
+      "from": "22:00",
+      "to": "23:59"
+    }
+  ],
+  "lines": {
+    "early_bird": [
+      "Early bird, {name}.",
+      "Up with the sun, {name}?",
+      "Early start, {name}. The inbox is quiet.",
+      "Morning, early riser."
+    ],
+    "morning": [
+      "Morning, {name}.",
+      "Good morning, {name}.",
+      "Morning, {name}. Coffee first, then clients.",
+      "Ready when you are, {name}."
+    ],
+    "midday": [
+      "Afternoon, {name}.",
+      "Lunch-break call, {name}?",
+      "Halfway through the day, {name}."
+    ],
+    "afternoon": [
+      "Good afternoon, {name}.",
+      "Afternoon, {name}. Let's keep it moving.",
+      "Back at it, {name}."
+    ],
+    "evening": [
+      "Evening, {name}.",
+      "Good evening, {name}.",
+      "One more call before dinner, {name}?"
+    ],
+    "night_owl": [
+      "Night owl mode, {name}.",
+      "Evening shift, {name}?",
+      "Quiet hours, {name}. Good time to focus."
+    ],
+    "up_late": [
+      "Up late, {name}?",
+      "Burning the midnight oil, {name}?",
+      "Still here, {name}?"
+    ]
+  },
+  "context_lines": {
+    "first_session": [
+      "Welcome to the desk, {name}."
+    ],
+    "promoted_today": [
+      "Congratulations, {title} {name}.",
+      "Big day, {name}. New title, same standards."
+    ],
+    "streak_milestone_today": [
+      "{streak} days, {name}. Keep it lit."
+    ],
+    "comeback": [
+      "Welcome back, {name}.",
+      "Good to see you again, {name}."
+    ],
+    "weekend": [
+      "Weekend shift, {name}?",
+      "A weekend call, {name}? Respect."
+    ],
+    "monday_morning": [
+      "New week, {name}."
+    ],
+    "friday_afternoon": [
+      "Nearly the weekend, {name}."
+    ],
+    "top_voice_month": [
+      "Top Voice {name}. Nice."
+    ]
+  },
+  "context_priority": [
+    "first_session",
+    "promoted_today",
+    "streak_milestone_today",
+    "top_voice_month",
+    "comeback",
+    "monday_morning",
+    "friday_afternoon",
+    "weekend"
+  ],
+  "context_rules": {
+    "comeback": "last activity >= 7 local days ago",
+    "weekend": "Saturday or Sunday local",
+    "monday_morning": "Monday 05:00–11:59 local",
+    "friday_afternoon": "Friday 14:00–17:59 local",
+    "streak_milestone_today": "streak reached 7, 14, 30, 60, 90, 180 or 365 today",
+    "promoted_today": "promotion event today",
+    "top_voice_month": "holds a Top Voice award for the current month (max once a day)"
+  },
+  "selection": "Deterministic: index = hash(userId + localDate + bandOrContext) mod lines.length. Stable for the whole band; no AI.",
+  "wellbeing": "In the up_late band, the subline suggests one short call and rest; never award or nudge for late-night play.",
+  "subline": "Second line comes from game state (next deadline, streak at risk, quest close to done), as on the desk prototype.",
+  "name": "{name} = player's first name from display name; fall back to no name ('Up late?')."
+}

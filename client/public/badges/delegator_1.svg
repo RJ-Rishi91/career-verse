@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="180" viewBox="0 0 160 180"><title>Delegator I</title>
+<path d="M52 112l-14 58 22-11 14 19 10-60z" fill="#2459E0"/><path d="M108 112l14 58-22-11-14 19-10-60z" fill="#1F3F8F"/>
+<circle cx="80" cy="76" r="66" fill="#FFFFFF" stroke="#14161C" stroke-width="3"/>
+<circle cx="80" cy="76" r="56" fill="#F6E2CC" stroke="#C98A4B" stroke-width="8"/>
+<g transform="translate(44 40) scale(3)" fill="none" stroke="#14161C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19c.7-3.2 3-5 5.5-5s4.8 1.8 5.5 5M15 14.2c2.3.2 4 1.8 5 4.8"/></g>
+</svg>

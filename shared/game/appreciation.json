@@ -1,0 +1,675 @@
+{
+  "templates": [
+    {
+      "id": "client_feedback_excellent_direct",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "direct",
+      "title": "A thank-you note",
+      "body": "{client_first} here. Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. — {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_warm",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "warm",
+      "title": "A thank-you note",
+      "body": "Hi {player_first}! Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. Warmly, {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_detail",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "detail",
+      "title": "A thank-you note",
+      "body": "Dear {player_first}, Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. Kind regards, {client_full}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_anxious",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "anxious",
+      "title": "A thank-you note",
+      "body": "{player_first}, quick note. Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. Thank you, really. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_skeptical",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "skeptical",
+      "title": "A thank-you note",
+      "body": "{player_first}, Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. Credit where it's due. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_busy",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "busy",
+      "title": "A thank-you note",
+      "body": "Two lines, {player_first}. Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_formal",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "formal",
+      "title": "A thank-you note",
+      "body": "Dear {player_first}, Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. With thanks, {client_full}, {client_company}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_feedback_excellent_collaborative",
+      "source_kind": "client",
+      "trigger": "feedback_excellent",
+      "persona_style": "collaborative",
+      "title": "A thank-you note",
+      "body": "Hey {player_first}, Thanks for how you handled {topic}. You were clear, you were honest, and I knew exactly what would happen next. Let's keep this going. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_direct",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "direct",
+      "title": "You've been recommended",
+      "body": "{client_first} here. I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. — {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_warm",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "warm",
+      "title": "You've been recommended",
+      "body": "Hi {player_first}! I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. Warmly, {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_detail",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "detail",
+      "title": "You've been recommended",
+      "body": "Dear {player_first}, I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. Kind regards, {client_full}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_anxious",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "anxious",
+      "title": "You've been recommended",
+      "body": "{player_first}, quick note. I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. Thank you, really. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_skeptical",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "skeptical",
+      "title": "You've been recommended",
+      "body": "{player_first}, I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. Credit where it's due. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_busy",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "busy",
+      "title": "You've been recommended",
+      "body": "Two lines, {player_first}. I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_formal",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "formal",
+      "title": "You've been recommended",
+      "body": "Dear {player_first}, I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. With thanks, {client_full}, {client_company}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_trust_9_collaborative",
+      "source_kind": "client",
+      "trigger": "trust_9",
+      "persona_style": "collaborative",
+      "title": "You've been recommended",
+      "body": "Hey {player_first}, I told a colleague at another agency they should be working with someone like you. Consider this a recommendation. Let's keep this going. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_direct",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "direct",
+      "title": "Thanks for turning it around",
+      "body": "{client_first} here. I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. — {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_warm",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "warm",
+      "title": "Thanks for turning it around",
+      "body": "Hi {player_first}! I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. Warmly, {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_detail",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "detail",
+      "title": "Thanks for turning it around",
+      "body": "Dear {player_first}, I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. Kind regards, {client_full}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_anxious",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "anxious",
+      "title": "Thanks for turning it around",
+      "body": "{player_first}, quick note. I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. Thank you, really. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_skeptical",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "skeptical",
+      "title": "Thanks for turning it around",
+      "body": "{player_first}, I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. Credit where it's due. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_busy",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "busy",
+      "title": "Thanks for turning it around",
+      "body": "Two lines, {player_first}. I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_formal",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "formal",
+      "title": "Thanks for turning it around",
+      "body": "Dear {player_first}, I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. With thanks, {client_full}, {client_company}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_turnaround_collaborative",
+      "source_kind": "client",
+      "trigger": "turnaround",
+      "persona_style": "collaborative",
+      "title": "Thanks for turning it around",
+      "body": "Hey {player_first}, I'll be honest: I was ready to escalate. You turned {topic} around, and I noticed. Let's keep this going. {client_first}",
+      "reward": {
+        "coins": 10
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_direct",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "direct",
+      "title": "No surprises. Thank you.",
+      "body": "{client_first} here. Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. — {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_warm",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "warm",
+      "title": "No surprises. Thank you.",
+      "body": "Hi {player_first}! Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. Warmly, {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_detail",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "detail",
+      "title": "No surprises. Thank you.",
+      "body": "Dear {player_first}, Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. Kind regards, {client_full}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_anxious",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "anxious",
+      "title": "No surprises. Thank you.",
+      "body": "{player_first}, quick note. Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. Thank you, really. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_skeptical",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "skeptical",
+      "title": "No surprises. Thank you.",
+      "body": "{player_first}, Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. Credit where it's due. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_busy",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "busy",
+      "title": "No surprises. Thank you.",
+      "body": "Two lines, {player_first}. Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_formal",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "formal",
+      "title": "No surprises. Thank you.",
+      "body": "Dear {player_first}, Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. With thanks, {client_full}, {client_company}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "client_cycle_clean_collaborative",
+      "source_kind": "client",
+      "trigger": "cycle_clean",
+      "persona_style": "collaborative",
+      "title": "No surprises. Thank you.",
+      "body": "Hey {player_first}, Start to finish on {topic}: no surprises, no chasing. That's rare. Thank you. Let's keep this going. {client_first}",
+      "reward": {
+        "coins": 5
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_first_strong_c7",
+      "source_kind": "mentor",
+      "trigger": "first_strong_c7",
+      "persona_style": null,
+      "title": "Your first Strong {c7}",
+      "from": "rosa-delgado",
+      "body": "That {c7} on the {client_first} call? That's the standard. Keep it.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_first_master",
+      "source_kind": "mentor",
+      "trigger": "first_master",
+      "persona_style": null,
+      "title": "All seven, Strong",
+      "from": "rosa-delgado",
+      "body": "Seven out of seven on one call. I'm putting that call in the training pack.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_first_recovery",
+      "source_kind": "mentor",
+      "trigger": "first_recovery",
+      "persona_style": null,
+      "title": "Owning it",
+      "from": "rosa-delgado",
+      "body": "You corrected yourself mid-call. Most people double down. You didn't.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_boss_pass",
+      "source_kind": "mentor",
+      "trigger": "boss_pass",
+      "persona_style": null,
+      "title": "Review passed",
+      "from": "rosa-delgado",
+      "body": "You passed. Not because you were perfect, but because your judgment held.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_streak_30",
+      "source_kind": "mentor",
+      "trigger": "streak_30",
+      "persona_style": null,
+      "title": "Thirty days",
+      "from": "rosa-delgado",
+      "body": "Thirty days of showing up. That's how good people become great at this.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_promotion_l5",
+      "source_kind": "agency",
+      "trigger": "promotion_l5",
+      "persona_style": null,
+      "title": "Your first team",
+      "from": "grace-okafor",
+      "body": "Rosa tells me you're ready to lead. I agree. Look after them.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_promotion_l7",
+      "source_kind": "agency",
+      "trigger": "promotion_l7",
+      "persona_style": null,
+      "title": "The unit is yours",
+      "from": "grace-okafor",
+      "body": "A quarter on probation, then the role is yours. I'll be watching the numbers and the people.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "mentor_top_voice",
+      "source_kind": "agency",
+      "trigger": "top_voice",
+      "persona_style": null,
+      "title": "Top Voice",
+      "from": "grace-okafor",
+      "body": "Your calls this month set the tone for the whole agency. Thank you.",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "teammate_delegation_success",
+      "source_kind": "teammate",
+      "trigger": "delegation_success",
+      "persona_style": null,
+      "title": "Thanks for trusting me",
+      "body": "Thanks for giving me {task}. I learned a lot doing it. — {teammate_first}",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "teammate_coaching_strong",
+      "source_kind": "teammate",
+      "trigger": "coaching_strong",
+      "persona_style": null,
+      "title": "That helped",
+      "body": "That conversation helped. I know what to do differently now. — {teammate_first}",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "teammate_workload_relief",
+      "source_kind": "teammate",
+      "trigger": "workload_relief",
+      "persona_style": null,
+      "title": "Breathing room",
+      "body": "Thanks for rebalancing the week. I can actually do good work again. — {teammate_first}",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    },
+    {
+      "id": "teammate_one_on_one",
+      "source_kind": "teammate",
+      "trigger": "one_on_one",
+      "persona_style": null,
+      "title": "Good talk",
+      "body": "I appreciated you asking what I wanted, not just what I was doing. — {teammate_first}",
+      "reward": {
+        "coins": 0
+      },
+      "status": "in_review"
+    }
+  ],
+  "placeholders": [
+    "{player_first}",
+    "{client_first}",
+    "{client_full}",
+    "{client_company}",
+    "{topic}",
+    "{c7}",
+    "{task}",
+    "{teammate_first}"
+  ],
+  "client_triggers": {
+    "feedback_excellent": {
+      "when": "feedback_call scorecard with communication >= 85 and business >= 90",
+      "coins": 5
+    },
+    "trust_9": {
+      "when": "client trust reaches 9 for the first time",
+      "coins": 10
+    },
+    "turnaround": {
+      "when": "client status changes from at_risk to on_track",
+      "coins": 10
+    },
+    "cycle_clean": {
+      "when": "client's 3-call cycle completed with no incidents",
+      "coins": 5
+    }
+  },
+  "top_voice": {
+    "period": "calendar_month",
+    "award_mode": "threshold (everyone who qualifies)",
+    "general": {
+      "min_scored_calls": 12,
+      "avg_communication_min": 85,
+      "avg_business_min": 80,
+      "unrecovered_critical_max": 0,
+      "courteous_avg_min": 2.5
+    },
+    "categories": {
+      "claims": {
+        "scenario_tag": "claim",
+        "min_calls": 5,
+        "avg_communication_min": 88
+      },
+      "renewals": {
+        "scenario_tag": "renewal",
+        "min_calls": 5,
+        "avg_communication_min": 88
+      },
+      "certificates": {
+        "scenario_tag": "coi",
+        "min_calls": 5,
+        "avg_communication_min": 88
+      },
+      "leadership": {
+        "scenario_types": [
+          "team_coaching",
+          "team_one_on_one",
+          "team_delegation"
+        ],
+        "min_calls": 3,
+        "avg_communication_min": 85
+      }
+    },
+    "display": "‘Top Voice · <Month YYYY>’ (or ‘Top Voice in Claims · <Month>’) on profile, leaderboard row and appreciation wall",
+    "reward": {
+      "coins": 100
+    },
+    "revocable_by": "master_admin with reason"
+  },
+  "employee_of_month": {
+    "period": "calendar_month",
+    "rule": "#1 by monthly Career Points within each title group among leaderboard participants; ties → higher avg communication, then earlier",
+    "groups": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "reward": {
+      "coins": 150
+    },
+    "announced_by": "grace-okafor"
+  },
+  "kudos": {
+    "types": [
+      {
+        "id": "clear_communicator",
+        "label": "Clear communicator",
+        "description": "Your calls are a model of clarity"
+      },
+      {
+        "id": "great_judgment",
+        "label": "Great judgment",
+        "description": "You make the call the situation needs"
+      },
+      {
+        "id": "calm_under_pressure",
+        "label": "Calm under pressure",
+        "description": "Steady when it matters"
+      },
+      {
+        "id": "inspiring_streak",
+        "label": "Inspiring streak",
+        "description": "Your consistency is motivating"
+      },
+      {
+        "id": "rising_star",
+        "label": "Rising star",
+        "description": "Climbing fast, and doing it right"
+      },
+      {
+        "id": "helpful_example",
+        "label": "Helpful example",
+        "description": "Your play shows how it's done"
+      }
+    ],
+    "free_text": false,
+    "per_day_max": 3,
+    "per_recipient_per_week": 1,
+    "who": "only between players who opted in to the leaderboard; never to yourself",
+    "recipient_can_hide": true
+  }
+}

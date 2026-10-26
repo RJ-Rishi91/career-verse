@@ -1,0 +1,209 @@
+[
+  {
+    "level": 1,
+    "title": "Trainee Associate",
+    "short_title": "Trainee",
+    "client_count": 3,
+    "team_size": 0,
+    "xp_threshold": 500,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 500,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true
+    },
+    "skills_introduced": [
+      "Clear status updates",
+      "Asking for missing information",
+      "Staying within authority"
+    ],
+    "unlocks": [
+      "path",
+      "clients"
+    ],
+    "boss_scenario_id": "L1_BOSS_FIRST_REVIEW",
+    "promotion_message": "You proved you can keep a client informed without overpromising. Welcome to the team properly."
+  },
+  {
+    "level": 2,
+    "title": "Associate",
+    "short_title": "Associate",
+    "client_count": 4,
+    "team_size": 0,
+    "xp_threshold": 1100,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 1100,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true
+    },
+    "skills_introduced": [
+      "Certificates and renewals",
+      "Deadlines",
+      "Email missions"
+    ],
+    "unlocks": [
+      "inbox",
+      "glossary"
+    ],
+    "boss_scenario_id": "L2_BOSS_RENEWAL_AT_RISK",
+    "promotion_message": "You handle renewals and deadlines on your own now. Bigger accounts are coming your way."
+  },
+  {
+    "level": 3,
+    "title": "Senior Associate",
+    "short_title": "Senior",
+    "client_count": 5,
+    "team_size": 0,
+    "xp_threshold": 1900,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 1900,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true
+    },
+    "skills_introduced": [
+      "Claims coordination",
+      "Carrier and adjuster communication",
+      "Incomplete facts"
+    ],
+    "unlocks": [
+      "journal"
+    ],
+    "boss_scenario_id": "L3_BOSS_INCOMPLETE_CLAIM",
+    "promotion_message": "Claims don't rattle you. You're the one people ask when the facts are messy."
+  },
+  {
+    "level": 4,
+    "title": "Executive Associate",
+    "short_title": "Executive",
+    "client_count": 8,
+    "team_size": 0,
+    "xp_threshold": 3200,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 3200,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true
+    },
+    "skills_introduced": [
+      "De-escalation",
+      "Empathy under pressure",
+      "Prioritising several accounts"
+    ],
+    "unlocks": [
+      "achievements_tiers"
+    ],
+    "boss_scenario_id": "L4_BOSS_DOUBLE_ESCALATION",
+    "promotion_message": "You kept your head when two clients escalated at once. Time to help others do the same."
+  },
+  {
+    "level": 5,
+    "title": "Assistant Team Lead",
+    "short_title": "ATL",
+    "client_count": 10,
+    "team_size": 2,
+    "xp_threshold": 4800,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 4800,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true,
+      "team_health_min": "good"
+    },
+    "skills_introduced": [
+      "Delegating routine work",
+      "Quality checks",
+      "Covering gaps"
+    ],
+    "unlocks": [
+      "team",
+      "delegation_board"
+    ],
+    "boss_scenario_id": "L5_BOSS_TEAMMATE_ERROR",
+    "promotion_message": "Your first team. Your job now is to make two people successful, not just yourself."
+  },
+  {
+    "level": 6,
+    "title": "Team Lead",
+    "short_title": "TL",
+    "client_count": 10,
+    "team_size": 4,
+    "xp_threshold": 6800,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 6800,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true,
+      "team_health_min": "good"
+    },
+    "skills_introduced": [
+      "Coaching: diagnose, coach, follow up",
+      "Workload balance",
+      "Giving feedback"
+    ],
+    "unlocks": [
+      "coaching_calls"
+    ],
+    "boss_scenario_id": "L6_BOSS_HARD_DAY",
+    "promotion_message": "You coach, you balance, you follow up. The team leads look to you."
+  },
+  {
+    "level": 7,
+    "title": "Manager (probationary)",
+    "short_title": "Manager",
+    "client_count": 10,
+    "team_size": 8,
+    "xp_threshold": 9200,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 9200,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true,
+      "team_health_min": "good"
+    },
+    "skills_introduced": [
+      "Capacity planning",
+      "Retention conversations",
+      "Reporting upward"
+    ],
+    "unlocks": [
+      "unit_dashboard"
+    ],
+    "boss_scenario_id": "L7_BOSS_QUARTERLY_REVIEW",
+    "promotion_message": "You've run a unit for a quarter. One more stretch and the role is yours."
+  },
+  {
+    "level": 8,
+    "title": "Manager",
+    "short_title": "Manager",
+    "client_count": 10,
+    "team_size": 10,
+    "xp_threshold": 12000,
+    "gates": {
+      "all_required_calls": true,
+      "xp_min": 12000,
+      "portfolio_min": "good",
+      "no_open_severe_incident": true,
+      "boss_passed": true,
+      "team_health_min": "good"
+    },
+    "skills_introduced": [
+      "Account recovery",
+      "Strategic trade-offs",
+      "Judgment under pressure"
+    ],
+    "unlocks": [
+      "ending"
+    ],
+    "boss_scenario_id": "L8_BOSS_FINALE",
+    "promotion_message": "Manager. Everything you said on every call led here."
+  }
+]

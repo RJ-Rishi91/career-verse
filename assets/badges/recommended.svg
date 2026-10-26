@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="180" viewBox="0 0 160 180"><title>Recommended</title>
+<path d="M52 112l-14 58 22-11 14 19 10-60z" fill="#2459E0"/><path d="M108 112l14 58-22-11-14 19-10-60z" fill="#1F3F8F"/>
+<circle cx="80" cy="76" r="66" fill="#FFFFFF" stroke="#14161C" stroke-width="3"/>
+<circle cx="80" cy="76" r="56" fill="#DCE8FF" stroke="#2459E0" stroke-width="8"/>
+<g transform="translate(44 40) scale(3)" fill="none" stroke="#14161C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.3 5.6.6-4.2 3.8 1.2 5.6L12 15.6 7 18.3l1.2-5.6L4 8.9l5.6-.6z"/></g>
+</svg>

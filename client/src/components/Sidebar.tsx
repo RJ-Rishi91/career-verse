@@ -19,6 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'desk', href: '#/desk', label: 'Desk', icon: 'desk' },
     { id: 'clients', href: '#/clients', label: 'Clients', icon: 'clients' },
     { id: 'inbox', href: '#/desk', label: 'Inbox', icon: 'inbox', count: inboxCount },
+    { id: 'leaderboard', href: '#/leaderboard', label: 'Leaderboard', icon: 'trophy' },
     { id: 'journal', href: '#/desk', label: 'Journal', icon: 'journal' }
   ];
 

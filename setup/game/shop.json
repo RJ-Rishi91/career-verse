@@ -1,0 +1,112 @@
+[
+  {
+    "id": "freeze",
+    "name": "Streak freeze",
+    "kind": "streak_freeze",
+    "price_coins": 60,
+    "max_owned": 2,
+    "min_level": 1,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "outfit_blazer",
+    "name": "Navy blazer",
+    "kind": "cosmetic_outfit",
+    "price_coins": 120,
+    "max_owned": 1,
+    "min_level": 1,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "outfit_cardigan",
+    "name": "Oat cardigan",
+    "kind": "cosmetic_outfit",
+    "price_coins": 120,
+    "max_owned": 1,
+    "min_level": 1,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "outfit_sharp",
+    "name": "Sharp suit",
+    "kind": "cosmetic_outfit",
+    "price_coins": 300,
+    "max_owned": 1,
+    "min_level": 4,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "outfit_lead",
+    "name": "Team lead lanyard",
+    "kind": "cosmetic_outfit",
+    "price_coins": 200,
+    "max_owned": 1,
+    "min_level": 5,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "desk_plants",
+    "name": "Desk plants",
+    "kind": "desk_theme",
+    "price_coins": 150,
+    "max_owned": 1,
+    "min_level": 2,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "desk_city",
+    "name": "City-view desk",
+    "kind": "desk_theme",
+    "price_coins": 400,
+    "max_owned": 1,
+    "min_level": 4,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "desk_corner",
+    "name": "Corner office",
+    "kind": "desk_theme",
+    "price_coins": 800,
+    "max_owned": 1,
+    "min_level": 7,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "frame_bronze",
+    "name": "Bronze title frame",
+    "kind": "title_frame",
+    "price_coins": 100,
+    "max_owned": 1,
+    "min_level": 2,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "frame_silver",
+    "name": "Silver title frame",
+    "kind": "title_frame",
+    "price_coins": 250,
+    "max_owned": 1,
+    "min_level": 4,
+    "data": {},
+    "status": "in_review"
+  },
+  {
+    "id": "frame_gold",
+    "name": "Gold title frame",
+    "kind": "title_frame",
+    "price_coins": 600,
+    "max_owned": 1,
+    "min_level": 6,
+    "data": {},
+    "status": "in_review"
+  }
+]

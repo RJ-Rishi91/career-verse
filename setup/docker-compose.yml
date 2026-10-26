@@ -1,0 +1,22 @@
+# Local services for CareerVerse. Usage: docker compose -f setup/docker-compose.yml up -d
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: careerverse
+      POSTGRES_PASSWORD: careerverse
+      POSTGRES_DB: careerverse
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ../db/seed.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U careerverse"]
+      interval: 5s
+      retries: 10
+  mail:
+    image: axllent/mailpit
+    ports: ["8025:8025", "1025:1025"]
+volumes:
+  pgdata:

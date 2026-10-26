@@ -1,0 +1,90 @@
+{
+  "_note": "Seed defaults (placeholders until playtesting). Edited and versioned in the Command Center.",
+  "version": 1,
+  "c7_weights": {
+    "clear": 1,
+    "concise": 1,
+    "concrete": 1,
+    "correct": 1.5,
+    "coherent": 1,
+    "complete": 1,
+    "courteous": 1
+  },
+  "c7_level_cuts": {
+    "strong": 2.5,
+    "good": 1.5
+  },
+  "critical_business_cap": 40,
+  "critical_flags": {
+    "commit_beyond_authority": "severe",
+    "confirmed_unverified_coverage": "severe",
+    "misstated_fact": "major",
+    "breached_privacy": "severe",
+    "abusive_tone": "major"
+  },
+  "recovery": {
+    "incident_severity_downgrade": true,
+    "note": "A recovery in the same call downgrades severe→major; history keeps both."
+  },
+  "account_health": {
+    "weights": {
+      "trust": 0.4,
+      "respect": 0.3,
+      "anger_inverse": 0.3
+    },
+    "on_track_min": 70,
+    "watch_min": 40,
+    "severe_incident_override": "at_risk"
+  },
+  "portfolio_health": {
+    "importance_weights": {
+      "low": 1,
+      "medium": 2,
+      "high": 3
+    },
+    "good_min": 65,
+    "fair_min": 45
+  },
+  "team_health": {
+    "weights": {
+      "morale": 0.5,
+      "reliability": 0.3,
+      "workload_inverse": 0.2
+    },
+    "good_min": 65,
+    "fair_min": 45
+  },
+  "thought_unlocks": [
+    {
+      "index": 1,
+      "trust_min": 6
+    },
+    {
+      "index": 2,
+      "trust_min": 8,
+      "c7_courteous_avg_min": 2
+    }
+  ],
+  "meters": {
+    "min": 0,
+    "max": 10,
+    "max_delta_per_reply": 3
+  },
+  "between_calls": {
+    "anger_cooldown_per_day": 1
+  },
+  "probation": {
+    "policy": "remediation_then_boss_variant",
+    "remediation_calls": 2,
+    "max_probations_per_level": 2,
+    "demotion_on": "second_failed_probation_or_two_open_severe_incidents"
+  },
+  "option_order": {
+    "seeded": true,
+    "seed_source": "career.seed + ':' + scenario_id + ':' + node_id"
+  },
+  "lock_in": {
+    "policy": "every_decision",
+    "alt": "consequential_only"
+  }
+}

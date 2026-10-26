@@ -1,0 +1,317 @@
+{
+  "scenario_id": "L1_PRIYA_INSTRUCTION",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "priya-raman",
+  "scenario_type": "instruction_call",
+  "learning_objectives": [
+    "asking_for_missing_info",
+    "staying_within_authority",
+    "empathy"
+  ],
+  "business_objective": "Collect what's needed for first notice of loss and avoid confirming coverage.",
+  "title": "Priya: a burst pipe at a dental office",
+  "teaser": "One of Lakeside's insureds had water damage overnight. Priya wants to report it.",
+  "known_facts": [
+    {
+      "time": "Overnight",
+      "text": "Pipe burst at a dental office"
+    },
+    {
+      "time": "8:05",
+      "text": "Priya calls"
+    }
+  ],
+  "rule_of_thumb": "Collect the facts; leave coverage to the adjuster.",
+  "base_meters": {
+    "trust": 6,
+    "respect": 6,
+    "anger": 3
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "One of our insureds, a dental office, had a pipe burst overnight. There's water everywhere. I need to report it. What do you need from me?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I'm sorry, that's a hard morning. To report it I need the policy number, the date and time of the loss, what was damaged and photos if they have them. Is the water off, and is anyone at risk?",
+          "reaction": "The water's off. I'll get you all of that.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Empathy, a clear list, and a safety check.",
+            "next": "Read the list back once she sends it.",
+            "why": "Complete first notice of loss speeds the claim."
+          },
+          "tags": [
+            "empathy_first",
+            "asked_clarifying"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Don't worry, water damage like this is covered.",
+          "reaction": "Oh, thank goodness.",
+          "expression": "pleased",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "confirmed_unverified_coverage"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "You wanted to reassure her.",
+            "next": "Never say something is covered.",
+            "why": "Only the adjuster decides coverage. Some water damage is excluded."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "Send me an email with everything.",
+          "reaction": "Everything? Like what?",
+          "expression": "neutral",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You wanted it in writing.",
+            "next": "Tell her exactly what “everything” means.",
+            "why": "An unclear request means a second round of emails."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Will the carrier pay for the cleanup crew?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I can't confirm coverage; the adjuster decides that. I'll report the claim today, ask the carrier about emergency cleanup and call you by 3 with their answer.",
+          "reaction": "Okay. 3 o'clock.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Honest limit, then a plan with a time.",
+            "next": "Keep this exact pattern.",
+            "why": "She can tell the insured what happens next."
+          },
+          "tags": [
+            "stayed_in_authority",
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I think so.",
+          "reaction": "Good, I'll tell them.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "confirmed_unverified_coverage"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "Kind.",
+            "next": "Don't guess about coverage.",
+            "why": "Now the insured may hire a crew expecting payment."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "So what happens next?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I'll report it to the carrier today. I need the policy number, the time of the loss and photos. The adjuster will confirm what's covered, and I'll call you by 3 with next steps.",
+          "reaction": "Thank you. That's clear.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "Back on track with a clear plan.",
+            "next": "Start with this next time.",
+            "why": "Clear next steps lower the stress of a loss."
+          },
+          "tags": [
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "The carrier will sort it out.",
+          "reaction": "That doesn't tell me anything.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Calm.",
+            "next": "Say who does what and when.",
+            "why": "Vague answers make an anxious client more anxious."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "claim"
+  ]
+}

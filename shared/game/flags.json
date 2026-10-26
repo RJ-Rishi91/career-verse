@@ -1,0 +1,42 @@
+[
+  {
+    "key": "registration_open",
+    "enabled": true,
+    "description": "Allow new sign-ups"
+  },
+  {
+    "key": "email_verification_required",
+    "enabled": true,
+    "description": "Players must verify email before playing"
+  },
+  {
+    "key": "maintenance_mode",
+    "enabled": false,
+    "description": "Show maintenance page to players; admins unaffected"
+  },
+  {
+    "key": "lock_in_consequential_only",
+    "enabled": false,
+    "description": "Proposal P2: only consequential decisions open the lock-in sheet"
+  },
+  {
+    "key": "probation_policy_rank_vs_chapter",
+    "enabled": false,
+    "description": "Proposal P1 alternative: failure changes standing, content continues"
+  },
+  {
+    "key": "reminders_enabled",
+    "enabled": true,
+    "description": "Allow opt-in reminders"
+  },
+  {
+    "key": "feedback_prompts",
+    "enabled": true,
+    "description": "Ask opt-in feedback after calls"
+  },
+  {
+    "key": "dev_autopublish_in_review",
+    "enabled": false,
+    "description": "DEV ONLY: treat in_review content as playable"
+  }
+]

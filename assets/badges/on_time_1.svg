@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="180" viewBox="0 0 160 180"><title>On Time, Every Time I</title>
+<path d="M52 112l-14 58 22-11 14 19 10-60z" fill="#2459E0"/><path d="M108 112l14 58-22-11-14 19-10-60z" fill="#1F3F8F"/>
+<circle cx="80" cy="76" r="66" fill="#FFFFFF" stroke="#14161C" stroke-width="3"/>
+<circle cx="80" cy="76" r="56" fill="#F6E2CC" stroke="#C98A4B" stroke-width="8"/>
+<g transform="translate(44 40) scale(3)" fill="none" stroke="#14161C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></g>
+</svg>

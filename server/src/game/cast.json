@@ -1,0 +1,69 @@
+[
+  {
+    "id": "rosa-delgado",
+    "kind": "mentor",
+    "level": 1,
+    "name": "Rosa Delgado",
+    "initials": "RD",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Team Lead and your mentor (Levels 1–4)",
+    "tint": "butter",
+    "persona": {
+      "style": "warm, direct, practical",
+      "catchphrase_rule": "Fact, then status, then the next step with a time."
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#A9734D",
+      "hair": "long",
+      "hairColor": "#3A2418",
+      "shirt": "#3D4250",
+      "tie": null
+    }
+  },
+  {
+    "id": "grace-okafor",
+    "kind": "executive",
+    "level": 7,
+    "name": "Grace Okafor",
+    "initials": "GO",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Agency owner (Levels 7–8)",
+    "tint": "sky",
+    "persona": {
+      "style": "calm, numbers-first, fair"
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#5F3C29",
+      "hair": "bun",
+      "hairColor": "#1B1F2A",
+      "shirt": "#14161C",
+      "tie": null
+    }
+  },
+  {
+    "id": "devon-park",
+    "kind": "rival",
+    "level": 2,
+    "name": "Devon Park",
+    "initials": "DP",
+    "pronoun": "he",
+    "company": "Your agency",
+    "role_line": "Fellow associate, friendly rival",
+    "tint": "lime",
+    "persona": {
+      "style": "fast, confident, sometimes cuts corners"
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#D9B08A",
+      "hair": "short",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3D6E",
+      "tie": "#3DBE8B"
+    }
+  }
+]

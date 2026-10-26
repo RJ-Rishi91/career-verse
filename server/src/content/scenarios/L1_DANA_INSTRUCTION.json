@@ -1,0 +1,316 @@
+{
+  "scenario_id": "L1_DANA_INSTRUCTION",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "dana-whitfield",
+  "scenario_type": "instruction_call",
+  "learning_objectives": [
+    "staying_within_authority",
+    "confirming_details"
+  ],
+  "business_objective": "Take the renewal instruction, confirm carriers and the deadline, and don't promise a price.",
+  "title": "Dana's nervous renewal",
+  "teaser": "Hendricks Bakery renews on the 1st. Last year the premium jumped 18 percent.",
+  "known_facts": [
+    {
+      "time": "Renews",
+      "text": "1st of next month"
+    },
+    {
+      "time": "Last year",
+      "text": "Premium rose 18%"
+    }
+  ],
+  "rule_of_thumb": "Promise the process, never the price.",
+  "base_meters": {
+    "trust": 7,
+    "respect": 6,
+    "anger": 2
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Hendricks Bakery renews on the 1st. Last year their premium jumped 18 percent. Can you get me renewal options before I talk to them?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes. I'll pull the current policy and request renewal quotes from the carriers you approve. Which carriers should I go to, and when do you need them?",
+          "reaction": "Good. Let me think about carriers.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You promised what you control: the process.",
+            "next": "Confirm the deadline back.",
+            "why": "Carriers set prices; you set the pace."
+          },
+          "tags": [
+            "stayed_in_authority",
+            "asked_clarifying"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I'll find them something cheaper.",
+          "reaction": "That would be wonderful.",
+          "expression": "pleased",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "commit_beyond_authority"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "You wanted to help.",
+            "next": "Never promise a lower premium.",
+            "why": "Only carriers decide price. A promise you can't keep becomes Dana's problem with Hendricks."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "Okay, I'll look into it.",
+          "reaction": "...Okay. When?",
+          "expression": "neutral",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You didn't overpromise.",
+            "next": "Ask the two questions that make it actionable: which carriers, and by when.",
+            "why": "“Look into it” has no owner, scope or date."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Go to our usual three. I need them by the 20th so I can call Hendricks on the 21st.",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Got it: three carriers, quotes to you by the 20th. If any carrier is running late, I'll tell you on the 17th so you still have options.",
+          "reaction": "Perfect. That's why I like working with you.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You repeated the plan and built in an early warning.",
+            "next": "Keep the early-warning habit.",
+            "why": "An early warning gives her time to act."
+          },
+          "tags": [
+            "early_warning"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Sounds good.",
+          "reaction": "Okay.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Polite and brief.",
+            "next": "Repeat the key details back.",
+            "why": "Unconfirmed details are where renewals go wrong."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "So you can bring the price down?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I can't promise a price; that's the carriers' decision. What I can do is get quotes from the carriers you choose by the date you set.",
+          "reaction": "Fair enough. Our usual three, by the 20th.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You corrected the expectation kindly.",
+            "next": "Start there next time.",
+            "why": "Resetting expectations early protects Dana with her client."
+          },
+          "tags": [
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I'm pretty sure I can.",
+          "reaction": "Great, I'll tell Hendricks.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "commit_beyond_authority"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "Confident.",
+            "next": "Don't guess about price.",
+            "why": "Now Dana may promise Hendricks something no one can deliver."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "renewal",
+    "premium"
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "scenario_id": "L1_ONBOARDING_PRACTICE",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "rosa-delgado",
+  "scenario_type": "onboarding",
+  "learning_objectives": [
+    "how_to_play"
+  ],
+  "business_objective": "Learn that replies appear one at a time and can't be taken back.",
+  "title": "Practice: one reply at a time",
+  "teaser": "Rosa shows you how replies work. This practice isn't saved to your career.",
+  "known_facts": [
+    {
+      "time": "Now",
+      "text": "Practice only"
+    }
+  ],
+  "rule_of_thumb": "Fact, then status, then the next step with a time.",
+  "base_meters": {
+    "trust": 5,
+    "respect": 5,
+    "anger": 0
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "mentor",
+      "line": "Hi, I'm Rosa, your team lead. Practice question: a client asks, “Did you get my email?” You did, but haven't read it yet. Which reply?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes, I've got it. I'll read it properly and reply by 2 today.",
+          "reaction": "Exactly. Honest and specific. In real calls, once you say a reply, it's said.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Honest, with a time.",
+            "next": "Use this pattern everywhere.",
+            "why": "Clients trust specific promises."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "B",
+          "text": "Yes, all sorted!",
+          "reaction": "Careful: you haven't read it. In real calls, once you say a reply, it's said.",
+          "expression": "worried",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Friendly.",
+            "next": "Don't claim what you haven't done.",
+            "why": "Small overstatements add up."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "I get a lot of email.",
+          "reaction": "That doesn't answer them. In real calls, once you say a reply, it's said.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 0,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Honest.",
+            "next": "Answer the question, then add a time.",
+            "why": "They still don't know what happens next."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": []
+}

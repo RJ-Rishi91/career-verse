@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "xp": {
+    "base_by_type": {
+      "instruction_call": 50,
+      "status_update_call": 60,
+      "feedback_call": 70,
+      "escalation_call": 80,
+      "email_mission": 40,
+      "boss_mission": 150,
+      "team_delegation": 60,
+      "team_coaching": 80,
+      "team_one_on_one": 80,
+      "remediation_call": 40,
+      "boss_variant": 150
+    },
+    "performance_bonus_max": 25,
+    "level_multiplier": [
+      1,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.5
+    ],
+    "glossary_round_xp": 5,
+    "glossary_daily_cap": 20
+  },
+  "coins": {
+    "per_call_base": 5,
+    "performance_bonus_max": 10,
+    "boss_bonus": 30,
+    "promotion_bonus": 100
+  },
+  "daily_goal": {
+    "light": 1,
+    "steady": 2,
+    "driven": 4,
+    "unit": "calls_or_missions"
+  },
+  "streak": {
+    "qualifying": "one call, email mission or boss per local day",
+    "freeze_covers_days": 1,
+    "freezes_max_held": 2,
+    "freeze_price": 60
+  },
+  "quests": {
+    "per_day": 3,
+    "refresh": "local midnight",
+    "seeded": true
+  }
+}

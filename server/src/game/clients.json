@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "marcus-bell",
+    "kind": "client",
+    "level": 1,
+    "name": "Marcus Bell",
+    "initials": "MB",
+    "pronoun": "he",
+    "company": "Bellrock Commercial",
+    "role_line": "Account manager · Bellrock Commercial, Houston TX",
+    "location": "Houston TX",
+    "importance": "high",
+    "tint": "blue",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "“The last agency told me ‘it’s handled’ twice. Both times it wasn’t.”"
+        },
+        {
+          "trust_min": 8,
+          "text": "“If this job slips, Hale Construction walks, and so does my bonus.”"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#7E4F33",
+      "hair": "short",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 6
+    },
+    "status": "in_review"
+  },
+  {
+    "id": "dana-whitfield",
+    "kind": "client",
+    "level": 1,
+    "name": "Dana Whitfield",
+    "initials": "DW",
+    "pronoun": "she",
+    "company": "Whitfield Insurance Group",
+    "role_line": "Agency owner · Whitfield Insurance Group, Columbus OH",
+    "location": "Columbus OH",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "“If this renewal premium jumps again, I’ll lose the Hendricks account.”"
+        },
+        {
+          "trust_min": 8,
+          "text": "“I built this agency on never surprising a client.”"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#E2B38F",
+      "hair": "long",
+      "hairColor": "#B86F33",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "in_review"
+  },
+  {
+    "id": "priya-raman",
+    "kind": "client",
+    "level": 1,
+    "name": "Priya Raman",
+    "initials": "PR",
+    "pronoun": "she",
+    "company": "Lakeside Benefits",
+    "role_line": "Office manager · Lakeside Benefits, Naperville IL",
+    "location": "Naperville IL",
+    "importance": "medium",
+    "tint": "mint",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "“I need every number in writing before I take it to the partners.”"
+        },
+        {
+          "trust_min": 8,
+          "text": "“The partners judge me by how prepared I look.”"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#B57C51",
+      "hair": "bun",
+      "hairColor": "#24140E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 3
+    },
+    "status": "in_review"
+  },
+  {
+    "id": "elena-vasquez",
+    "kind": "client",
+    "level": 2,
+    "name": "Elena Vasquez",
+    "initials": "EV",
+    "pronoun": "she",
+    "company": "Cedar Ridge Insurance Agency",
+    "role_line": "Producer · Cedar Ridge Insurance Agency, Tampa FL",
+    "location": "Tampa FL",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "short",
+      "hairColor": "#5B3A1E",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "tomas-ortega",
+    "kind": "client",
+    "level": 2,
+    "name": "Tomás Ortega",
+    "initials": "TO",
+    "pronoun": "he",
+    "company": "Harborview Risk Partners",
+    "role_line": "CSR lead · Harborview Risk Partners, Denver CO",
+    "location": "Denver CO",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "bun",
+      "hairColor": "#8A8F99",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "hannah-brooks",
+    "kind": "client",
+    "level": 2,
+    "name": "Hannah Brooks",
+    "initials": "HB",
+    "pronoun": "she",
+    "company": "Summit Insurance Services",
+    "role_line": "Commercial lines manager · Summit Insurance Services, Raleigh NC",
+    "location": "Raleigh NC",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "long",
+      "hairColor": "#3A2418",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "kwame-mensah",
+    "kind": "client",
+    "level": 2,
+    "name": "Kwame Mensah",
+    "initials": "KM",
+    "pronoun": "he",
+    "company": "Prairie Oak Coverage Co.",
+    "role_line": "Personal lines manager · Prairie Oak Coverage Co., Phoenix AZ",
+    "location": "Phoenix AZ",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "short",
+      "hairColor": "#C9A06A",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "lucy-tran",
+    "kind": "client",
+    "level": 3,
+    "name": "Lucy Tran",
+    "initials": "LT",
+    "pronoun": "she",
+    "company": "Canyon Agency",
+    "role_line": "Benefits coordinator · Canyon Agency, Atlanta GA",
+    "location": "Atlanta GA",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "bun",
+      "hairColor": "#1B1F2A",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "raj-patel",
+    "kind": "client",
+    "level": 3,
+    "name": "Raj Patel",
+    "initials": "RP",
+    "pronoun": "he",
+    "company": "Riverbend Commercial",
+    "role_line": "Operations director · Riverbend Commercial, Portland OR",
+    "location": "Portland OR",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "long",
+      "hairColor": "#B86F33",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "bianca-rossi",
+    "kind": "client",
+    "level": 3,
+    "name": "Bianca Rossi",
+    "initials": "BR",
+    "pronoun": "she",
+    "company": "Northgate Insurance Group",
+    "role_line": "Claims coordinator · Northgate Insurance Group, Nashville TN",
+    "location": "Nashville TN",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "short",
+      "hairColor": "#24140E",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "owen-gallagher",
+    "kind": "client",
+    "level": 3,
+    "name": "Owen Gallagher",
+    "initials": "OG",
+    "pronoun": "he",
+    "company": "Maple Hill Benefits",
+    "role_line": "Account manager · Maple Hill Benefits, Charlotte NC",
+    "location": "Charlotte NC",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "bun",
+      "hairColor": "#5B3A1E",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "fatima-haddad",
+    "kind": "client",
+    "level": 3,
+    "name": "Fatima Haddad",
+    "initials": "FH",
+    "pronoun": "she",
+    "company": "Bayline Insurance Agency",
+    "role_line": "Agency owner · Bayline Insurance Agency, Minneapolis MN",
+    "location": "Minneapolis MN",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "long",
+      "hairColor": "#8A8F99",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "jordan-ellis",
+    "kind": "client",
+    "level": 4,
+    "name": "Jordan Ellis",
+    "initials": "JE",
+    "pronoun": "they",
+    "company": "Granite Peak Risk Partners",
+    "role_line": "Office manager · Granite Peak Risk Partners, Sacramento CA",
+    "location": "Sacramento CA",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "short",
+      "hairColor": "#3A2418",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "mei-chen",
+    "kind": "client",
+    "level": 4,
+    "name": "Mei Chen",
+    "initials": "MC",
+    "pronoun": "she",
+    "company": "Silverleaf Insurance Services",
+    "role_line": "Producer · Silverleaf Insurance Services, Boise ID",
+    "location": "Boise ID",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "bun",
+      "hairColor": "#C9A06A",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "carlos-medina",
+    "kind": "client",
+    "level": 4,
+    "name": "Carlos Medina",
+    "initials": "CM",
+    "pronoun": "he",
+    "company": "Fairmont Coverage Co.",
+    "role_line": "CSR lead · Fairmont Coverage Co., Richmond VA",
+    "location": "Richmond VA",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "long",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "aisha-okoye",
+    "kind": "client",
+    "level": 4,
+    "name": "Aisha Okoye",
+    "initials": "AO",
+    "pronoun": "she",
+    "company": "Ironwood Agency",
+    "role_line": "Commercial lines manager · Ironwood Agency, Omaha NE",
+    "location": "Omaha NE",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "short",
+      "hairColor": "#B86F33",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ben-sutton",
+    "kind": "client",
+    "level": 4,
+    "name": "Ben Sutton",
+    "initials": "BS",
+    "pronoun": "he",
+    "company": "Clearwater Commercial",
+    "role_line": "Personal lines manager · Clearwater Commercial, Albany NY",
+    "location": "Albany NY",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "bun",
+      "hairColor": "#24140E",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "sofia-lindqvist",
+    "kind": "client",
+    "level": 4,
+    "name": "Sofia Lindqvist",
+    "initials": "SL",
+    "pronoun": "she",
+    "company": "Stonebridge Insurance Group",
+    "role_line": "Benefits coordinator · Stonebridge Insurance Group, Austin TX",
+    "location": "Austin TX",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "long",
+      "hairColor": "#5B3A1E",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "luis-navarro",
+    "kind": "client",
+    "level": 4,
+    "name": "Luis Navarro",
+    "initials": "LN",
+    "pronoun": "he",
+    "company": "Willow Creek Benefits",
+    "role_line": "Operations director · Willow Creek Benefits, Spokane WA",
+    "location": "Spokane WA",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "short",
+      "hairColor": "#8A8F99",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "grace-kim",
+    "kind": "client",
+    "level": 4,
+    "name": "Grace Kim",
+    "initials": "GK",
+    "pronoun": "she",
+    "company": "Redfield Insurance Agency",
+    "role_line": "Claims coordinator · Redfield Insurance Agency, Madison WI",
+    "location": "Madison WI",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "bun",
+      "hairColor": "#3A2418",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "nadia-farouk",
+    "kind": "client",
+    "level": 5,
+    "name": "Nadia Farouk",
+    "initials": "NF",
+    "pronoun": "she",
+    "company": "Pinecrest Risk Partners",
+    "role_line": "Account manager · Pinecrest Risk Partners, Toronto ON",
+    "location": "Toronto ON",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "long",
+      "hairColor": "#C9A06A",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "peter-novak",
+    "kind": "client",
+    "level": 5,
+    "name": "Peter Novak",
+    "initials": "PN",
+    "pronoun": "he",
+    "company": "Eastport Insurance Services",
+    "role_line": "Agency owner · Eastport Insurance Services, Calgary AB",
+    "location": "Calgary AB",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "short",
+      "hairColor": "#1B1F2A",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "yuki-sato",
+    "kind": "client",
+    "level": 5,
+    "name": "Yuki Sato",
+    "initials": "YS",
+    "pronoun": "she",
+    "company": "Highland Coverage Co.",
+    "role_line": "Office manager · Highland Coverage Co., Halifax NS",
+    "location": "Halifax NS",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "bun",
+      "hairColor": "#B86F33",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "andre-dubois",
+    "kind": "client",
+    "level": 5,
+    "name": "Andre Dubois",
+    "initials": "AD",
+    "pronoun": "he",
+    "company": "Meadowbrook Agency",
+    "role_line": "Producer · Meadowbrook Agency, Ottawa ON",
+    "location": "Ottawa ON",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "long",
+      "hairColor": "#24140E",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "chloe-fischer",
+    "kind": "client",
+    "level": 5,
+    "name": "Chloe Fischer",
+    "initials": "CF",
+    "pronoun": "she",
+    "company": "Copperline Commercial",
+    "role_line": "CSR lead · Copperline Commercial, Houston TX",
+    "location": "Houston TX",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "short",
+      "hairColor": "#5B3A1E",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "samir-qureshi",
+    "kind": "client",
+    "level": 5,
+    "name": "Samir Qureshi",
+    "initials": "SQ",
+    "pronoun": "he",
+    "company": "Brightwater Insurance Group",
+    "role_line": "Commercial lines manager · Brightwater Insurance Group, Columbus OH",
+    "location": "Columbus OH",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "bun",
+      "hairColor": "#8A8F99",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "irene-costa",
+    "kind": "client",
+    "level": 5,
+    "name": "Irene Costa",
+    "initials": "IC",
+    "pronoun": "she",
+    "company": "Oakhaven Benefits",
+    "role_line": "Personal lines manager · Oakhaven Benefits, Naperville IL",
+    "location": "Naperville IL",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "long",
+      "hairColor": "#3A2418",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "malik-johnson",
+    "kind": "client",
+    "level": 5,
+    "name": "Malik Johnson",
+    "initials": "MJ",
+    "pronoun": "he",
+    "company": "Westbury Insurance Agency",
+    "role_line": "Benefits coordinator · Westbury Insurance Agency, Tampa FL",
+    "location": "Tampa FL",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "short",
+      "hairColor": "#C9A06A",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "teresa-alvarez",
+    "kind": "client",
+    "level": 5,
+    "name": "Teresa Alvarez",
+    "initials": "TA",
+    "pronoun": "she",
+    "company": "Lantern Risk Partners",
+    "role_line": "Operations director · Lantern Risk Partners, Denver CO",
+    "location": "Denver CO",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "bun",
+      "hairColor": "#1B1F2A",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "hugo-lambert",
+    "kind": "client",
+    "level": 5,
+    "name": "Hugo Lambert",
+    "initials": "HL",
+    "pronoun": "he",
+    "company": "Foxglove Insurance Services",
+    "role_line": "Claims coordinator · Foxglove Insurance Services, Raleigh NC",
+    "location": "Raleigh NC",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "long",
+      "hairColor": "#B86F33",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "zara-hussain",
+    "kind": "client",
+    "level": 6,
+    "name": "Zara Hussain",
+    "initials": "ZH",
+    "pronoun": "she",
+    "company": "Kingsley Coverage Co.",
+    "role_line": "Account manager · Kingsley Coverage Co., Phoenix AZ",
+    "location": "Phoenix AZ",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "short",
+      "hairColor": "#24140E",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "victor-petrov",
+    "kind": "client",
+    "level": 6,
+    "name": "Victor Petrov",
+    "initials": "VP",
+    "pronoun": "he",
+    "company": "Ashford Agency",
+    "role_line": "Agency owner · Ashford Agency, Atlanta GA",
+    "location": "Atlanta GA",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "bun",
+      "hairColor": "#5B3A1E",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "leah-abrams",
+    "kind": "client",
+    "level": 6,
+    "name": "Leah Abrams",
+    "initials": "LA",
+    "pronoun": "she",
+    "company": "Marlowe Commercial",
+    "role_line": "Office manager · Marlowe Commercial, Portland OR",
+    "location": "Portland OR",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "long",
+      "hairColor": "#8A8F99",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "arjun-mehta",
+    "kind": "client",
+    "level": 6,
+    "name": "Arjun Mehta",
+    "initials": "AM",
+    "pronoun": "he",
+    "company": "Seabrook Insurance Group",
+    "role_line": "Producer · Seabrook Insurance Group, Nashville TN",
+    "location": "Nashville TN",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "short",
+      "hairColor": "#3A2418",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "monica-reyes",
+    "kind": "client",
+    "level": 6,
+    "name": "Monica Reyes",
+    "initials": "MR",
+    "pronoun": "she",
+    "company": "Thornton Benefits",
+    "role_line": "CSR lead · Thornton Benefits, Charlotte NC",
+    "location": "Charlotte NC",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "bun",
+      "hairColor": "#C9A06A",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "dmitri-volkov",
+    "kind": "client",
+    "level": 6,
+    "name": "Dmitri Volkov",
+    "initials": "DV",
+    "pronoun": "he",
+    "company": "Juniper Insurance Agency",
+    "role_line": "Commercial lines manager · Juniper Insurance Agency, Minneapolis MN",
+    "location": "Minneapolis MN",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "long",
+      "hairColor": "#1B1F2A",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ruth-adeyemi",
+    "kind": "client",
+    "level": 6,
+    "name": "Ruth Adeyemi",
+    "initials": "RA",
+    "pronoun": "she",
+    "company": "Larkspur Risk Partners",
+    "role_line": "Personal lines manager · Larkspur Risk Partners, Sacramento CA",
+    "location": "Sacramento CA",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "short",
+      "hairColor": "#B86F33",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "kenji-ito",
+    "kind": "client",
+    "level": 6,
+    "name": "Kenji Ito",
+    "initials": "KI",
+    "pronoun": "he",
+    "company": "Ridgeview Insurance Services",
+    "role_line": "Benefits coordinator · Ridgeview Insurance Services, Boise ID",
+    "location": "Boise ID",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "bun",
+      "hairColor": "#24140E",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "gloria-morales",
+    "kind": "client",
+    "level": 6,
+    "name": "Gloria Morales",
+    "initials": "GM",
+    "pronoun": "she",
+    "company": "Hollis Coverage Co.",
+    "role_line": "Operations director · Hollis Coverage Co., Richmond VA",
+    "location": "Richmond VA",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "long",
+      "hairColor": "#5B3A1E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "isaac-grant",
+    "kind": "client",
+    "level": 6,
+    "name": "Isaac Grant",
+    "initials": "IG",
+    "pronoun": "he",
+    "company": "Bramble Agency",
+    "role_line": "Claims coordinator · Bramble Agency, Omaha NE",
+    "location": "Omaha NE",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "short",
+      "hairColor": "#8A8F99",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "amara-nwosu",
+    "kind": "client",
+    "level": 7,
+    "name": "Amara Nwosu",
+    "initials": "AN",
+    "pronoun": "she",
+    "company": "Crescent Commercial",
+    "role_line": "Account manager · Crescent Commercial, Albany NY",
+    "location": "Albany NY",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "bun",
+      "hairColor": "#3A2418",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "felix-becker",
+    "kind": "client",
+    "level": 7,
+    "name": "Felix Becker",
+    "initials": "FB",
+    "pronoun": "he",
+    "company": "Driftwood Insurance Group",
+    "role_line": "Agency owner · Driftwood Insurance Group, Austin TX",
+    "location": "Austin TX",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "long",
+      "hairColor": "#C9A06A",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "rosalind-hart",
+    "kind": "client",
+    "level": 7,
+    "name": "Rosalind Hart",
+    "initials": "RH",
+    "pronoun": "she",
+    "company": "Everly Benefits",
+    "role_line": "Office manager · Everly Benefits, Spokane WA",
+    "location": "Spokane WA",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "short",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "theo-ward",
+    "kind": "client",
+    "level": 7,
+    "name": "Theo Ward",
+    "initials": "TW",
+    "pronoun": "he",
+    "company": "Fenwick Insurance Agency",
+    "role_line": "Producer · Fenwick Insurance Agency, Madison WI",
+    "location": "Madison WI",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "bun",
+      "hairColor": "#B86F33",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "lina-karim",
+    "kind": "client",
+    "level": 7,
+    "name": "Lina Karim",
+    "initials": "LK",
+    "pronoun": "she",
+    "company": "Glenmore Risk Partners",
+    "role_line": "CSR lead · Glenmore Risk Partners, Toronto ON",
+    "location": "Toronto ON",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "long",
+      "hairColor": "#24140E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "desmond-clarke",
+    "kind": "client",
+    "level": 7,
+    "name": "Desmond Clarke",
+    "initials": "DC",
+    "pronoun": "he",
+    "company": "Hawthorne Insurance Services",
+    "role_line": "Commercial lines manager · Hawthorne Insurance Services, Calgary AB",
+    "location": "Calgary AB",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "short",
+      "hairColor": "#5B3A1E",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "paula-romero",
+    "kind": "client",
+    "level": 7,
+    "name": "Paula Romero",
+    "initials": "PR",
+    "pronoun": "she",
+    "company": "Kestrel Coverage Co.",
+    "role_line": "Personal lines manager · Kestrel Coverage Co., Halifax NS",
+    "location": "Halifax NS",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "bun",
+      "hairColor": "#8A8F99",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ravi-iyer",
+    "kind": "client",
+    "level": 7,
+    "name": "Ravi Iyer",
+    "initials": "RI",
+    "pronoun": "he",
+    "company": "Linden Agency",
+    "role_line": "Benefits coordinator · Linden Agency, Ottawa ON",
+    "location": "Ottawa ON",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "long",
+      "hairColor": "#3A2418",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "celeste-moreau",
+    "kind": "client",
+    "level": 7,
+    "name": "Celeste Moreau",
+    "initials": "CM",
+    "pronoun": "she",
+    "company": "Mariner Commercial",
+    "role_line": "Operations director · Mariner Commercial, Houston TX",
+    "location": "Houston TX",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "short",
+      "hairColor": "#C9A06A",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "joaquin-ruiz",
+    "kind": "client",
+    "level": 7,
+    "name": "Joaquín Ruiz",
+    "initials": "JR",
+    "pronoun": "he",
+    "company": "Northfield Insurance Group",
+    "role_line": "Claims coordinator · Northfield Insurance Group, Columbus OH",
+    "location": "Columbus OH",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "bun",
+      "hairColor": "#1B1F2A",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "harriet-fleming",
+    "kind": "client",
+    "level": 8,
+    "name": "Harriet Fleming",
+    "initials": "HF",
+    "pronoun": "she",
+    "company": "Orchard Benefits",
+    "role_line": "Account manager · Orchard Benefits, Naperville IL",
+    "location": "Naperville IL",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "long",
+      "hairColor": "#B86F33",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "omar-saleh",
+    "kind": "client",
+    "level": 8,
+    "name": "Omar Saleh",
+    "initials": "OS",
+    "pronoun": "he",
+    "company": "Parkside Insurance Agency",
+    "role_line": "Agency owner · Parkside Insurance Agency, Tampa FL",
+    "location": "Tampa FL",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "short",
+      "hairColor": "#24140E",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ingrid-berg",
+    "kind": "client",
+    "level": 8,
+    "name": "Ingrid Berg",
+    "initials": "IB",
+    "pronoun": "she",
+    "company": "Quarry Risk Partners",
+    "role_line": "Office manager · Quarry Risk Partners, Denver CO",
+    "location": "Denver CO",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "skeptical",
+      "prefs": [
+        "Evidence over opinion",
+        "Sources for every claim",
+        "Straight answers"
+      ],
+      "trigger": "Distrusts anything that sounds like a sales line",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "bun",
+      "hairColor": "#5B3A1E",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "nate-collins",
+    "kind": "client",
+    "level": 8,
+    "name": "Nate Collins",
+    "initials": "NC",
+    "pronoun": "he",
+    "company": "Rosewood Insurance Services",
+    "role_line": "Producer · Rosewood Insurance Services, Raleigh NC",
+    "location": "Raleigh NC",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "collaborative",
+      "prefs": [
+        "Thinking out loud together",
+        "Being asked for input",
+        "Shared checklists"
+      ],
+      "trigger": "Feels shut out by one-way updates",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "long",
+      "hairColor": "#8A8F99",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "esther-levy",
+    "kind": "client",
+    "level": 8,
+    "name": "Esther Levy",
+    "initials": "EL",
+    "pronoun": "she",
+    "company": "Sterling Coverage Co.",
+    "role_line": "CSR lead · Sterling Coverage Co., Phoenix AZ",
+    "location": "Phoenix AZ",
+    "importance": "low",
+    "tint": "blue",
+    "persona": {
+      "style": "detail",
+      "prefs": [
+        "Detail and documents",
+        "Polite, formal tone",
+        "No surprises"
+      ],
+      "trigger": "Needs every number in writing",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "short",
+      "hairColor": "#3A2418",
+      "shirt": "#2B3A5C",
+      "tie": "#2459E0"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "kofi-asante",
+    "kind": "client",
+    "level": 8,
+    "name": "Kofi Asante",
+    "initials": "KA",
+    "pronoun": "he",
+    "company": "Tidewater Agency",
+    "role_line": "Commercial lines manager · Tidewater Agency, Atlanta GA",
+    "location": "Atlanta GA",
+    "importance": "medium",
+    "tint": "coral",
+    "persona": {
+      "style": "busy",
+      "prefs": [
+        "Two-line emails",
+        "Decisions framed as options",
+        "Calls under five minutes"
+      ],
+      "trigger": "Hates being asked the same thing twice",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "bun",
+      "hairColor": "#C9A06A",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "maya-shah",
+    "kind": "client",
+    "level": 8,
+    "name": "Maya Shah",
+    "initials": "MS",
+    "pronoun": "she",
+    "company": "Union Commercial",
+    "role_line": "Personal lines manager · Union Commercial, Portland OR",
+    "location": "Portland OR",
+    "importance": "high",
+    "tint": "mint",
+    "persona": {
+      "style": "direct",
+      "prefs": [
+        "Bottom line first",
+        "Exact times, not “soon”",
+        "Short calls"
+      ],
+      "trigger": "Loses patience with vague answers",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "long",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "gabriel-silva",
+    "kind": "client",
+    "level": 8,
+    "name": "Gabriel Silva",
+    "initials": "GS",
+    "pronoun": "he",
+    "company": "Vale Insurance Group",
+    "role_line": "Benefits coordinator · Vale Insurance Group, Nashville TN",
+    "location": "Nashville TN",
+    "importance": "low",
+    "tint": "lime",
+    "persona": {
+      "style": "anxious",
+      "prefs": [
+        "Reassurance through facts",
+        "Frequent short updates",
+        "Clear next steps"
+      ],
+      "trigger": "Silence makes them assume the worst",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "short",
+      "hairColor": "#B86F33",
+      "shirt": "#3D4250",
+      "tie": "#3DBE8B"
+    },
+    "starting_meters": {
+      "trust": 5,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "simone-laurent",
+    "kind": "client",
+    "level": 8,
+    "name": "Simone Laurent",
+    "initials": "SL",
+    "pronoun": "she",
+    "company": "Wren Benefits",
+    "role_line": "Operations director · Wren Benefits, Charlotte NC",
+    "location": "Charlotte NC",
+    "importance": "medium",
+    "tint": "rose",
+    "persona": {
+      "style": "formal",
+      "prefs": [
+        "Courteous openings",
+        "Proper titles",
+        "Written confirmation"
+      ],
+      "trigger": "Finds casual tone unprofessional",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "bun",
+      "hairColor": "#24140E",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "trust": 6,
+      "respect": 6,
+      "anger": 2
+    },
+    "status": "draft"
+  },
+  {
+    "id": "wesley-price",
+    "kind": "client",
+    "level": 8,
+    "name": "Wesley Price",
+    "initials": "WP",
+    "pronoun": "he",
+    "company": "Yardley Insurance Agency",
+    "role_line": "Claims coordinator · Yardley Insurance Agency, Minneapolis MN",
+    "location": "Minneapolis MN",
+    "importance": "high",
+    "tint": "sky",
+    "persona": {
+      "style": "warm",
+      "prefs": [
+        "Warm small talk first",
+        "Wants the why",
+        "Email recap after calls"
+      ],
+      "trigger": "Dislikes surprises on premium",
+      "thoughts": [
+        {
+          "trust_min": 6,
+          "text": "(draft) Authored thought 1"
+        },
+        {
+          "trust_min": 8,
+          "text": "(draft) Authored thought 2"
+        }
+      ]
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "long",
+      "hairColor": "#5B3A1E",
+      "shirt": "#4A2F3F",
+      "tie": "#F2795A"
+    },
+    "starting_meters": {
+      "trust": 7,
+      "respect": 5,
+      "anger": 2
+    },
+    "status": "draft"
+  }
+]

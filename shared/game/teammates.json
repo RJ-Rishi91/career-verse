@@ -1,0 +1,302 @@
+[
+  {
+    "id": "jamie-ford",
+    "kind": "teammate",
+    "level": 5,
+    "name": "Jamie Ford",
+    "initials": "JF",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "mint",
+    "persona": {
+      "strength": "thorough",
+      "growth_area": "speed"
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "short",
+      "hairColor": "#24140E",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 6,
+      "reliability": 7,
+      "workload": 5,
+      "morale": 7
+    },
+    "status": "draft"
+  },
+  {
+    "id": "noor-aziz",
+    "kind": "teammate",
+    "level": 5,
+    "name": "Noor Aziz",
+    "initials": "NA",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "lime",
+    "persona": {
+      "strength": "fast",
+      "growth_area": "accuracy"
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "long",
+      "hairColor": "#5B3A1E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 5,
+      "reliability": 5,
+      "workload": 6,
+      "morale": 6
+    },
+    "status": "draft"
+  },
+  {
+    "id": "sam-ortiz",
+    "kind": "teammate",
+    "level": 6,
+    "name": "Sam Ortiz",
+    "initials": "SO",
+    "pronoun": "he",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "rose",
+    "persona": {
+      "strength": "calm with clients",
+      "growth_area": "pushing back"
+    },
+    "art": {
+      "skin": "#B9825A",
+      "neck": "#B9825A",
+      "hair": "bun",
+      "hairColor": "#8A8F99",
+      "shirt": "#3D4250",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 5,
+      "reliability": 6,
+      "workload": 4,
+      "morale": 7
+    },
+    "status": "draft"
+  },
+  {
+    "id": "leila-moreno",
+    "kind": "teammate",
+    "level": 6,
+    "name": "Leila Moreno",
+    "initials": "LM",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "sky",
+    "persona": {
+      "strength": "great with carriers",
+      "growth_area": "written updates"
+    },
+    "art": {
+      "skin": "#D9A27A",
+      "neck": "#D9A27A",
+      "hair": "short",
+      "hairColor": "#3A2418",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 7,
+      "reliability": 6,
+      "workload": 5,
+      "morale": 5
+    },
+    "status": "draft"
+  },
+  {
+    "id": "chris-dunn",
+    "kind": "teammate",
+    "level": 7,
+    "name": "Chris Dunn",
+    "initials": "CD",
+    "pronoun": "he",
+    "company": "Your agency",
+    "role_line": "Team lead on your team",
+    "tint": "blue",
+    "persona": {
+      "strength": "organised",
+      "growth_area": "delegating"
+    },
+    "art": {
+      "skin": "#5A3A28",
+      "neck": "#5A3A28",
+      "hair": "long",
+      "hairColor": "#C9A06A",
+      "shirt": "#4A2F3F",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 7,
+      "reliability": 8,
+      "workload": 6,
+      "morale": 6
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ana-popescu",
+    "kind": "teammate",
+    "level": 7,
+    "name": "Ana Popescu",
+    "initials": "AP",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Team lead on your team",
+    "tint": "coral",
+    "persona": {
+      "strength": "coaches well",
+      "growth_area": "patience"
+    },
+    "art": {
+      "skin": "#8D5A3B",
+      "neck": "#8D5A3B",
+      "hair": "bun",
+      "hairColor": "#1B1F2A",
+      "shirt": "#2B3A5C",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 6,
+      "reliability": 7,
+      "workload": 6,
+      "morale": 7
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ike-obi",
+    "kind": "teammate",
+    "level": 7,
+    "name": "Ike Obi",
+    "initials": "IO",
+    "pronoun": "he",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "mint",
+    "persona": {
+      "strength": "eager",
+      "growth_area": "confidence"
+    },
+    "art": {
+      "skin": "#F1C7A5",
+      "neck": "#F1C7A5",
+      "hair": "short",
+      "hairColor": "#B86F33",
+      "shirt": "#24325C",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 4,
+      "reliability": 5,
+      "workload": 3,
+      "morale": 8
+    },
+    "status": "draft"
+  },
+  {
+    "id": "tess-murray",
+    "kind": "teammate",
+    "level": 7,
+    "name": "Tess Murray",
+    "initials": "TM",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "lime",
+    "persona": {
+      "strength": "detail-minded",
+      "growth_area": "prioritising"
+    },
+    "art": {
+      "skin": "#C68B5E",
+      "neck": "#C68B5E",
+      "hair": "long",
+      "hairColor": "#24140E",
+      "shirt": "#2B3D6E",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 6,
+      "reliability": 7,
+      "workload": 5,
+      "morale": 6
+    },
+    "status": "draft"
+  },
+  {
+    "id": "ryo-tanaka",
+    "kind": "teammate",
+    "level": 8,
+    "name": "Ryo Tanaka",
+    "initials": "RT",
+    "pronoun": "he",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "rose",
+    "persona": {
+      "strength": "quiet but reliable",
+      "growth_area": "speaking up"
+    },
+    "art": {
+      "skin": "#E8C29C",
+      "neck": "#E8C29C",
+      "hair": "bun",
+      "hairColor": "#5B3A1E",
+      "shirt": "#3D4250",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 5,
+      "reliability": 8,
+      "workload": 4,
+      "morale": 6
+    },
+    "status": "draft"
+  },
+  {
+    "id": "bea-santos",
+    "kind": "teammate",
+    "level": 8,
+    "name": "Bea Santos",
+    "initials": "BS",
+    "pronoun": "she",
+    "company": "Your agency",
+    "role_line": "Associate on your team",
+    "tint": "sky",
+    "persona": {
+      "strength": "creative fixer",
+      "growth_area": "follow-through"
+    },
+    "art": {
+      "skin": "#6E4630",
+      "neck": "#6E4630",
+      "hair": "short",
+      "hairColor": "#8A8F99",
+      "shirt": "#1F4D45",
+      "tie": null
+    },
+    "starting_meters": {
+      "skill": 6,
+      "reliability": 5,
+      "workload": 6,
+      "morale": 7
+    },
+    "status": "draft"
+  }
+]

@@ -5,13 +5,14 @@ import { connectDB, isDbConnected } from './config/db.js';
 import careerRoutes from './routes/careerRoutes.js';
 import callRoutes from './routes/callRoutes.js';
 import clientRoutes from './routes/clientRoutes.js';
+import leaderboardRoutes from './routes/leaderboardRoutes.js';
+import scenarioRoutes from './routes/scenarioRoutes.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// Allow CORS from GitHub Pages, custom domain, and localhost
 const allowedOrigins = [
   'https://career-verse.onerishi.in',
   'http://career-verse.onerishi.in',
@@ -29,7 +30,7 @@ app.use(cors({
       typeof item === 'string' ? item === origin : item.test(origin)
     );
     if (isAllowed) return callback(null, true);
-    return callback(null, true); // Permissive for preview/local development
+    return callback(null, true);
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -42,12 +43,14 @@ app.use(express.json());
 app.use('/api/career', careerRoutes);
 app.use('/api/calls', callRoutes);
 app.use('/api/clients', clientRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
+app.use('/api/scenarios', scenarioRoutes);
 
-// Health check endpoint for Render & clients
+// Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    service: 'CareerVerse Backend API',
+    service: 'CareerVerse Backend API v1.0',
     database: isDbConnected() ? 'connected' : 'in-memory-fallback',
     timestamp: new Date().toISOString()
   });

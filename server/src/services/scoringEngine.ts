@@ -1,4 +1,4 @@
-import { C7Scores, CommittedChoice, ScorecardResult, ScenarioOption } from '../types/index.js';
+import { C7Scores, CommittedChoice, ScorecardResult } from '../types/index.js';
 import { ContentService } from './contentService.js';
 
 const C7_KEYS: (keyof C7Scores)[] = ['clear', 'concise', 'concrete', 'correct', 'coherent', 'complete', 'courteous'];
@@ -63,13 +63,16 @@ export class ScoringEngine {
     });
 
     const level = (val: number): number => {
-      if (val >= rules.levelCuts.strong) return 3;
-      if (val >= rules.levelCuts.good) return 2;
+      const strongCut = rules.levelCuts?.strong ?? 2.5;
+      const goodCut = rules.levelCuts?.good ?? 1.5;
+      if (val >= strongCut) return 3;
+      if (val >= goodCut) return 2;
       return 1;
     };
 
-    const wSum = C7_KEYS.reduce((sum, k) => sum + (rules.c7Weights[k] || 1), 0);
-    const commTotal = C7_KEYS.reduce((sum, k) => sum + avg[k] * (rules.c7Weights[k] || 1), 0);
+    const weights = rules.c7Weights || { clear: 1, concise: 1, concrete: 1, correct: 1.5, coherent: 1, complete: 1, courteous: 1 };
+    const wSum = C7_KEYS.reduce((sum, k) => sum + (weights[k] || 1), 0);
+    const commTotal = C7_KEYS.reduce((sum, k) => sum + avg[k] * (weights[k] || 1), 0);
     const communication = Math.round((commTotal / wSum / 3) * 100);
 
     let rawBusiness = Math.round(
@@ -78,16 +81,46 @@ export class ScoringEngine {
 
     const criticalChoice = choices.find((ch) => ch.option.critical);
     const recovered = !!choices.find((ch) => ch.option.recovery);
-    const capped = !!criticalChoice && rawBusiness > rules.criticalBusinessCap;
+    const cap = rules.criticalBusinessCap ?? 40;
+    const capped = !!criticalChoice && rawBusiness > cap;
 
-    const business = criticalChoice ? Math.min(rawBusiness, rules.criticalBusinessCap) : rawBusiness;
+    const business = criticalChoice ? Math.min(rawBusiness, cap) : rawBusiness;
 
     const perf = (communication + business) / 200;
-    const xp = rules.xpBase + Math.round(rules.xpPerformanceMax * perf);
-    const coins = rules.coinsBase + Math.round((rules.coinsPerformanceMax * business) / 100);
+    const xpBase = rules.xpBase ?? 60;
+    const xpMax = rules.xpPerformanceMax ?? 25;
+    const coinsBase = rules.coinsBase ?? 5;
+    const coinsMax = rules.coinsPerformanceMax ?? 10;
 
-    const bReq = rules.badges.straightShooter;
-    const badge = !criticalChoice && avg.correct >= bReq.requires.correct && avg.concrete >= bReq.requires.concrete;
+    const xp = xpBase + Math.round(xpMax * perf);
+    const coins = coinsBase + Math.round((coinsMax * business) / 100);
+
+    // Evaluate badges from v1.0 100-badge system
+    let badge = false;
+    let badgeId: string | undefined = undefined;
+    let badgeName: string | undefined = undefined;
+
+    if (!criticalChoice && avg.correct >= 2.5 && avg.concrete >= 2.5) {
+      badge = true;
+      badgeId = 'straight_shooter_1';
+      badgeName = 'Straight Shooter I';
+    } else if (recovered) {
+      badge = true;
+      badgeId = 'course_correct';
+      badgeName = 'Course Correct';
+    } else if (!criticalChoice && rawBusiness >= 85) {
+      badge = true;
+      badgeId = 'clean_record_1';
+      badgeName = 'Clean Record I';
+    } else if (avg.clear >= 2.5) {
+      badge = true;
+      badgeId = 'c7_clear_1';
+      badgeName = 'Crystal Clear I';
+    } else if (avg.courteous >= 2.5) {
+      badge = true;
+      badgeId = 'c7_courteous_1';
+      badgeName = 'Diplomat I';
+    }
 
     const rank = (ch: CommittedChoice) =>
       ch.option.business + C7_KEYS.reduce((s, k) => s + ch.option.c7[k], 0) / 7;
@@ -123,6 +156,7 @@ export class ScoringEngine {
     }
 
     return {
+      scenarioId,
       communication,
       business,
       critical: criticalChoice ? criticalChoice.option : null,
@@ -131,12 +165,14 @@ export class ScoringEngine {
       xp,
       coins,
       badge,
+      badgeId,
+      badgeName,
       c7rows,
       totals,
       coach: {
-        worked: best.coach.worked,
-        next: worst.coach.next,
-        why: (criticalChoice ? criticalChoice.option : worst).coach.why
+        worked: best?.coach?.worked || 'You maintained a clear structure.',
+        next: worst?.coach?.next || 'Acknowledge the client’s timeline pressure.',
+        why: (criticalChoice ? criticalChoice.option : worst)?.coach?.why || 'Clear updates protect both client and agency.'
       },
       headline,
       ruleOfThumb: scenario.ruleOfThumb

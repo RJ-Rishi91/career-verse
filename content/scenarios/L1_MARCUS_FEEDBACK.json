@@ -1,0 +1,312 @@
+{
+  "scenario_id": "L1_MARCUS_FEEDBACK",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "marcus-bell",
+  "scenario_type": "feedback_call",
+  "learning_objectives": [
+    "receiving_feedback",
+    "concrete_improvements"
+  ],
+  "business_objective": "Own the near miss and agree a concrete improvement without blaming the carrier.",
+  "title": "Marcus: “2:50 was too close”",
+  "teaser": "The certificate was accepted, but it landed ten minutes before the deadline.",
+  "known_facts": [
+    {
+      "time": "Tue 2:50",
+      "text": "Certificate delivered to the GC"
+    },
+    {
+      "time": "Tue 3:00",
+      "text": "GC deadline"
+    }
+  ],
+  "rule_of_thumb": "Own it, then fix the process with a time.",
+  "base_meters": {
+    "trust": 6,
+    "respect": 7,
+    "anger": 5
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "The GC accepted it, but 2:50 was too close. My crew almost got sent home.",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "That was too close, and I'm sorry it put your crew at risk. Next time I'll request the endorsement the same hour you ask, and send you a midday status even if it's still pending.",
+          "reaction": "Okay. That's what I wanted to hear.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You owned it and offered a specific change.",
+            "next": "Keep the apology to one sentence, as you did.",
+            "why": "Feedback calls are about the next time, not the last time."
+          },
+          "tags": [
+            "owned_mistake",
+            "empathy_first"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "It got there before 3, so it worked out.",
+          "reaction": "Worked out? I had a superintendent yelling at me.",
+          "expression": "frustrated",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 1,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You stated a fact.",
+            "next": "Acknowledge the impact before the facts.",
+            "why": "On time isn't the same as early enough for him."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "The carrier was slow, not us.",
+          "reaction": "I don't care whose fault it was.",
+          "expression": "frustrated",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 2
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 3,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You explained the delay.",
+            "next": "Don't shift blame to a partner the client can't see.",
+            "why": "Blame sounds like an excuse and doesn't fix the next request."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Can you set that up for every certificate I send you?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes. Send requests to the shared inbox and I'll confirm I've got them within an hour, with a status by midday.",
+          "reaction": "Done. Thanks.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "A clear process with times he can rely on.",
+            "next": "Write it down for him in an email recap.",
+            "why": "A repeatable process prevents the next near miss."
+          },
+          "tags": [
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I'll try my best.",
+          "reaction": "Hmm.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You were willing.",
+            "next": "Replace “try” with a process and a time.",
+            "why": "“Try” gives him nothing to plan around."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "That doesn't help me next time.",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "You're right. From now on you'll get a status by midday on any certificate, even if it's still pending.",
+          "reaction": "Okay. I'll hold you to that.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 2,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You turned it around with a concrete change.",
+            "next": "Lead with the acknowledgement next time.",
+            "why": "He needed to know it won't happen again."
+          },
+          "tags": [
+            "owned_mistake"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "The certificate was still on time, though.",
+          "reaction": "Unbelievable.",
+          "expression": "frustrated",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 2
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 1,
+              "coherent": 2,
+              "complete": 0,
+              "courteous": 0
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You were consistent.",
+            "next": "Stop defending and start fixing.",
+            "why": "Repeating your point after he pushed back cost trust."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "coi",
+    "feedback"
+  ]
+}

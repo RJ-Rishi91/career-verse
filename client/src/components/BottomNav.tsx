@@ -16,7 +16,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     { id: 'desk', href: '#/desk', label: 'Desk', icon: 'desk' },
     { id: 'clients', href: '#/clients', label: 'Clients', icon: 'clients' },
     { id: 'inbox', href: '#/desk', label: `Inbox · ${inboxCount}`, icon: 'inbox' },
-    { id: 'journal', href: '#/desk', label: 'Journal', icon: 'journal' }
+    { id: 'leaderboard', href: '#/leaderboard', label: 'Top 30', icon: 'trophy' }
   ];
 
   return (

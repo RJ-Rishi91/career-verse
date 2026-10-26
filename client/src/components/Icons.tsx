@@ -50,7 +50,16 @@ export const ICON_PATHS = {
       <path d="M12 10v4M12 17v.5" />
     </>
   ),
-  chevron: <path d="M9 6l6 6-6 6" />
+  chevron: <path d="M9 6l6 6-6 6" />,
+  trophy: (
+    <>
+      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+      <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+      <path d="M4 22h16" />
+      <path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v3h10v-3c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34" />
+      <path d="M6 4h12a2 2 0 0 1 2 2v4a6 6 0 0 1-12 0V6a2 2 0 0 1 2-2z" />
+    </>
+  )
 };
 
 export type IconName = keyof typeof ICON_PATHS;

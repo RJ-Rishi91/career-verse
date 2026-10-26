@@ -1,0 +1,30 @@
+{
+  "author": [
+    "content.read",
+    "content.edit_draft",
+    "characters.edit_draft",
+    "preview.play"
+  ],
+  "reviewer": [
+    "content.read",
+    "content.review",
+    "preview.play"
+  ],
+  "admin": [
+    "users.read",
+    "users.suspend",
+    "users.force_logout",
+    "users.send_reset",
+    "careers.read",
+    "content.read",
+    "content.publish",
+    "config.edit_draft",
+    "announcements.manage",
+    "feedback.read",
+    "analytics.read",
+    "audit.read"
+  ],
+  "master_admin": [
+    "*"
+  ]
+}

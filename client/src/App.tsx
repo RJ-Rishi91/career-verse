@@ -13,6 +13,7 @@ import { CallView } from './views/CallView.js';
 import { ScoreView } from './views/ScoreView.js';
 import { RewardsView } from './views/RewardsView.js';
 import { ClientsView } from './views/ClientsView.js';
+import { LeaderboardView } from './views/LeaderboardView.js';
 
 export const App: React.FC = () => {
   const [career, setCareer] = useState<CareerState | null>(null);
@@ -26,6 +27,7 @@ export const App: React.FC = () => {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState<boolean>(false);
   const [previewMode, setPreviewMode] = useState<PreviewMode>('auto');
+  const [timeOverride, setTimeOverride] = useState<number | null>(null);
   const [isBackendConnected, setIsBackendConnected] = useState<boolean>(false);
 
   // Parse current hash route
@@ -121,12 +123,18 @@ export const App: React.FC = () => {
     );
   }
 
-  const marcus = career.clients.find(c => c.id === 'marcus')!;
-  const dana = career.clients.find(c => c.id === 'dana')!;
+  const marcus = career.clients.find(c => c.id === 'marcus') || career.clients[0];
+  const dana = career.clients.find(c => c.id === 'dana') || career.clients[1] || marcus;
+
+  const currentScenarioId = callState?.scenarioId || scorecard?.scenarioId || career.scenario.id;
+  const currentScenario = ApiService.getScenario(currentScenarioId) || career.scenario;
+  const currentClient = career.clients.find(c => c.id === currentScenario.clientId) || marcus;
 
   // Actions
-  const handleStartCall = async () => {
-    const cState = await ApiService.getActiveCall();
+  const handleStartCall = async (scenarioId?: string) => {
+    const cState = await ApiService.getActiveCall(scenarioId);
+    const updatedCareer = await ApiService.getCareer();
+    setCareer(updatedCareer);
     setCallState(cState);
     navigateTo('call');
   };
@@ -193,8 +201,8 @@ export const App: React.FC = () => {
   };
 
   // Determine layout shell
-  const hasSidebar = route === 'desk' || route === 'clients' || route === 'client';
-  const showBottomNav = route === 'desk' || route === 'clients';
+  const hasSidebar = route === 'desk' || route === 'clients' || route === 'client' || route === 'leaderboard';
+  const showBottomNav = route === 'desk' || route === 'clients' || route === 'leaderboard';
 
   return (
     <>
@@ -203,7 +211,7 @@ export const App: React.FC = () => {
           className={`app ${hasSidebar ? 'has-sidebar' : ''}`}
           data-route={route}
         >
-          {/* Desktop Sidebar (Desk & Clients only) */}
+          {/* Desktop Sidebar (Desk, Clients, Leaderboard) */}
           {hasSidebar && (
             <Sidebar
               activeRoute={route}
@@ -214,14 +222,7 @@ export const App: React.FC = () => {
           )}
 
           {/* Top Bars */}
-          {route === 'desk' && (
-            <TopBar
-              player={career.player}
-              isBackendConnected={isBackendConnected}
-            />
-          )}
-
-          {route === 'clients' && (
+          {(route === 'desk' || route === 'clients' || route === 'leaderboard') && (
             <TopBar
               player={career.player}
               isBackendConnected={isBackendConnected}
@@ -246,8 +247,8 @@ export const App: React.FC = () => {
               backHref="#/desk"
               backLabel="Pause and return to desk"
               backIcon="pause"
-              title={marcus.name}
-              sub={`${career.scenario.type} · ${marcus.company}`}
+              title={currentClient.name}
+              sub={`${currentScenario.type} · ${currentClient.company || 'Client'}`}
               saveState={saveState}
               onBackClick={(e) => {
                 e.preventDefault();
@@ -261,7 +262,7 @@ export const App: React.FC = () => {
               backHref="#/desk"
               backLabel="Back to desk"
               title="Call scorecard"
-              sub={marcus.name}
+              sub={currentClient.name}
               onBackClick={(e) => {
                 e.preventDefault();
                 navigateTo('desk');
@@ -286,6 +287,7 @@ export const App: React.FC = () => {
             {route === 'desk' && (
               <DeskView
                 career={career}
+                timeOverride={timeOverride}
                 onNavigate={navigateTo}
                 onStartCall={handleStartCall}
               />
@@ -294,8 +296,8 @@ export const App: React.FC = () => {
             {route === 'call' && callState && (
               <CallView
                 callState={callState}
-                client={marcus}
-                scenario={career.scenario}
+                client={currentClient}
+                scenario={currentScenario}
                 onNextOption={handleNextOption}
                 onCommitOption={handleCommitOption}
                 onContinue={handleContinueCall}
@@ -306,8 +308,8 @@ export const App: React.FC = () => {
             {route === 'score' && scorecard && (
               <ScoreView
                 scorecard={scorecard}
-                client={marcus}
-                scenario={career.scenario}
+                client={currentClient}
+                scenario={currentScenario}
                 onCollect={handleCollectRewards}
               />
             )}
@@ -327,6 +329,13 @@ export const App: React.FC = () => {
                 clients={career.clients}
                 selectedClientId={routeParam}
                 onSelectClient={(id) => navigateTo(`client/${id}`)}
+              />
+            )}
+
+            {route === 'leaderboard' && (
+              <LeaderboardView
+                onBackToDesk={() => navigateTo('desk')}
+                showToast={showToast}
               />
             )}
           </main>
@@ -349,6 +358,8 @@ export const App: React.FC = () => {
       <PreviewBar
         currentMode={previewMode}
         onModeChange={setPreviewMode}
+        timeOverride={timeOverride}
+        onTimeChange={setTimeOverride}
         onResetDemo={handleResetDemo}
       />
     </>

@@ -1,14 +1,14 @@
 {
   "scenario_id": "L1_MARCUS_STATUS_UPDATE",
   "version": 1,
-  "status": "draft",
+  "status": "in_review",
   "level": 1,
-  "client_id": "marcus",
+  "client_id": "marcus-bell",
   "scenario_type": "status_update_call",
   "learning_objectives": [
     "clear_updates",
     "concrete_timelines",
-    "correct_authority_boundaries"
+    "staying_within_authority"
   ],
   "business_objective": "Give a truthful update on his certificate of insurance without promising what the carrier hasn’t confirmed.",
   "title": "The job site can’t open until his certificate lands",
@@ -26,11 +26,6 @@
       "time": "3:00",
       "text": "GC deadline for site access"
     }
-  ],
-  "due_label": "Due 3:00 PM",
-  "skills": [
-    "Concrete",
-    "Correct"
   ],
   "rule_of_thumb": "Fact, then status, then the next step with a time.",
   "base_meters": {
@@ -86,7 +81,8 @@
             "worked": "Your tone was calm and reassuring.",
             "next": "Never call something done before the carrier confirms it. Say what is true right now.",
             "why": "You promised an endorsement the carrier hasn’t issued. If the GC acts on your word, the agency carries the risk."
-          }
+          },
+          "tags": []
         },
         {
           "option_id": "B",
@@ -118,7 +114,11 @@
             "worked": "A fact (sent at 9:40), the real status (pending) and a next step with a time (1:30). Marcus can plan around that.",
             "next": "Name his pressure first: “I know the crew is waiting.” Courtesy costs three seconds.",
             "why": "You can’t confirm an endorsement the carrier hasn’t issued. A clear process update protects him and the agency."
-          }
+          },
+          "tags": [
+            "stayed_in_authority",
+            "promised_controlled_time"
+          ]
         },
         {
           "option_id": "C",
@@ -150,7 +150,8 @@
             "worked": "You didn’t promise anything you couldn’t deliver.",
             "next": "Give him the facts you do have and a time for the next update.",
             "why": "An honest “I don’t know” still needs a plan. Without one, Marcus can’t manage his crew or the GC."
-          }
+          },
+          "tags": []
         }
       ]
     },
@@ -192,7 +193,11 @@
             "worked": "You had a fallback ready and kept your 1:30 promise either way.",
             "next": "Keep the fallback as short as the answer.",
             "why": "A backup plan turns a risk into a managed risk."
-          }
+          },
+          "tags": [
+            "fallback_plan",
+            "escalated_correctly"
+          ]
         },
         {
           "option_id": "B",
@@ -224,7 +229,8 @@
             "worked": "You stayed polite.",
             "next": "Answer the “what if” with an action and a time.",
             "why": "He asked for a plan B. Without one he can’t prepare his crew."
-          }
+          },
+          "tags": []
         }
       ]
     },
@@ -266,7 +272,11 @@
             "worked": "You corrected yourself before the mistake could spread. That takes nerve.",
             "next": "Get it right the first time so there is nothing to correct.",
             "why": "Correcting early limits the damage, but the first promise stays on the record."
-          }
+          },
+          "tags": [
+            "owned_mistake",
+            "stayed_in_authority"
+          ]
         },
         {
           "option_id": "B",
@@ -300,7 +310,8 @@
             "worked": "You were decisive.",
             "next": "Only commit to times you control. The carrier controls this one.",
             "why": "This doubles the original promise. If the certificate isn’t there by 2, the GC and Marcus both lose trust in the agency."
-          }
+          },
+          "tags": []
         }
       ]
     },
@@ -342,7 +353,10 @@
             "worked": "Second time round you gave facts and a time.",
             "next": "Lead with this answer next time.",
             "why": "He had to push to get a plan. That costs a little respect even when you recover."
-          }
+          },
+          "tags": [
+            "promised_controlled_time"
+          ]
         },
         {
           "option_id": "B",
@@ -374,9 +388,15 @@
             "worked": "You stayed calm.",
             "next": "Replace “try” with an action and a time.",
             "why": "A vague promise twice in one call tells him the account isn’t in control."
-          }
+          },
+          "tags": []
         }
       ]
     }
+  ],
+  "tags": [
+    "coi",
+    "deadline",
+    "carrier"
   ]
 }

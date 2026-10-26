@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "navigation": {
+    "path": "start",
+    "clients": "after_first_scorecard",
+    "inbox": "level>=2",
+    "glossary": "level>=2",
+    "journal": "after_first_incident_or_level>=2",
+    "achievements": "after_first_badge",
+    "quests": "after_onboarding",
+    "shop": "after_first_promotion",
+    "team": "level>=5"
+  },
+  "rule": "Hidden until unlocked; introduce with a one-line message."
+}

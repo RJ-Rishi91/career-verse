@@ -1,0 +1,2202 @@
+[
+  {
+    "id": "c7_clear_1",
+    "name": "Crystal Clear I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_clear",
+    "description": "Rated Strong on Clear (plain words, one idea per sentence) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:clear",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 1,
+    "art": "assets/badges/c7_clear_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_clear_2",
+    "name": "Crystal Clear II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_clear",
+    "description": "Rated Strong on Clear (plain words, one idea per sentence) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:clear",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 2,
+    "art": "assets/badges/c7_clear_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_clear_3",
+    "name": "Crystal Clear III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_clear",
+    "description": "Rated Strong on Clear (plain words, one idea per sentence) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:clear",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 3,
+    "art": "assets/badges/c7_clear_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concise_1",
+    "name": "Brevity Pro I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_concise",
+    "description": "Rated Strong on Concise (no wasted words) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concise",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 4,
+    "art": "assets/badges/c7_concise_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concise_2",
+    "name": "Brevity Pro II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_concise",
+    "description": "Rated Strong on Concise (no wasted words) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concise",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 5,
+    "art": "assets/badges/c7_concise_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concise_3",
+    "name": "Brevity Pro III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_concise",
+    "description": "Rated Strong on Concise (no wasted words) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concise",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 6,
+    "art": "assets/badges/c7_concise_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concrete_1",
+    "name": "Concrete Thinker I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_concrete",
+    "description": "Rated Strong on Concrete (real facts, times and owners) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concrete",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 7,
+    "art": "assets/badges/c7_concrete_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concrete_2",
+    "name": "Concrete Thinker II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_concrete",
+    "description": "Rated Strong on Concrete (real facts, times and owners) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concrete",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 8,
+    "art": "assets/badges/c7_concrete_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_concrete_3",
+    "name": "Concrete Thinker III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_concrete",
+    "description": "Rated Strong on Concrete (real facts, times and owners) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:concrete",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 9,
+    "art": "assets/badges/c7_concrete_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_correct_1",
+    "name": "By the Book I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_correct",
+    "description": "Rated Strong on Correct (accurate and within your authority) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:correct",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 10,
+    "art": "assets/badges/c7_correct_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_correct_2",
+    "name": "By the Book II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_correct",
+    "description": "Rated Strong on Correct (accurate and within your authority) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:correct",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 11,
+    "art": "assets/badges/c7_correct_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_correct_3",
+    "name": "By the Book III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_correct",
+    "description": "Rated Strong on Correct (accurate and within your authority) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:correct",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 12,
+    "art": "assets/badges/c7_correct_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_coherent_1",
+    "name": "Logical Flow I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_coherent",
+    "description": "Rated Strong on Coherent (past, present, next, in order) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:coherent",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 13,
+    "art": "assets/badges/c7_coherent_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_coherent_2",
+    "name": "Logical Flow II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_coherent",
+    "description": "Rated Strong on Coherent (past, present, next, in order) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:coherent",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 14,
+    "art": "assets/badges/c7_coherent_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_coherent_3",
+    "name": "Logical Flow III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_coherent",
+    "description": "Rated Strong on Coherent (past, present, next, in order) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:coherent",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 15,
+    "art": "assets/badges/c7_coherent_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_complete_1",
+    "name": "Nothing Missed I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_complete",
+    "description": "Rated Strong on Complete (everything the client needed to act) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:complete",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 16,
+    "art": "assets/badges/c7_complete_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_complete_2",
+    "name": "Nothing Missed II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_complete",
+    "description": "Rated Strong on Complete (everything the client needed to act) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:complete",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 17,
+    "art": "assets/badges/c7_complete_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_complete_3",
+    "name": "Nothing Missed III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_complete",
+    "description": "Rated Strong on Complete (everything the client needed to act) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:complete",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 18,
+    "art": "assets/badges/c7_complete_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_courteous_1",
+    "name": "Gracious I",
+    "category": "communication",
+    "tier": 1,
+    "family": "c7_courteous",
+    "description": "Rated Strong on Courteous (respect and empathy under pressure) in 3 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:courteous",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 19,
+    "art": "assets/badges/c7_courteous_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_courteous_2",
+    "name": "Gracious II",
+    "category": "communication",
+    "tier": 2,
+    "family": "c7_courteous",
+    "description": "Rated Strong on Courteous (respect and empathy under pressure) in 15 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:courteous",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 20,
+    "art": "assets/badges/c7_courteous_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "c7_courteous_3",
+    "name": "Gracious III",
+    "category": "communication",
+    "tier": 3,
+    "family": "c7_courteous",
+    "description": "Rated Strong on Courteous (respect and empathy under pressure) in 50 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "c7_strong_calls:courteous",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 21,
+    "art": "assets/badges/c7_courteous_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "master_communicator_1",
+    "name": "Master Communicator I",
+    "category": "communication",
+    "tier": 1,
+    "family": "master_communicator",
+    "description": "All seven Cs rated Strong in 1 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "all_c7_strong_calls",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 22,
+    "art": "assets/badges/master_communicator_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "master_communicator_2",
+    "name": "Master Communicator II",
+    "category": "communication",
+    "tier": 2,
+    "family": "master_communicator",
+    "description": "All seven Cs rated Strong in 10 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "all_c7_strong_calls",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 23,
+    "art": "assets/badges/master_communicator_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "master_communicator_3",
+    "name": "Master Communicator III",
+    "category": "communication",
+    "tier": 3,
+    "family": "master_communicator",
+    "description": "All seven Cs rated Strong in 30 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "all_c7_strong_calls",
+          "op": "gte",
+          "value": 30
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 24,
+    "art": "assets/badges/master_communicator_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "problem_solver_1",
+    "name": "Problem Solver I",
+    "category": "problem_solving",
+    "tier": 1,
+    "family": "problem_solver",
+    "description": "Full business score in 5 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "business_full_calls",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 25,
+    "art": "assets/badges/problem_solver_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "problem_solver_2",
+    "name": "Problem Solver II",
+    "category": "problem_solving",
+    "tier": 2,
+    "family": "problem_solver",
+    "description": "Full business score in 20 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "business_full_calls",
+          "op": "gte",
+          "value": 20
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 26,
+    "art": "assets/badges/problem_solver_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "problem_solver_3",
+    "name": "Problem Solver III",
+    "category": "problem_solving",
+    "tier": 3,
+    "family": "problem_solver",
+    "description": "Full business score in 60 calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "business_full_calls",
+          "op": "gte",
+          "value": 60
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 27,
+    "art": "assets/badges/problem_solver_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "plan_b",
+    "name": "Plan B",
+    "category": "problem_solving",
+    "tier": 1,
+    "family": "plan_b",
+    "description": "Offered a concrete fallback plan 5 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:fallback_plan",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 28,
+    "art": "assets/badges/plan_b.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "right_question",
+    "name": "The Right Question",
+    "category": "problem_solving",
+    "tier": 1,
+    "family": "right_question",
+    "description": "Asked the clarifying question that mattered 10 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:asked_clarifying",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 29,
+    "art": "assets/badges/right_question.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "escalation_ace",
+    "name": "Escalation Ace",
+    "category": "problem_solving",
+    "tier": 1,
+    "family": "escalation_ace",
+    "description": "Escalated to the right person at the right time 5 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:escalated_correctly",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 30,
+    "art": "assets/badges/escalation_ace.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "trusted_1",
+    "name": "Trusted I",
+    "category": "relationships",
+    "tier": 1,
+    "family": "trusted",
+    "description": "1 clients reached trust 9",
+    "criteria": {
+      "all": [
+        {
+          "metric": "clients_trust_gte:9",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 31,
+    "art": "assets/badges/trusted_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "trusted_2",
+    "name": "Trusted II",
+    "category": "relationships",
+    "tier": 2,
+    "family": "trusted",
+    "description": "5 clients reached trust 9",
+    "criteria": {
+      "all": [
+        {
+          "metric": "clients_trust_gte:9",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 32,
+    "art": "assets/badges/trusted_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "trusted_3",
+    "name": "Trusted III",
+    "category": "relationships",
+    "tier": 3,
+    "family": "trusted",
+    "description": "15 clients reached trust 9",
+    "criteria": {
+      "all": [
+        {
+          "metric": "clients_trust_gte:9",
+          "op": "gte",
+          "value": 15
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 33,
+    "art": "assets/badges/trusted_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "calm_voice_1",
+    "name": "Calm Voice I",
+    "category": "relationships",
+    "tier": 1,
+    "family": "calm_voice",
+    "description": "Lowered a client's anger by 2 or more in one call, 1 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "anger_drop_calls:2",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 34,
+    "art": "assets/badges/calm_voice_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "calm_voice_2",
+    "name": "Calm Voice II",
+    "category": "relationships",
+    "tier": 2,
+    "family": "calm_voice",
+    "description": "Lowered a client's anger by 2 or more in one call, 10 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "anger_drop_calls:2",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 35,
+    "art": "assets/badges/calm_voice_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "turnaround",
+    "name": "Turnaround",
+    "category": "relationships",
+    "tier": 1,
+    "family": "turnaround",
+    "description": "Brought a client from At risk back to On track",
+    "criteria": {
+      "all": [
+        {
+          "metric": "turnarounds",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 36,
+    "art": "assets/badges/turnaround.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "peacemaker",
+    "name": "Peacemaker",
+    "category": "relationships",
+    "tier": 1,
+    "family": "peacemaker",
+    "description": "Lowered a client's anger by 3 or more in a single call",
+    "criteria": {
+      "all": [
+        {
+          "metric": "anger_drop_calls:3",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 37,
+    "art": "assets/badges/peacemaker.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "client_whisperer",
+    "name": "Client Whisperer",
+    "category": "relationships",
+    "tier": 1,
+    "family": "client_whisperer",
+    "description": "Finished a level with every client On track",
+    "criteria": {
+      "all": [
+        {
+          "metric": "levels_all_clients_on_track",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 38,
+    "art": "assets/badges/client_whisperer.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "straight_shooter_1",
+    "name": "Straight Shooter I",
+    "category": "integrity",
+    "tier": 1,
+    "family": "straight_shooter",
+    "description": "Correct and Concrete Strong with no critical mistake on 1 deadline calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "deadline_calls_correct_concrete_strong",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 39,
+    "art": "assets/badges/straight_shooter_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "straight_shooter_2",
+    "name": "Straight Shooter II",
+    "category": "integrity",
+    "tier": 2,
+    "family": "straight_shooter",
+    "description": "Correct and Concrete Strong with no critical mistake on 5 deadline calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "deadline_calls_correct_concrete_strong",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 40,
+    "art": "assets/badges/straight_shooter_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "straight_shooter_3",
+    "name": "Straight Shooter III",
+    "category": "integrity",
+    "tier": 3,
+    "family": "straight_shooter",
+    "description": "Correct and Concrete Strong with no critical mistake on 20 deadline calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "deadline_calls_correct_concrete_strong",
+          "op": "gte",
+          "value": 20
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 41,
+    "art": "assets/badges/straight_shooter_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "clean_record_1",
+    "name": "Clean Record I",
+    "category": "integrity",
+    "tier": 1,
+    "family": "clean_record",
+    "description": "Finished 1 levels with no incidents",
+    "criteria": {
+      "all": [
+        {
+          "metric": "levels_zero_incidents",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 42,
+    "art": "assets/badges/clean_record_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "clean_record_2",
+    "name": "Clean Record II",
+    "category": "integrity",
+    "tier": 2,
+    "family": "clean_record",
+    "description": "Finished 4 levels with no incidents",
+    "criteria": {
+      "all": [
+        {
+          "metric": "levels_zero_incidents",
+          "op": "gte",
+          "value": 4
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 43,
+    "art": "assets/badges/clean_record_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "course_correct",
+    "name": "Course Correct",
+    "category": "integrity",
+    "tier": 1,
+    "family": "course_correct",
+    "description": "Corrected your own mistake on the same call",
+    "criteria": {
+      "all": [
+        {
+          "metric": "recoveries",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 44,
+    "art": "assets/badges/course_correct.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "boundary_keeper",
+    "name": "Boundary Keeper",
+    "category": "integrity",
+    "tier": 1,
+    "family": "boundary_keeper",
+    "description": "Stayed within your authority under pressure 20 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:stayed_in_authority",
+          "op": "gte",
+          "value": 20
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 45,
+    "art": "assets/badges/boundary_keeper.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "on_time_1",
+    "name": "On Time, Every Time I",
+    "category": "reliability",
+    "tier": 1,
+    "family": "on_time",
+    "description": "Concrete rated Strong on 5 status updates",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_c7_strong:status_update_call:concrete",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 46,
+    "art": "assets/badges/on_time_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "on_time_2",
+    "name": "On Time, Every Time II",
+    "category": "reliability",
+    "tier": 2,
+    "family": "on_time",
+    "description": "Concrete rated Strong on 25 status updates",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_c7_strong:status_update_call:concrete",
+          "op": "gte",
+          "value": 25
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 47,
+    "art": "assets/badges/on_time_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "early_warning",
+    "name": "Early Warning",
+    "category": "reliability",
+    "tier": 1,
+    "family": "early_warning",
+    "description": "Flagged a risk before it became a problem 5 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:early_warning",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 48,
+    "art": "assets/badges/early_warning.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promise_keeper",
+    "name": "Promise Keeper",
+    "category": "reliability",
+    "tier": 1,
+    "family": "promise_keeper",
+    "description": "Committed to an update time you controlled 10 times",
+    "criteria": {
+      "all": [
+        {
+          "metric": "option_tag:promised_controlled_time",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 49,
+    "art": "assets/badges/promise_keeper.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "certificate_pro",
+    "name": "Certificate Pro",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "certificate_pro",
+    "description": "Communication 85+ on 5 certificate calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_tag_calls_comm85:coi",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 50,
+    "art": "assets/badges/certificate_pro.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "renewal_ranger",
+    "name": "Renewal Ranger",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "renewal_ranger",
+    "description": "Communication 85+ on 5 renewal calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_tag_calls_comm85:renewal",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 51,
+    "art": "assets/badges/renewal_ranger.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "claims_navigator",
+    "name": "Claims Navigator",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "claims_navigator",
+    "description": "Communication 85+ on 5 claim calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_tag_calls_comm85:claim",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 52,
+    "art": "assets/badges/claims_navigator.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "carrier_liaison",
+    "name": "Carrier Liaison",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "carrier_liaison",
+    "description": "Communication 85+ on 5 carrier calls",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_tag_calls_comm85:carrier",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 53,
+    "art": "assets/badges/carrier_liaison.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "inbox_ace",
+    "name": "Inbox Ace",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "inbox_ace",
+    "description": "Communication 85+ on 10 email missions",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_comm85:email_mission",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 54,
+    "art": "assets/badges/inbox_ace.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "glossary_guru_1",
+    "name": "Glossary Guru I",
+    "category": "insurance_craft",
+    "tier": 1,
+    "family": "glossary_guru",
+    "description": "Mastered 10 glossary terms",
+    "criteria": {
+      "all": [
+        {
+          "metric": "glossary_mastered",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 55,
+    "art": "assets/badges/glossary_guru_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "glossary_guru_2",
+    "name": "Glossary Guru II",
+    "category": "insurance_craft",
+    "tier": 2,
+    "family": "glossary_guru",
+    "description": "Mastered 30 glossary terms",
+    "criteria": {
+      "all": [
+        {
+          "metric": "glossary_mastered",
+          "op": "gte",
+          "value": 30
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 56,
+    "art": "assets/badges/glossary_guru_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_3",
+    "name": "Warm-Up",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_3",
+    "description": "Kept your streak for 3 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 57,
+    "art": "assets/badges/streak_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_7",
+    "name": "One Week Strong",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_7",
+    "description": "Kept your streak for 7 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 7
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 58,
+    "art": "assets/badges/streak_7.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_14",
+    "name": "Fortnight Focus",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_14",
+    "description": "Kept your streak for 14 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 14
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 59,
+    "art": "assets/badges/streak_14.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_30",
+    "name": "30-Day Streak",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_30",
+    "description": "Kept your streak for 30 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 30
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 60,
+    "art": "assets/badges/streak_30.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_60",
+    "name": "60-Day Streak",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_60",
+    "description": "Kept your streak for 60 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 60
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 61,
+    "art": "assets/badges/streak_60.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_90",
+    "name": "90-Day Streak",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_90",
+    "description": "Kept your streak for 90 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 90
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 62,
+    "art": "assets/badges/streak_90.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_180",
+    "name": "Six-Month Streak",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_180",
+    "description": "Kept your streak for 180 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 180
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 63,
+    "art": "assets/badges/streak_180.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "streak_365",
+    "name": "One-Year Streak",
+    "category": "streaks",
+    "tier": 1,
+    "family": "streak_365",
+    "description": "Kept your streak for 365 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "longest_streak_days",
+          "op": "gte",
+          "value": 365
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 64,
+    "art": "assets/badges/streak_365.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l2",
+    "name": "Promoted: Associate",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l2",
+    "description": "Earned the title Associate",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 2
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 65,
+    "art": "assets/badges/promoted_l2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l3",
+    "name": "Promoted: Senior Associate",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l3",
+    "description": "Earned the title Senior Associate",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 66,
+    "art": "assets/badges/promoted_l3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l4",
+    "name": "Promoted: Executive Associate",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l4",
+    "description": "Earned the title Executive Associate",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 4
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 67,
+    "art": "assets/badges/promoted_l4.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l5",
+    "name": "Promoted: Assistant Team Lead",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l5",
+    "description": "Earned the title Assistant Team Lead",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 68,
+    "art": "assets/badges/promoted_l5.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l6",
+    "name": "Promoted: Team Lead",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l6",
+    "description": "Earned the title Team Lead",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 6
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 69,
+    "art": "assets/badges/promoted_l6.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l7",
+    "name": "Promoted: Manager (probationary)",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l7",
+    "description": "Earned the title Manager (probationary)",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 7
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 70,
+    "art": "assets/badges/promoted_l7.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "promoted_l8",
+    "name": "Promoted: Manager",
+    "category": "progression",
+    "tier": 1,
+    "family": "promoted_l8",
+    "description": "Earned the title Manager",
+    "criteria": {
+      "all": [
+        {
+          "metric": "reached_level",
+          "op": "gte",
+          "value": 8
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 71,
+    "art": "assets/badges/promoted_l8.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "boss_first_try",
+    "name": "First-Try Finish",
+    "category": "progression",
+    "tier": 1,
+    "family": "boss_first_try",
+    "description": "Passed a boss mission on the first attempt",
+    "criteria": {
+      "all": [
+        {
+          "metric": "bosses_passed_first_try",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 72,
+    "art": "assets/badges/boss_first_try.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "career_complete",
+    "name": "Career Complete",
+    "category": "progression",
+    "tier": 1,
+    "family": "career_complete",
+    "description": "Reached a career ending",
+    "criteria": {
+      "all": [
+        {
+          "metric": "ending_reached",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 73,
+    "art": "assets/badges/career_complete.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "delegator_1",
+    "name": "Delegator I",
+    "category": "leadership",
+    "tier": 1,
+    "family": "delegator",
+    "description": "5 delegations completed successfully",
+    "criteria": {
+      "all": [
+        {
+          "metric": "delegations_success",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 74,
+    "art": "assets/badges/delegator_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "delegator_2",
+    "name": "Delegator II",
+    "category": "leadership",
+    "tier": 2,
+    "family": "delegator",
+    "description": "25 delegations completed successfully",
+    "criteria": {
+      "all": [
+        {
+          "metric": "delegations_success",
+          "op": "gte",
+          "value": 25
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 75,
+    "art": "assets/badges/delegator_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "coach_1",
+    "name": "Coach I",
+    "category": "leadership",
+    "tier": 1,
+    "family": "coach",
+    "description": "1 coaching conversations with every C rated Strong",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_all_c7_strong:team_coaching",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 76,
+    "art": "assets/badges/coach_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "coach_2",
+    "name": "Coach II",
+    "category": "leadership",
+    "tier": 2,
+    "family": "coach",
+    "description": "5 coaching conversations with every C rated Strong",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_all_c7_strong:team_coaching",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 77,
+    "art": "assets/badges/coach_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "morale_booster",
+    "name": "Morale Booster",
+    "category": "leadership",
+    "tier": 1,
+    "family": "morale_booster",
+    "description": "Raised your team's average morale to 8",
+    "criteria": {
+      "all": [
+        {
+          "metric": "team_morale_avg_gte:8",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 78,
+    "art": "assets/badges/morale_booster.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "unit_steward",
+    "name": "Unit Steward",
+    "category": "leadership",
+    "tier": 1,
+    "family": "unit_steward",
+    "description": "Finished a leadership level with team health 80+",
+    "criteria": {
+      "all": [
+        {
+          "metric": "levels_team_health_gte:80",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 79,
+    "art": "assets/badges/unit_steward.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "hard_conversation",
+    "name": "Hard Conversation",
+    "category": "leadership",
+    "tier": 1,
+    "family": "hard_conversation",
+    "description": "Business score 90+ on a one-to-one",
+    "criteria": {
+      "all": [
+        {
+          "metric": "scenario_type_business90:team_one_on_one",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 80,
+    "art": "assets/badges/hard_conversation.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "thank_you_1",
+    "name": "Thank-You Collector I",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "thank_you",
+    "description": "Received 1 client thank-you notes",
+    "criteria": {
+      "all": [
+        {
+          "metric": "appreciations_received:client",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 81,
+    "art": "assets/badges/thank_you_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "thank_you_2",
+    "name": "Thank-You Collector II",
+    "category": "appreciation",
+    "tier": 2,
+    "family": "thank_you",
+    "description": "Received 10 client thank-you notes",
+    "criteria": {
+      "all": [
+        {
+          "metric": "appreciations_received:client",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 82,
+    "art": "assets/badges/thank_you_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "thank_you_3",
+    "name": "Thank-You Collector III",
+    "category": "appreciation",
+    "tier": 3,
+    "family": "thank_you",
+    "description": "Received 30 client thank-you notes",
+    "criteria": {
+      "all": [
+        {
+          "metric": "appreciations_received:client",
+          "op": "gte",
+          "value": 30
+        }
+      ]
+    },
+    "rarity": "epic",
+    "hidden": false,
+    "sort": 83,
+    "art": "assets/badges/thank_you_3.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "recommended",
+    "name": "Recommended",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "recommended",
+    "description": "A client recommended you to a colleague",
+    "criteria": {
+      "all": [
+        {
+          "metric": "appreciations_received_trigger:trust_9",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 84,
+    "art": "assets/badges/recommended.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "top_voice",
+    "name": "Top Voice",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "top_voice",
+    "description": "Named a Top Voice for a month",
+    "criteria": {
+      "all": [
+        {
+          "metric": "recognitions:top_voice",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 85,
+    "art": "assets/badges/top_voice.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "voice_of_the_agency",
+    "name": "Voice of the Agency",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "voice_of_the_agency",
+    "description": "Named a Top Voice in 3 different months",
+    "criteria": {
+      "all": [
+        {
+          "metric": "recognitions:top_voice",
+          "op": "gte",
+          "value": 3
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 86,
+    "art": "assets/badges/voice_of_the_agency.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "employee_of_month",
+    "name": "Employee of the Month",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "employee_of_month",
+    "description": "Named Employee of the Month for your title",
+    "criteria": {
+      "all": [
+        {
+          "metric": "recognitions:employee_of_month",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 87,
+    "art": "assets/badges/employee_of_month.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "kudos_received_1",
+    "name": "Well Regarded I",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "kudos_received",
+    "description": "Received 5 kudos from other players",
+    "criteria": {
+      "all": [
+        {
+          "metric": "kudos_received",
+          "op": "gte",
+          "value": 5
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 88,
+    "art": "assets/badges/kudos_received_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "kudos_received_2",
+    "name": "Well Regarded II",
+    "category": "appreciation",
+    "tier": 2,
+    "family": "kudos_received",
+    "description": "Received 25 kudos from other players",
+    "criteria": {
+      "all": [
+        {
+          "metric": "kudos_received",
+          "op": "gte",
+          "value": 25
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 89,
+    "art": "assets/badges/kudos_received_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "generous_colleague",
+    "name": "Generous Colleague",
+    "category": "appreciation",
+    "tier": 1,
+    "family": "generous_colleague",
+    "description": "Gave 10 kudos to other players",
+    "criteria": {
+      "all": [
+        {
+          "metric": "kudos_given",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 90,
+    "art": "assets/badges/generous_colleague.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "top_30",
+    "name": "Top 30",
+    "category": "leaderboard",
+    "tier": 1,
+    "family": "top_30",
+    "description": "Finished a week in the top 30",
+    "criteria": {
+      "all": [
+        {
+          "metric": "leaderboard_finish_rank_lte:30",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 91,
+    "art": "assets/badges/top_30.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "podium",
+    "name": "Podium",
+    "category": "leaderboard",
+    "tier": 1,
+    "family": "podium",
+    "description": "Finished a week in the top 3",
+    "criteria": {
+      "all": [
+        {
+          "metric": "leaderboard_finish_rank_lte:3",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 92,
+    "art": "assets/badges/podium.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "number_one",
+    "name": "Number One",
+    "category": "leaderboard",
+    "tier": 1,
+    "family": "number_one",
+    "description": "Finished a week at number 1",
+    "criteria": {
+      "all": [
+        {
+          "metric": "leaderboard_finish_rank_lte:1",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 93,
+    "art": "assets/badges/number_one.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "daily_goal_1",
+    "name": "Daily Goal Champion I",
+    "category": "habits",
+    "tier": 1,
+    "family": "daily_goal",
+    "description": "Met your daily goal on 10 days",
+    "criteria": {
+      "all": [
+        {
+          "metric": "daily_goals_met",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "common",
+    "hidden": false,
+    "sort": 94,
+    "art": "assets/badges/daily_goal_1.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "daily_goal_2",
+    "name": "Daily Goal Champion II",
+    "category": "habits",
+    "tier": 2,
+    "family": "daily_goal",
+    "description": "Met your daily goal on 50 days",
+    "criteria": {
+      "all": [
+        {
+          "metric": "daily_goals_met",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 95,
+    "art": "assets/badges/daily_goal_2.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "quest_hunter",
+    "name": "Quest Hunter",
+    "category": "habits",
+    "tier": 1,
+    "family": "quest_hunter",
+    "description": "Claimed 25 daily quests",
+    "criteria": {
+      "all": [
+        {
+          "metric": "quests_claimed",
+          "op": "gte",
+          "value": 25
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 96,
+    "art": "assets/badges/quest_hunter.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "review_scholar",
+    "name": "Review Scholar",
+    "category": "habits",
+    "tier": 1,
+    "family": "review_scholar",
+    "description": "Replayed 10 calls in review mode",
+    "criteria": {
+      "all": [
+        {
+          "metric": "review_replays",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 97,
+    "art": "assets/badges/review_scholar.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "perfect_week",
+    "name": "Perfect Week",
+    "category": "habits",
+    "tier": 1,
+    "family": "perfect_week",
+    "description": "Met your daily goal 7 days in a row",
+    "criteria": {
+      "all": [
+        {
+          "metric": "daily_goal_streak_days",
+          "op": "gte",
+          "value": 7
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 98,
+    "art": "assets/badges/perfect_week.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "early_bird",
+    "name": "Early Bird",
+    "category": "habits",
+    "tier": 1,
+    "family": "early_bird",
+    "description": "Finished 10 calls before 8 a.m. local time",
+    "criteria": {
+      "all": [
+        {
+          "metric": "calls_local_hour_between:5-8",
+          "op": "gte",
+          "value": 10
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": false,
+    "sort": 99,
+    "art": "assets/badges/early_bird.svg",
+    "status": "in_review"
+  },
+  {
+    "id": "comeback",
+    "name": "Comeback",
+    "category": "habits",
+    "tier": 1,
+    "family": "comeback",
+    "description": "Came back and finished a call after 14 days away",
+    "criteria": {
+      "all": [
+        {
+          "metric": "comebacks:14",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "rarity": "rare",
+    "hidden": true,
+    "sort": 100,
+    "art": "assets/badges/comeback.svg",
+    "status": "in_review"
+  }
+]

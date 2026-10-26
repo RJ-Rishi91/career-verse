@@ -1,0 +1,86 @@
+[
+  {
+    "key": "coi_routine",
+    "title": "Send a routine certificate of insurance",
+    "complexity": 3,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "renewal_reminder",
+    "title": "Send renewal reminders to five clients",
+    "complexity": 2,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "claim_docs_chase",
+    "title": "Chase claim documents from a contractor",
+    "complexity": 4,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "carrier_followup",
+    "title": "Follow up with a carrier on a quote",
+    "complexity": 4,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "policy_change",
+    "title": "Process a simple policy change request",
+    "complexity": 5,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "client_onboarding",
+    "title": "Onboard a new client account",
+    "complexity": 6,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 6
+  },
+  {
+    "key": "loss_runs",
+    "title": "Request loss runs for a renewal",
+    "complexity": 3,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "summary_pack",
+    "title": "Prepare a renewal summary pack",
+    "complexity": 6,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 6
+  },
+  {
+    "key": "escalation_triage",
+    "title": "Triage an angry client email",
+    "complexity": 7,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 6
+  },
+  {
+    "key": "audit_prep",
+    "title": "Prepare files for a carrier audit",
+    "complexity": 7,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 6
+  },
+  {
+    "key": "new_hire_shadow",
+    "title": "Let a new hire shadow calls",
+    "complexity": 5,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 5
+  },
+  {
+    "key": "weekly_report",
+    "title": "Compile the weekly unit report",
+    "complexity": 6,
+    "rule": "success if skill + reliability - workload/2 >= complexity + 2; partial if within 2; else returned",
+    "min_level": 6
+  }
+]

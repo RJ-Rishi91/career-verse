@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "accent": "#2459E0",
+  "tints": {
+    "blue": [
+      "#DCE8FF",
+      "#1F3F8F"
+    ],
+    "coral": [
+      "#FFE3DA",
+      "#8A2E12"
+    ],
+    "mint": [
+      "#D6F3E6",
+      "#0D5A3A"
+    ],
+    "lime": [
+      "#E8F4CC",
+      "#3D5A0D"
+    ],
+    "rose": [
+      "#FCE1EA",
+      "#8A1F45"
+    ],
+    "sky": [
+      "#D6F0FA",
+      "#0E4F6B"
+    ],
+    "butter": [
+      "#FFF0C2",
+      "#7A3E00"
+    ]
+  },
+  "rule": "Admin edits must pass a 4.5:1 contrast check for ink on tint and white on accent."
+}

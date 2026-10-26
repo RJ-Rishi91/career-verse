@@ -1,40 +1,48 @@
-import React from 'react';
-import { CareerState } from '../types/index.js';
+import React, { useState } from 'react';
+import { CareerState, ScenarioSummary } from '../types/index.js';
 import { Portrait } from '../components/Portraits.js';
 import { LottiePlayer } from '../components/LottiePlayer.js';
 import { StatusPill } from '../components/StatusPill.js';
 import { Icon } from '../components/Icons.js';
+import { ApiService } from '../services/api.js';
 
 interface DeskViewProps {
   career: CareerState;
+  timeOverride: number | null;
   onNavigate: (route: string) => void;
-  onStartCall: () => void;
+  onStartCall: (scenarioId?: string) => void;
 }
 
 export const DeskView: React.FC<DeskViewProps> = ({
   career,
+  timeOverride,
   onNavigate,
   onStartCall
 }) => {
+  const [showScenarioPicker, setShowScenarioPicker] = useState<boolean>(false);
+
   const p = career.player;
   const sc = career.scenario;
   const marcus = career.clients.find(c => c.id === 'marcus')!;
   const dana = career.clients.find(c => c.id === 'dana')!;
 
-  const marcusDone = !!career.lastResult;
+  const marcusDone = career.completedScenarios.includes('L1_MARCUS_STATUS_UPDATE') || !!career.lastResult;
   const inCall = !!career.activeCall;
 
-  let helloGreeting = `Morning, ${p.name.split(' ')[0]}.`;
-  let helloSub = 'Marcus needs his COI by 3:00 PM.';
+  // Time-aware greeting
+  const greeting = ApiService.getGreeting(timeOverride);
+  let sub = 'Marcus needs his COI by 3:00 PM.';
 
   if (marcusDone) {
     if (career.lastResult?.critical && !career.lastResult?.recovered) {
-      helloGreeting = 'Marcus is expecting that certificate by 2.';
-      helloSub = 'Better check with the carrier.';
+      sub = 'Marcus is expecting that certificate by 2. Better check with the carrier.';
     } else {
-      helloGreeting = `Nice work, ${p.name.split(' ')[0]}.`;
-      helloSub = 'Dana is next with her renewal.';
+      sub = 'Dana is next with her renewal.';
     }
+  }
+
+  if (greeting.band === 'up_late') {
+    sub += ' One call, then get some rest.';
   }
 
   const callsLeft = Math.max(0, p.callsTotal - p.callsDone);
@@ -76,9 +84,9 @@ export const DeskView: React.FC<DeskViewProps> = ({
       {/* Hello Greeting Header */}
       <div className="desk__hello">
         <h1 className="h-display">
-          {helloGreeting}
+          {greeting.line}
           <br />
-          {helloSub}
+          {sub}
         </h1>
         <p className="h-sub">
           Monday · Level {p.level}, {p.levelTitle} · {callsLeft} calls left this level
@@ -142,10 +150,20 @@ export const DeskView: React.FC<DeskViewProps> = ({
               The premium may rise again. She needs to know what you can find out, and by when.
             </p>
             <div className="next__foot">
-              <button className="btn btn--primary" type="button" disabled>
-                Take the call
+              <button
+                className="btn btn--primary"
+                type="button"
+                onClick={() => onStartCall('L1_DANA_INSTRUCTION')}
+              >
+                Take the call <Icon name="arrow" size={16} strokeWidth={2} />
               </button>
-              <span className="meta t-ink">This call isn't in Level 1 MVP yet.</span>
+              <button
+                className="btn btn--secondary"
+                type="button"
+                onClick={() => setShowScenarioPicker(true)}
+              >
+                All 11 Scenarios
+              </button>
             </div>
           </div>
         </section>
@@ -172,9 +190,16 @@ export const DeskView: React.FC<DeskViewProps> = ({
               <button
                 className="btn btn--primary"
                 type="button"
-                onClick={onStartCall}
+                onClick={() => onStartCall('L1_MARCUS_STATUS_UPDATE')}
               >
                 {inCall ? 'Resume the call' : 'Take the call'} <Icon name="arrow" size={16} strokeWidth={2} />
+              </button>
+              <button
+                className="btn btn--secondary"
+                type="button"
+                onClick={() => setShowScenarioPicker(true)}
+              >
+                All Level 1 Scenarios ({career.availableScenarios.length})
               </button>
               <span className="meta t-ink">
                 +60 XP base · skills: {sc.skills.join(', ')}
@@ -182,6 +207,61 @@ export const DeskView: React.FC<DeskViewProps> = ({
             </div>
           </div>
         </section>
+      )}
+
+      {/* Scenario Selection Modal */}
+      {showScenarioPicker && (
+        <div
+          className="scrim"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowScenarioPicker(false);
+          }}
+          role="presentation"
+        >
+          <div className="sheet" role="dialog" aria-modal="true" aria-labelledby="picker-title" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
+            <div className="sheet__handle" />
+            <h2 className="sheet__title" id="picker-title">
+              Level 1 Scenarios ({career.availableScenarios.length})
+            </h2>
+            <p className="sheet__warn">
+              Choose any scenario to practice your communication, boundaries, and client relationships.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8, margin: '14px 0' }}>
+              {career.availableScenarios.map((scItem: ScenarioSummary) => (
+                <div
+                  key={scItem.id}
+                  className="row"
+                  style={{ cursor: 'pointer', border: scItem.id === sc.id ? '1.5px solid var(--accent)' : undefined }}
+                  onClick={() => {
+                    setShowScenarioPicker(false);
+                    onStartCall(scItem.id);
+                  }}
+                >
+                  <span className="row__body">
+                    <b>{scItem.title}</b>
+                    <span>{scItem.clientName} · {scItem.type}</span>
+                  </span>
+                  {scItem.completed ? (
+                    <span className="pill pill--ok">Completed</span>
+                  ) : scItem.isBoss ? (
+                    <span className="pill pill--watch">Boss review</span>
+                  ) : (
+                    <span className="pill pill--neutral">Available</span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="sheet__actions">
+              <button
+                className="btn btn--secondary"
+                type="button"
+                onClick={() => setShowScenarioPicker(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Clients Summary Panel */}
@@ -201,7 +281,7 @@ export const DeskView: React.FC<DeskViewProps> = ({
             View all
           </a>
         </div>
-        {career.clients.map((c) => {
+        {career.clients.slice(0, 3).map((c) => {
           const tint = tintBgMap[c.tint] || tintBgMap.blue;
           return (
             <a

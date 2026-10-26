@@ -1,19 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { Client, Scenario, ScenarioNode, ScenarioOption } from '../types/index.js';
+import { Client, Scenario, ScenarioNode, ScenarioOption, ScenarioSummary } from '../types/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Helper to locate content files reliably
-function resolveContentPath(relativePath: string): string {
+function resolvePath(relativePath: string): string {
   const candidates = [
-    path.resolve(__dirname, '../content', relativePath),
-    path.resolve(__dirname, '../../content', relativePath),
-    path.resolve(process.cwd(), 'server/src/content', relativePath),
+    path.resolve(process.cwd(), relativePath),
+    path.resolve(process.cwd(), 'setup/game', relativePath),
     path.resolve(process.cwd(), 'content', relativePath),
-    path.resolve(process.cwd(), 'CareerVerse_Dev_Handoff/content', relativePath),
+    path.resolve(process.cwd(), 'server/src', relativePath),
+    path.resolve(__dirname, '..', relativePath),
+    path.resolve(__dirname, '../../setup/game', relativePath),
+    path.resolve(__dirname, '../../content', relativePath),
   ];
 
   for (const p of candidates) {
@@ -25,38 +26,81 @@ function resolveContentPath(relativePath: string): string {
 export class ContentService {
   private static clients: Client[] | null = null;
   private static rules: any = null;
+  private static greetings: any = null;
+  private static badges: any[] | null = null;
+  private static leaderboardConfig: any = null;
   private static scenarios: Map<string, Scenario> = new Map();
+  private static scenarioSummaries: ScenarioSummary[] | null = null;
 
   public static getRules(): any {
     if (!this.rules) {
-      const p = resolveContentPath('rules.config.json');
+      const p = resolvePath('setup/game/rules.json');
       const raw = fs.readFileSync(p, 'utf-8');
       this.rules = JSON.parse(raw);
     }
     return this.rules;
   }
 
+  public static getGreetings(): any {
+    if (!this.greetings) {
+      const p = resolvePath('setup/game/greetings.json');
+      const raw = fs.readFileSync(p, 'utf-8');
+      this.greetings = JSON.parse(raw);
+    }
+    return this.greetings;
+  }
+
+  public static getBadges(): any[] {
+    if (!this.badges) {
+      const p = resolvePath('setup/game/badges.json');
+      const raw = fs.readFileSync(p, 'utf-8');
+      this.badges = JSON.parse(raw);
+    }
+    return this.badges || [];
+  }
+
+  public static getLeaderboardConfig(): any {
+    if (!this.leaderboardConfig) {
+      const p = resolvePath('setup/game/leaderboard.json');
+      const raw = fs.readFileSync(p, 'utf-8');
+      this.leaderboardConfig = JSON.parse(raw);
+    }
+    return this.leaderboardConfig;
+  }
+
   public static getInitialClients(): Client[] {
     if (!this.clients) {
-      const p = resolveContentPath('clients.json');
-      const raw = fs.readFileSync(p, 'utf-8');
-      const data = JSON.parse(raw);
-      
-      this.clients = data.map((c: any) => ({
+      const pClients = resolvePath('setup/game/clients.json');
+      const rawClients = fs.readFileSync(pClients, 'utf-8');
+      const dataClients = JSON.parse(rawClients);
+
+      let castClients: any[] = [];
+      try {
+        const pCast = resolvePath('setup/game/cast.json');
+        if (fs.existsSync(pCast)) {
+          castClients = JSON.parse(fs.readFileSync(pCast, 'utf-8'));
+        }
+      } catch (e) {
+        // ignore
+      }
+
+      const allChars = [...dataClients, ...castClients];
+
+      this.clients = allChars.map((c: any) => ({
         id: c.id,
         name: c.name,
-        initials: c.initials,
-        company: c.company,
-        role: c.role,
-        importance: c.importance,
-        tint: c.tint,
+        initials: c.initials || c.name.split(' ').map((n: string) => n[0]).join(''),
+        company: c.company || (c.role?.includes('Agency') ? 'Agency Mentor' : 'Bellrock'),
+        role: c.role || 'Client',
+        importance: c.importance || 'Medium importance',
+        tint: c.tint || 'blue',
         status: c.initial_status || c.status || 'watch',
-        meters: { ...(c.initial_meters || c.meters || { trust: 5, respect: 5, anger: 5 }) },
+        meters: { ...(c.initial_meters || c.meters || { trust: 5, respect: 5, anger: 3 }) },
         next: c.id === 'marcus' ? 'COI due 3:00 PM' : c.id === 'dana' ? 'Renewal instruction call next' : 'Feedback call Thursday',
         prefs: c.preferences || c.prefs || [],
         trigger: c.trigger || '',
         thought: c.thought || { unlockTrust: 6, text: '' },
-        art: c.art || {},
+        art: c.art || { skin: '#8D5A3B', neck: '#7E4F33', hair: 'short', hairColor: '#1B1F2A', shirt: '#2B3A5C', tie: null },
         cycle: [
           { name: 'Instruction call', when: c.id === 'priya' ? 'Last Thu' : c.id === 'marcus' ? 'Yesterday' : 'Next', done: c.id !== 'dana', current: c.id === 'dana' },
           { name: 'Status update call', when: c.id === 'priya' ? 'Monday' : 'Today', done: c.id === 'priya', current: c.id === 'marcus' },
@@ -78,15 +122,51 @@ export class ContentService {
     return JSON.parse(JSON.stringify(this.clients));
   }
 
+  public static getScenarioSummaries(): ScenarioSummary[] {
+    if (!this.scenarioSummaries) {
+      const scenariosDir = resolvePath('content/scenarios');
+      const files = fs.readdirSync(scenariosDir).filter(f => f.endsWith('.json'));
+
+      this.scenarioSummaries = files.map(file => {
+        const raw = fs.readFileSync(path.join(scenariosDir, file), 'utf-8');
+        const data = JSON.parse(raw);
+        const clientId = data.client_id;
+        const clients = this.getInitialClients();
+        const client = clients.find(c => c.id === clientId) || { name: clientId };
+
+        return {
+          id: data.scenario_id,
+          title: data.title,
+          type: data.scenario_type === 'boss_mission' ? 'Boss review' : data.scenario_type.replace('_call', '').replace('_', ' '),
+          clientId,
+          clientName: client.name,
+          due: data.due_label || 'Today',
+          skills: data.skills || data.learning_objectives || ['Communication'],
+          isBoss: data.scenario_type === 'boss_mission'
+        };
+      });
+    }
+    return this.scenarioSummaries;
+  }
+
   public static getScenario(scenarioId: string = 'L1_MARCUS_STATUS_UPDATE'): Scenario {
     if (this.scenarios.has(scenarioId)) {
       return this.scenarios.get(scenarioId)!;
     }
 
-    const p = resolveContentPath(`scenarios/${scenarioId}.json`);
-    const raw = fs.readFileSync(p, 'utf-8');
-    const data = JSON.parse(raw);
+    const scenariosDir = resolvePath('content/scenarios');
+    const targetFile = path.join(scenariosDir, `${scenarioId}.json`);
 
+    let raw: string;
+    if (fs.existsSync(targetFile)) {
+      raw = fs.readFileSync(targetFile, 'utf-8');
+    } else {
+      // Fallback search
+      const files = fs.readdirSync(scenariosDir).filter(f => f.endsWith('.json'));
+      raw = fs.readFileSync(path.join(scenariosDir, files[0]), 'utf-8');
+    }
+
+    const data = JSON.parse(raw);
     const nodesMap: Record<string, ScenarioNode> = {};
 
     for (const node of data.nodes) {
@@ -137,7 +217,7 @@ export class ContentService {
       version: data.version || 1,
       level: data.level || 1,
       clientId: data.client_id,
-      type: data.scenario_type === 'status_update_call' ? 'Status update' : (data.scenario_type || 'Status update'),
+      type: data.scenario_type === 'status_update_call' ? 'Status update' : (data.scenario_type === 'boss_mission' ? 'Boss review' : (data.scenario_type || 'Call')),
       title: data.title,
       teaser: data.teaser,
       goal: data.business_objective || data.goal,

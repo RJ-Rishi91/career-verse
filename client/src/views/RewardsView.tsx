@@ -59,11 +59,23 @@ export const RewardsView: React.FC<RewardsViewProps> = ({
             <div className="reward-hero__burst">
               <LottiePlayer name="badge-burst" style={{ width: 300, height: 300 }} />
             </div>
-            {badgeSvg}
+            {r.badgeId ? (
+              <img
+                src={`badges/${r.badgeId}.svg`}
+                alt={r.badgeName || 'Earned badge'}
+                width="150"
+                height="170"
+                style={{ objectFit: 'contain' }}
+              />
+            ) : (
+              badgeSvg
+            )}
           </div>
-          <h1>Straight Shooter</h1>
+          <h1>{r.badgeName || 'Straight Shooter'}</h1>
           <p className="t-ink">
-            A truthful, specific update under deadline pressure, without promising what wasn’t yours to promise.
+            {r.badgeId === 'straight_shooter_1' || !r.badgeName
+              ? 'A truthful, specific update under deadline pressure, without promising what wasn’t yours to promise.'
+              : `Earned: ${r.badgeName}. High performance and professional standards demonstrated.`}
           </p>
         </section>
       ) : (

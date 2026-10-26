@@ -1,0 +1,242 @@
+[
+  {
+    "id": "coi",
+    "term": "Certificate of insurance (COI)",
+    "meaning": "A document that summarises a policy's coverage for a third party. It informs; it doesn't change the policy.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "certificate_holder",
+    "term": "Certificate holder",
+    "meaning": "The person or company that receives the COI, often a general contractor or landlord.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "additional_insured",
+    "term": "Additional insured",
+    "meaning": "A party added to a policy by an endorsement so it gets some protection under it. Only the carrier can add one.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "endorsement",
+    "term": "Endorsement",
+    "meaning": "A written change to a policy issued by the carrier.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "carrier",
+    "term": "Carrier",
+    "meaning": "The insurance company that issues the policy.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "underwriter",
+    "term": "Underwriter",
+    "meaning": "The carrier's specialist who evaluates risk and decides terms.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "premium",
+    "term": "Premium",
+    "meaning": "The price of the policy.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "renewal",
+    "term": "Renewal",
+    "meaning": "Continuing a policy for a new term, usually with updated terms and premium.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "declarations_page",
+    "term": "Declarations page",
+    "meaning": "The summary page of a policy: insured, limits, dates, premium.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "binding",
+    "term": "Binding",
+    "meaning": "Putting coverage into effect. Only authorised people can bind.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "fnol",
+    "term": "First notice of loss (FNOL)",
+    "meaning": "The first report of a claim to the carrier.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "adjuster",
+    "term": "Adjuster",
+    "meaning": "The person who investigates a claim and decides what's covered.",
+    "example": null,
+    "level": 1,
+    "status": "in_review"
+  },
+  {
+    "id": "loss_runs",
+    "term": "Loss runs",
+    "meaning": "A carrier's report of a client's claims history.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "deductible",
+    "term": "Deductible",
+    "meaning": "The amount the insured pays before the policy pays.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "limit",
+    "term": "Limit",
+    "meaning": "The most a policy will pay for a covered loss.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "exclusion",
+    "term": "Exclusion",
+    "meaning": "Something a policy specifically doesn't cover.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "general_liability",
+    "term": "General liability",
+    "meaning": "Coverage for injury or property damage the business causes to others.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "workers_comp",
+    "term": "Workers' compensation",
+    "meaning": "Coverage for employees injured on the job.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "commercial_auto",
+    "term": "Commercial auto",
+    "meaning": "Coverage for vehicles used for business.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "umbrella",
+    "term": "Umbrella policy",
+    "meaning": "Extra liability coverage above other policies' limits.",
+    "example": null,
+    "level": 2,
+    "status": "in_review"
+  },
+  {
+    "id": "producer",
+    "term": "Producer",
+    "meaning": "The licensed agent who sells and advises on insurance.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "csr",
+    "term": "Customer service representative (CSR)",
+    "meaning": "Agency staff who service existing policies.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "quote",
+    "term": "Quote",
+    "meaning": "A carrier's proposed terms and premium.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "effective_date",
+    "term": "Effective date",
+    "meaning": "When coverage starts.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "cancellation",
+    "term": "Cancellation",
+    "meaning": "Ending a policy before its term ends.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "subrogation",
+    "term": "Subrogation",
+    "meaning": "A carrier recovering what it paid from the party at fault.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "reserve",
+    "term": "Reserve",
+    "meaning": "Money a carrier sets aside to pay a claim.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "waiver_of_subrogation",
+    "term": "Waiver of subrogation",
+    "meaning": "An agreement that the carrier won't pursue a particular party. Requires an endorsement.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "payroll_audit",
+    "term": "Payroll audit",
+    "meaning": "A carrier's review of actual payroll to adjust the final premium.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  },
+  {
+    "id": "e_and_o",
+    "term": "Errors and omissions (E&O)",
+    "meaning": "Coverage for professional mistakes; also why staying within authority matters.",
+    "example": null,
+    "level": 3,
+    "status": "in_review"
+  }
+]

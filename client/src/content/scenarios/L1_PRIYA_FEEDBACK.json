@@ -1,0 +1,310 @@
+{
+  "scenario_id": "L1_PRIYA_FEEDBACK",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "priya-raman",
+  "scenario_type": "feedback_call",
+  "learning_objectives": [
+    "receiving_feedback",
+    "proactive_updates"
+  ],
+  "business_objective": "Accept the feedback and set a reliable written update rhythm.",
+  "title": "Priya: updates felt slow",
+  "teaser": "The partners felt they had to ask for every claim update.",
+  "known_facts": [
+    {
+      "time": "Two weeks",
+      "text": "Claim open"
+    },
+    {
+      "time": "Feedback",
+      "text": "Partners had to ask each time"
+    }
+  ],
+  "rule_of_thumb": "Set a rhythm and keep it.",
+  "base_meters": {
+    "trust": 6,
+    "respect": 6,
+    "anger": 4
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "The partners felt the claim updates were slow and they had to ask every time.",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Thank you for telling me. You shouldn't have had to ask. From now on I'll send a written update every Monday and Thursday until the claim closes, even when nothing has changed.",
+          "reaction": "That would make a big difference.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You accepted it and offered a rhythm.",
+            "next": "Put the rhythm in your calendar.",
+            "why": "Predictable updates replace chasing."
+          },
+          "tags": [
+            "owned_mistake",
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Claims just take time.",
+          "reaction": "That's not what I said.",
+          "expression": "frustrated",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "True in general.",
+            "next": "Answer the actual feedback.",
+            "why": "She complained about updates, not speed."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "That's because the adjuster never replies.",
+          "reaction": "Then tell us that.",
+          "expression": "frustrated",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 2
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 3,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You explained.",
+            "next": "Don't blame; fix your part.",
+            "why": "Your part is keeping her informed."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Can each update include what's still outstanding?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes: each one will list what's done, what's outstanding, who owns it and the next date.",
+          "reaction": "Perfect.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "A clear structure.",
+            "next": "Use the same structure every time.",
+            "why": "Consistency builds trust."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "B",
+          "text": "I'll include what I can.",
+          "reaction": "Okay.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Willing.",
+            "next": "Commit to a structure.",
+            "why": "“What I can” is vague."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "That doesn't help me answer the partners.",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "You're right. I'll send a written update twice a week with what's done, what's outstanding and the next date, starting today.",
+          "reaction": "Thank you.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You turned it around.",
+            "next": "Start with the fix next time.",
+            "why": "She needed a change, not an explanation."
+          },
+          "tags": [
+            "owned_mistake"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I can only pass on what the adjuster tells me.",
+          "reaction": "Then pass it on more often.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Accurate.",
+            "next": "Own the part you control.",
+            "why": "The rhythm is yours to keep."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "claim",
+    "feedback"
+  ]
+}

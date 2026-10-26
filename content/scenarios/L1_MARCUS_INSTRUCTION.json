@@ -1,0 +1,315 @@
+{
+  "scenario_id": "L1_MARCUS_INSTRUCTION",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "marcus-bell",
+  "scenario_type": "instruction_call",
+  "learning_objectives": [
+    "asking_for_missing_info",
+    "staying_within_authority"
+  ],
+  "business_objective": "Take the COI request and confirm the certificate holder and additional-insured details before committing to a time.",
+  "title": "Marcus needs a certificate for a new job",
+  "teaser": "Hale Construction starts on the Riverside job Thursday. Marcus wants the certificate today.",
+  "known_facts": [
+    {
+      "time": "Mon 9:10",
+      "text": "Marcus calls about Hale Construction"
+    },
+    {
+      "time": "Thu",
+      "text": "Hale starts at the Riverside site"
+    }
+  ],
+  "rule_of_thumb": "Fact, then status, then the next step with a time.",
+  "base_meters": {
+    "trust": 5,
+    "respect": 5,
+    "anger": 6
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "I need a certificate of insurance for our client Hale Construction. They start on the Riverside job Thursday. Can you get it out today?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes, I'll start it now. To get it right: who should be the certificate holder, and does the GC need to be listed as additional insured?",
+          "reaction": "Good question. Riverside GC, and yes, additional insured. I'll email you the contract page.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You asked for the two details that decide whether the certificate is accepted.",
+            "next": "Repeat the deadline back so you both agree on it.",
+            "why": "A wrong holder or a missing additional-insured request gets a certificate rejected at the gate."
+          },
+          "tags": [
+            "asked_clarifying"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Sure, I'll send it today.",
+          "reaction": "Great. Don't make me chase it.",
+          "expression": "neutral",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 2,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You were quick and positive.",
+            "next": "Never accept a COI request without the certificate holder and additional-insured details.",
+            "why": "You committed to a time before you had what you needed to meet it."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "Done. I'll add the GC as additional insured on the policy too.",
+          "reaction": "Perfect, thanks.",
+          "expression": "pleased",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "commit_beyond_authority"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "You tried to solve his whole problem in one go.",
+            "next": "Say you'll request the endorsement; don't say you'll add it.",
+            "why": "Adding an additional insured usually needs an endorsement from the carrier. You can request it, not grant it."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Contract page is in your inbox. When will I have it?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "If the carrier confirms the additional-insured endorsement, I'll send it by 4 today. Either way, I'll update you by 1.",
+          "reaction": "That works. Talk at 1.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "A time you control (1:00) and a condition you don't (the carrier).",
+            "next": "Keep doing exactly this.",
+            "why": "He can plan around a real time."
+          },
+          "tags": [
+            "promised_controlled_time",
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Today for sure.",
+          "reaction": "Okay.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 1,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You were confident.",
+            "next": "Only promise times you control; the carrier controls the endorsement.",
+            "why": "“For sure” is a promise someone else has to keep."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "So it'll be out today, right?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Before I promise a time, I need two details: who the certificate holder is and whether the GC must be additional insured. Then I'll give you a firm time.",
+          "reaction": "Fine. Riverside GC, and yes. I'll email the contract.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 2,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You stopped and asked for what you needed.",
+            "next": "Ask these questions first next time.",
+            "why": "A short pause beats a rejected certificate."
+          },
+          "tags": [
+            "asked_clarifying",
+            "owned_mistake"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Yes, today.",
+          "reaction": "Good.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 1,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You stayed positive.",
+            "next": "Get the holder and additional-insured details before promising anything.",
+            "why": "You still don't know what the certificate needs to say."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "coi",
+    "deadline"
+  ]
+}

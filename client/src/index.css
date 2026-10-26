@@ -1,5 +1,4 @@
 @import "./tokens/tokens.css";
-
 /* CareerVerse prototype styles.
    Layout switches on the width of .frame (a CSS container), so the Phone / Desktop
    preview buttons show the real responsive layouts without resizing the window.
@@ -384,12 +383,29 @@ body.preview-phone .toast { position: absolute; }
 .cycle-row__dot.is-done { background: var(--positive); }
 .cycle-row__name { flex: 1 1 auto; }
 
+/* ---------- Leaderboard ---------- */
+.lb { display: flex; flex-direction: column; gap: var(--gap); }
+@container cv (min-width: 1100px) { .lb { max-width: 760px; margin: 0 auto; padding-top: 24px; } }
+.tabs--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lb-row { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 8px 12px; border-radius: var(--radius-card); background: #FFFFFF; border: 1px solid var(--border); }
+.lb-row.is-me { border: 1.5px solid var(--accent); background: #F5F8FF; }
+.lb-rank { flex: none; width: 28px; text-align: center; font-size: 16px; color: var(--muted); }
+.lb-rank.is-podium { color: var(--ink); font-weight: 600; }
+.lb-pts { flex: none; font-size: 16px; text-align: right; min-width: 72px; }
+.lb-pts small { font-size: 11px; color: var(--muted); }
+.lb-kudos { flex: none; min-height: 36px !important; padding: 0 14px; font-size: 13px; width: 84px; justify-content: center; }
+@container cv (max-width: 640px) { .lb-row .row__body b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .lb-row .avatar { display: none; } .lb-row .row__body span { display: none; } .lb-kudos { width: auto; padding: 0 10px; } }
+.lb-me .lb-row { margin-top: 2px; }
+.row__body .lb-tv { display: inline-flex; margin-left: 6px; vertical-align: 1px; }
+.lb-kudos.pill { justify-content: center; }
+
 /* ---------- Prototype toolbar ---------- */
 .proto-bar { position: fixed; right: 16px; bottom: 16px; z-index: 100; display: none; align-items: center; gap: 4px; padding: 6px; border-radius: var(--radius-pill); background: #FFFFFF; border: 1px solid var(--border); box-shadow: var(--shadow-dialog); font-size: 13px; }
 @media (min-width: 900px) { .proto-bar { display: flex; } }
 .proto-bar__label { padding: 0 8px; color: var(--muted); }
 .proto-bar__btn { min-height: 32px; padding: 0 12px; border-radius: var(--radius-pill); border: 0; background: transparent; cursor: pointer; font-weight: 500; }
 .proto-bar__btn[aria-pressed="true"] { background: var(--ink); color: #FFFFFF; }
+.proto-bar__select { min-height: 32px; border-radius: var(--radius-pill); border: 1px solid var(--border); padding: 0 8px; font: inherit; background: #FFFFFF; }
 .proto-bar__sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
 
 /* ---------- Motion ---------- */

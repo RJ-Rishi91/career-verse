@@ -168,6 +168,7 @@ export interface C7Row {
 }
 
 export interface ScorecardResult {
+  scenarioId?: string;
   communication: number; // 0-100
   business: number; // 0-100
   critical: ScenarioOption | null;
@@ -176,11 +177,41 @@ export interface ScorecardResult {
   xp: number;
   coins: number;
   badge: boolean;
+  badgeId?: string;
+  badgeName?: string;
   c7rows: C7Row[];
   totals: ClientMeters;
   coach: CoachingNote;
   headline: string;
   ruleOfThumb?: string;
+}
+
+export interface LeaderboardEntry {
+  rank: number;
+  handle: string;
+  title: string;
+  points: number;
+  topVoice: boolean;
+  badge: string;
+  me: boolean;
+}
+
+export interface KudosType {
+  id: string;
+  label: string;
+  description: string;
+}
+
+export interface ScenarioSummary {
+  id: string;
+  title: string;
+  type: string;
+  clientId: string;
+  clientName: string;
+  due: string;
+  skills: string[];
+  isBoss?: boolean;
+  completed?: boolean;
 }
 
 export interface CareerState {
@@ -190,10 +221,15 @@ export interface CareerState {
   scenario: Scenario;
   activeCall: CallState | null;
   lastResult: ScorecardResult | null;
+  completedScenarios: string[];
+  availableScenarios: ScenarioSummary[];
   unlocks: {
     clients: boolean;
     inbox: boolean;
     journal: boolean;
     shop: boolean;
+    leaderboard: boolean;
   };
+  kudosSent: Record<string, string>;
+  lbOptIn: boolean;
 }

@@ -1,0 +1,394 @@
+{
+  "scenario_id": "L1_DANA_STATUS_UPDATE",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "dana-whitfield",
+  "scenario_type": "status_update_call",
+  "learning_objectives": [
+    "clear_updates",
+    "asking_for_missing_info"
+  ],
+  "business_objective": "Give a precise status and get Dana to unblock the third quote.",
+  "title": "The 17th: where are the quotes?",
+  "teaser": "Two quotes are in. The third carrier needs Hendricks's updated annual sales.",
+  "known_facts": [
+    {
+      "time": "Mon",
+      "text": "Quote 1 received"
+    },
+    {
+      "time": "Tue",
+      "text": "Quote 2 received"
+    },
+    {
+      "time": "Wed",
+      "text": "Carrier 3 asked for updated annual sales"
+    }
+  ],
+  "rule_of_thumb": "Fact, then status, then the next step with a time.",
+  "base_meters": {
+    "trust": 7,
+    "respect": 6,
+    "anger": 2
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "It's the 17th. Where are we on the Hendricks quotes?",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Two of three are in, and I've put them side by side for you. The third carrier needs Hendricks's updated annual sales before it can quote. Could you ask them today? Then I can still have all three to you by the 20th.",
+          "reaction": "I'll call them this morning.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Facts, status, the blocker and what you need from her.",
+            "next": "Add the time you'll follow up.",
+            "why": "She can act immediately."
+          },
+          "tags": [
+            "early_warning"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Still waiting on carriers.",
+          "reaction": "Waiting on what, exactly? I talk to Hendricks on the 21st.",
+          "expression": "frustrated",
+          "next_node_id": "d2_vague",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You were honest.",
+            "next": "Name what you're waiting for and what unblocks it.",
+            "why": "Vague status hides the one thing she could fix today."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "All three are basically done.",
+          "reaction": "Great, send them now.",
+          "expression": "pleased",
+          "next_node_id": "d2_promise",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "misstated_fact"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "Upbeat.",
+            "next": "Never round up a status.",
+            "why": "Two isn't three. She'll find out on the 20th."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Anything in the two quotes I should know before I call them?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "One is higher but includes equipment breakdown coverage; the other excludes it. I've highlighted it so you can talk it through with Hendricks.",
+          "reaction": "Good catch. That changes the conversation.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "A factual difference, and the decision left with Dana.",
+            "next": "Keep facts and recommendations separate.",
+            "why": "Choosing coverage is the agency's and client's call, not yours."
+          },
+          "tags": [
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "The cheaper one looks best.",
+          "reaction": "Based on what?",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You tried to help her decide.",
+            "next": "Describe differences; don't recommend coverage.",
+            "why": "Recommending coverage is advice beyond your role."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_vague",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Waiting on what?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Two quotes are in. The third needs updated sales figures from Hendricks. If you ask them today, I'll have all three by the 20th.",
+          "reaction": "Okay. I'll call them.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 2,
+              "coherent": 3,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "Clear on the second try.",
+            "next": "Lead with this next time.",
+            "why": "She had to dig for it."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "B",
+          "text": "I'll chase them.",
+          "reaction": "That's not an answer.",
+          "expression": "frustrated",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Willing.",
+            "next": "Say what, who and when.",
+            "why": "She still can't plan the 21st."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_promise",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Great, send all three over now.",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I need to correct that. Two are in; the third needs Hendricks's updated sales figures. I'll send the two now.",
+          "reaction": "Thank you for telling me now.",
+          "expression": "worried",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 2,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You corrected yourself quickly.",
+            "next": "Get it right the first time.",
+            "why": "An early correction keeps her from repeating it to Hendricks."
+          },
+          "tags": [
+            "owned_mistake"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I'll send them tomorrow.",
+          "reaction": "Why tomorrow if they're done?",
+          "expression": "frustrated",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 2
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You bought time.",
+            "next": "Correct the record; don't cover it.",
+            "why": "Covering a misstatement makes it worse."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "renewal",
+    "carrier",
+    "deadline"
+  ]
+}

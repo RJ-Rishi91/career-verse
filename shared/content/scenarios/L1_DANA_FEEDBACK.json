@@ -1,0 +1,315 @@
+{
+  "scenario_id": "L1_DANA_FEEDBACK",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "dana-whitfield",
+  "scenario_type": "feedback_call",
+  "learning_objectives": [
+    "receiving_feedback",
+    "staying_within_authority"
+  ],
+  "business_objective": "Show the work, give Dana something useful for Hendricks, and don't promise a price change.",
+  "title": "Dana: Hendricks is upset",
+  "teaser": "Even the best quote is 9 percent higher. Hendricks asks if the agency did enough.",
+  "known_facts": [
+    {
+      "time": "20th",
+      "text": "Three quotes delivered"
+    },
+    {
+      "time": "Best quote",
+      "text": "+9% on last year"
+    }
+  ],
+  "rule_of_thumb": "Show the work; don't promise the outcome.",
+  "base_meters": {
+    "trust": 7,
+    "respect": 7,
+    "anger": 2
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Hendricks is upset. Even the best quote is 9 percent higher, and they're asking if we did enough.",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I understand. Here's what we did: three carriers, all quotes by the 20th. I can send you a one-page summary of each quote and what drove the increase, so you can walk Hendricks through it.",
+          "reaction": "That would really help.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "You showed the work and offered a useful tool.",
+            "next": "Keep it to one page.",
+            "why": "Clients accept increases better when they see the effort and the reasons."
+          },
+          "tags": [
+            "empathy_first",
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "Premiums are going up everywhere; there's nothing we can do.",
+          "reaction": "That isn't helping me with Hendricks.",
+          "expression": "frustrated",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Partly true.",
+            "next": "Offer what you can do.",
+            "why": "“Nothing we can do” sounds like giving up."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "I'll ask the carrier to drop it back to last year's price.",
+          "reaction": "Can you really do that?",
+          "expression": "pleased",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "commit_beyond_authority"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "You wanted to fix it.",
+            "next": "You can ask questions; you can't set prices.",
+            "why": "Promising a price change sets up a bigger disappointment."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Can you have it by tomorrow morning?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Yes, by 10 a.m. If any carrier's rating notes aren't clear, I'll flag what I couldn't confirm.",
+          "reaction": "Perfect.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "A time, plus honesty about limits.",
+            "next": "Keep flagging what you can't confirm.",
+            "why": "She won't be caught out by a gap."
+          },
+          "tags": [
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "I'll get it to you when I can.",
+          "reaction": "I need it before my call.",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Willing.",
+            "next": "Give a time.",
+            "why": "She has a client call to plan."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "So what can you actually do?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I can put together a one-page summary of the three quotes and what changed, so you can show Hendricks the work. Tomorrow by 10?",
+          "reaction": "Yes. Please.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "You found the useful offer.",
+            "next": "Lead with it next time.",
+            "why": "Concrete help beats sympathy."
+          },
+          "tags": [
+            "stayed_in_authority"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "It's really up to the carrier.",
+          "reaction": "I know that.",
+          "expression": "frustrated",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Accurate.",
+            "next": "Pair a limit with an offer.",
+            "why": "A limit without an offer leaves her empty-handed."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "renewal",
+    "premium",
+    "feedback"
+  ]
+}

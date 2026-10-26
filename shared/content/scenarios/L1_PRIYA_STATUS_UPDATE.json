@@ -1,0 +1,316 @@
+{
+  "scenario_id": "L1_PRIYA_STATUS_UPDATE",
+  "version": 1,
+  "status": "in_review",
+  "level": 1,
+  "client_id": "priya-raman",
+  "scenario_type": "status_update_call",
+  "learning_objectives": [
+    "clear_updates",
+    "written_follow_up"
+  ],
+  "business_objective": "Give a written-ready status with names, dates and what's outstanding.",
+  "title": "Priya needs it in writing",
+  "teaser": "The adjuster needs a repair estimate and a moisture report. The partners want an update.",
+  "known_facts": [
+    {
+      "time": "Tue",
+      "text": "Claim reported"
+    },
+    {
+      "time": "Wed",
+      "text": "Adjuster Tom Reyes assigned"
+    },
+    {
+      "time": "Now",
+      "text": "Needs repair estimate + moisture report"
+    }
+  ],
+  "rule_of_thumb": "Fact, then status, then the next step with a time.",
+  "base_meters": {
+    "trust": 6,
+    "respect": 6,
+    "anger": 4
+  },
+  "opening_node_id": "d1",
+  "review": {
+    "domain_reviewer": null,
+    "communication_reviewer": null,
+    "reviewed_at": null,
+    "notes": "Drafted for the build. Needs insurance subject-matter review before publish."
+  },
+  "nodes": [
+    {
+      "node_id": "d1",
+      "type": "decision",
+      "speaker": "client",
+      "line": "The partners are asking where the claim stands. I need something I can put in writing.",
+      "presentation": "sequential_commit",
+      "consequential": true,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "The claim was reported Tuesday and an adjuster, Tom Reyes, was assigned Wednesday. He needs two documents: the repair estimate and the moisture report. I'll email you this summary with the claim number in the next 30 minutes.",
+          "reaction": "That's exactly what I needed.",
+          "expression": "relieved",
+          "next_node_id": "d2_good",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Names, dates, what's outstanding, and a written follow-up.",
+            "next": "Keep the 30-minute promise.",
+            "why": "She can forward it to the partners as is."
+          },
+          "tags": [
+            "promised_controlled_time"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "It's with the adjuster now.",
+          "reaction": "I need specifics.",
+          "expression": "neutral",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 0,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 1,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 2
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Accurate.",
+            "next": "Give names, dates and what's outstanding.",
+            "why": "She can't put “with the adjuster” in a report."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "C",
+          "text": "It should be approved soon.",
+          "reaction": "Approved? Great.",
+          "expression": "pleased",
+          "next_node_id": "d2_repair",
+          "ends_call": false,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 0,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 2,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [
+            "confirmed_unverified_coverage"
+          ],
+          "recovery": false,
+          "coaching": {
+            "worked": "Optimistic.",
+            "next": "Never predict a claim decision.",
+            "why": "Only the adjuster decides, and nothing is approved yet."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_good",
+      "type": "decision",
+      "speaker": "client",
+      "line": "Can you chase the contractor for the estimate?",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "I'll email the contractor today and copy you. If there's no estimate by Friday, I'll tell you and the adjuster.",
+          "reaction": "Thank you.",
+          "expression": "pleased",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 1,
+              "respect": 1,
+              "anger": -1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 3
+            },
+            "business": 3
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Action, copy, deadline and escalation.",
+            "next": "Keep copying her.",
+            "why": "She stays informed without asking."
+          },
+          "tags": [
+            "early_warning",
+            "escalated_correctly"
+          ]
+        },
+        {
+          "option_id": "B",
+          "text": "That's really the insured's job.",
+          "reaction": "I'm asking for help.",
+          "expression": "frustrated",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 2,
+              "concrete": 2,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 0,
+              "courteous": 1
+            },
+            "business": 1
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Technically true.",
+            "next": "Offer help within your role.",
+            "why": "She asked for support, not a rule."
+          },
+          "tags": []
+        }
+      ]
+    },
+    {
+      "node_id": "d2_repair",
+      "type": "decision",
+      "speaker": "client",
+      "line": "I need specifics I can put in writing.",
+      "presentation": "sequential_commit",
+      "consequential": false,
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Of course. Claim reported Tuesday, adjuster Tom Reyes assigned Wednesday, and he needs the repair estimate and moisture report. I'll email that within 30 minutes.",
+          "reaction": "Thank you.",
+          "expression": "relieved",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": 0,
+              "respect": 1,
+              "anger": 0
+            },
+            "communication_7c": {
+              "clear": 3,
+              "concise": 3,
+              "concrete": 3,
+              "correct": 3,
+              "coherent": 3,
+              "complete": 3,
+              "courteous": 2
+            },
+            "business": 2
+          },
+          "critical_flags": [],
+          "recovery": true,
+          "coaching": {
+            "worked": "Specific on the second try.",
+            "next": "Lead with specifics.",
+            "why": "Written-ready updates save her time."
+          },
+          "tags": []
+        },
+        {
+          "option_id": "B",
+          "text": "I'll find out more and get back to you.",
+          "reaction": "When?",
+          "expression": "neutral",
+          "next_node_id": null,
+          "ends_call": true,
+          "effects": {
+            "relationship": {
+              "trust": -1,
+              "respect": -1,
+              "anger": 1
+            },
+            "communication_7c": {
+              "clear": 2,
+              "concise": 2,
+              "concrete": 0,
+              "correct": 0,
+              "coherent": 2,
+              "complete": 1,
+              "courteous": 1
+            },
+            "business": 0
+          },
+          "critical_flags": [],
+          "recovery": false,
+          "coaching": {
+            "worked": "Honest.",
+            "next": "Say what you'll find out and when.",
+            "why": "She's still empty-handed."
+          },
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "claim",
+    "carrier"
+  ]
+}
