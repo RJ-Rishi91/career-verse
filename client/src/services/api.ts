@@ -24,7 +24,34 @@ import priyaFeedbackData from '../content/scenarios/L1_PRIYA_FEEDBACK.json';
 import bossFirstReviewData from '../content/scenarios/L1_BOSS_FIRST_REVIEW.json';
 import onboardingPracticeData from '../content/scenarios/L1_ONBOARDING_PRACTICE.json';
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+const DEFAULT_TUNNEL_URL = 'https://tree-papers-reflected-thursday.trycloudflare.com/api';
+
+function getInitialApiBase(): string {
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search);
+    const fromParam = params.get('api') || params.get('backend');
+    if (fromParam) {
+      const clean = fromParam.replace(/\/$/, '');
+      const full = clean.endsWith('/api') ? clean : `${clean}/api`;
+      try { localStorage.setItem('careerverse_api_url', full); } catch {}
+      return full;
+    }
+
+    try {
+      const saved = localStorage.getItem('careerverse_api_url');
+      if (saved) return saved;
+    } catch {}
+
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return '/api';
+    }
+
+    return DEFAULT_TUNNEL_URL;
+  }
+  return import.meta.env.VITE_API_URL || '/api';
+}
+
+const API_BASE = getInitialApiBase();
 
 const SCENARIO_RAW_MAP: Record<string, any> = {
   'L1_MARCUS_STATUS_UPDATE': marcusStatusData,
