@@ -7,14 +7,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function resolvePath(relativePath: string): string {
+  const clean = relativePath.replace(/^\.\//, '');
+  const basename = path.basename(clean);
+  const repoRoot = path.resolve(__dirname, '../../..');
+  const serverRoot = path.resolve(__dirname, '../..');
+  const srcRoot = path.resolve(__dirname, '..');
+
   const candidates = [
-    path.resolve(process.cwd(), relativePath),
-    path.resolve(process.cwd(), 'setup/game', relativePath),
-    path.resolve(process.cwd(), 'content', relativePath),
-    path.resolve(process.cwd(), 'server/src', relativePath),
-    path.resolve(__dirname, '..', relativePath),
-    path.resolve(__dirname, '../../setup/game', relativePath),
-    path.resolve(__dirname, '../../content', relativePath),
+    path.resolve(process.cwd(), clean),
+    path.resolve(repoRoot, clean),
+    path.resolve(serverRoot, clean),
+    path.resolve(srcRoot, 'game', basename),
+    path.resolve(srcRoot, 'content', clean),
+    path.resolve(srcRoot, 'content/scenarios', basename),
+    path.resolve(repoRoot, 'setup/game', basename),
+    path.resolve(repoRoot, 'content', clean),
+    path.resolve(repoRoot, 'content/scenarios', basename)
   ];
 
   for (const p of candidates) {

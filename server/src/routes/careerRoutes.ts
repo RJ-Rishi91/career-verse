@@ -14,7 +14,8 @@ router.get('/', async (req, res) => {
 
 router.get('/greeting', (req, res) => {
   try {
-    const timeOverride = req.query.time ? Number(req.query.time) : null;
+    const rawVal = req.query.time ?? req.query.hour;
+    const timeOverride = rawVal !== undefined && rawVal !== null && rawVal !== '' ? Number(rawVal) : null;
     const greeting = CareerService.getGreeting(timeOverride);
     res.json(greeting);
   } catch (err: any) {
